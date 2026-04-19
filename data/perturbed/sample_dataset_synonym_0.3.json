@@ -1,0 +1,92 @@
+[
+  {
+    "id": "sent_001",
+    "task": "sentiment",
+    "text": "This movie was absolutely fantastic, I loved every minute of it.",
+    "label": "positive"
+  },
+  {
+    "id": "sent_002",
+    "task": "sentiment",
+    "text": "The food was terrible and the service was even worse.",
+    "label": "negative"
+  },
+  {
+    "id": "sent_003",
+    "task": "sentiment",
+    "text": "It was an okay experience, nothing special but not bad either.",
+    "label": "neutral"
+  },
+  {
+    "id": "nli_001",
+    "task": "nli",
+    "text": "premise: A man is playing a guitar. hypothesis: A person is making music.",
+    "label": "entailment"
+  },
+  {
+    "id": "nli_002",
+    "task": "nli",
+    "text": "premise: The cat is sleeping on the couch. hypothesis: The cat is running outside.",
+    "label": "contradiction"
+  },
+  {
+    "id": "nli_003",
+    "task": "nli",
+    "text": "premise: She bought a red dress. hypothesis: She went shopping.",
+    "label": "neutral"
+  },
+  {
+    "id": "toxicity_001",
+    "task": "toxicity",
+    "text": "I hope you have a wonderful day and achieve all your goals.",
+    "label": "non-toxic"
+  },
+  {
+    "id": "toxicity_002",
+    "task": "toxicity",
+    "text": "You are completely worthless and nobody likes you.",
+    "label": "toxic"
+  },
+  {
+    "id": "toxicity_003",
+    "task": "toxicity",
+    "text": "This policy decision will have serious consequences for the economy.",
+    "label": "non-toxic"
+  },
+  {
+    "id": "qa_001",
+    "task": "qa",
+    "text": "context: The Eiffel Tower is located in Paris, France. question: Where is the Eiffel Tower?",
+    "label": "Paris, France"
+  },
+  {
+    "id": "qa_002",
+    "task": "qa",
+    "text": "context: Water boils at 100 degrees Celsius at sea level. question: At what temperature does water boil at sea level?",
+    "label": "100 degrees Celsius"
+  },
+  {
+    "id": "qa_003",
+    "task": "qa",
+    "text": "context: Marie Curie won two Nobel Prizes, one in Physics and one in Chemistry. question: How many Nobel Prizes did Marie Curie win?",
+    "label": "two"
+  },
+  {
+    "id": "sent_004",
+    "task": "sentiment",
+    "text": "Outstanding performance by the lead actor, a truly memorable film.",
+    "label": "positive"
+  },
+  {
+    "id": "nli_004",
+    "task": "nli",
+    "text": "premise: All birds can fly. hypothesis: Penguins can fly.",
+    "label": "entailment"
+  },
+  {
+    "id": "toxicity_004",
+    "task": "toxicity",
+    "text": "The research findings were inconclusive and require further investigation.",
+    "label": "non-toxic"
+  }
+]
