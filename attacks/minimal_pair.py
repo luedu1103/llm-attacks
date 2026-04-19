@@ -8,6 +8,6 @@ class MinimalPairAttack(Attack):
     Placeholder — returns example unchanged until implemented.
     """
 
-    def apply(self, example: dict[str, Any]) -> dict[str, Any]:
+    def _perturb_text(self, text: str) -> str:
         # TODO: implement minimal-pair generation
-        return dict(example)
+        return text

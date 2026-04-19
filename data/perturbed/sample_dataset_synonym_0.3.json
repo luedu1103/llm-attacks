@@ -1,92 +1,86 @@
 [
   {
-    "id": "sent_001",
-    "task": "sentiment",
-    "text": "This movie was absolutely fantastic, I loved every minute of it.",
-    "label": "positive"
+    "id": 0,
+    "task": "sentence_ordering",
+    "question": "Hegel y la Revolución francesa\nI. La Revolución francesa, como fenómeno político, económico, social y cultural, no sólo transformó el país de origen, sino también toda Europa.\nII. Tanto estudiantes como filósofos alemanes estuvieron fascinados por la Revolución francesa.\nIII. Señala que la Revolución francesa fue una tentativa por someter la historia a la razón.\nIV. Pocos fenómenos resultan tan trascendentes en la historia como la Revolución francesa.\nV. En Fenomenología del espíritu, Hegel reflexiona sobre le significado de este hecho histórico.",
+    "options": [
+      "I - IV - V - III - II",
+      "V - III - II - IV - I",
+      "V - III - IV - II - I",
+      "IV - I - II - V - III",
+      "IV - II - I - V - III"
+    ],
+    "answer": 3,
+    "rationale": "El texto se inicia con una presentación en la que se valora la trascendencia histórica de la Revolución (IV), complementado con el concepto de Revolución francesa y su repercusión (I). Luego, la fascinación producida en los filósofos alemanes (II), inmediatamente la reflexión de Hegel (V); y finalmente el significado filosófico de la Revolución para Hegel (III). El orden es IV - I - II - V - III."
   },
   {
-    "id": "sent_002",
-    "task": "sentiment",
-    "text": "The food was terrible and the service was even worse.",
-    "label": "negative"
+    "id": 1,
+    "task": "sentence_ordering",
+    "question": "Libertad y religión\nI. Y así la libertad se convirtió en un ideal\nII. La libertad es un factor indispensable no sólo en filosofía, sino también en religión.\nIII. Luego, la lava se enfrió y se convirtió en piedra.\nIV. Entonces, aparecieron las instituciones, las jerarquías, las autoridades y los deberes.\nV. En un principio, las religiones fueron como lava que se salía de un volcán en erupción: Jesús y Buda son paradigmas de hombres libres.",
+    "options": [
+      "V - III - II - IV - I",
+      "V - II - III - IV - I",
+      "II - V - III - IV - I",
+      "II - V - I - III - IV",
+      "V - I - II - III - IV"
+    ],
+    "answer": 2,
+    "rationale": "El texto comienza con la importancia de la libertad en filosofía y religión (II). Después, se citan a Jesús y Buda como personajes religiosos que marcan el origen de la religión libre (V). De manera inmediata, se completa con una metáfora que representa la materialización de la religión (III). Luego, la aparición de entidades formales (IV). Finalmente, la conversión de la libertad en un ideal (I). La secuencia es II - V - III - IV - I."
   },
   {
-    "id": "sent_003",
-    "task": "sentiment",
-    "text": "It was an okay experience, nothing special but not bad either.",
-    "label": "neutral"
+    "id": 2,
+    "task": "sentence_ordering",
+    "question": "Caminos de la Creación\nI. Su proceso de búsqueda o de creación está cargado de rupturas, de intentos, de confrontación.\nII. Es desde la comodidad y desde la sorpresa que ellos descubren, con satisfacción, algo inesperado.\nIII. El potencial del ser humano determina que no hay una sola fórmula para crear.\nIV. Los artistas creen que el caos es necesario para construir un nuevo orden.\nV. De otro lado, cuando los niños crean lo hacen a través del juego.",
+    "options": [
+      "III - IV - I - V - II",
+      "III - I - V - II - IV",
+      "IV - I - V - III - II",
+      "IV - V - I - III - II",
+      "II - I - III - V - IV"
+    ],
+    "answer": 0,
+    "rationale": "El texto empieza con la idea general de que existen diversas fórmulas para llegar a la creación (III). Inmediatamente, se menciona el caso de los artistas que parten del caos (IV). A continuación, los elementos presentes en el proceso de creación artística (I). Luego, la creación de los niños a través del juego (V) y finalmente los elementos presentes en la creación lúdica del niño (II). El orden correcto es III - IV - I - V - II."
   },
   {
-    "id": "nli_001",
-    "task": "nli",
-    "text": "premise: A man is playing a guitar. hypothesis: A person is making music.",
-    "label": "entailment"
+    "id": 3,
+    "task": "sentence_elimination",
+    "question": "Resulta incompatible con lo desarrollado en el texto sostener que",
+    "options": [
+      "la teoría de la relatividad general tuvo, desde sus inicios, una amplia difusión.",
+      "durante su vida, John Wheeler realizó investigaciones junto a otras personalidades.",
+      "John Wheeler creyó que los agujeros negros son el estado colapsado de la materia.",
+      "Wheeler dilucidó la naturaleza del esparcimiento de la luz de los átomos de helio.",
+      "Princeton fue el primer lugar donde se impartió un curso de relatividad general."
+    ],
+    "answer": 0,
+    "rationale": "John Wheeler fue el primero en estudiar la teoría de la relatividad, ya que la mayoría de sus colegas estaba analizando la física nuclear, por ello, la teoría de Einstein no fue muy difundida en sus inicios."
   },
   {
-    "id": "nli_002",
-    "task": "nli",
-    "text": "premise: The cat is sleeping on the couch. hypothesis: The cat is running outside.",
-    "label": "contradiction"
+    "id": 4,
+    "task": "sentence_elimination",
+    "question": "Respecto de John Wheeler, se puede inferir que",
+    "options": [
+      "a diferencia de los demás, estudió la teoría de la relatividad.",
+      "logró su doctorado antes de cumplir los veinticinco años.",
+      "enseñó un curso sobre relatividad general en Princeton.",
+      "desde joven se inclinó por el estudio de la relatividad.",
+      "realizó todas sus investigaciones sin ningún apoyo."
+    ],
+    "answer": 1,
+    "rationale": "John Wheeler nació en 1911 y se doctoró en 1933, en consecuencia, logró ese grado académico antes de los 25 años."
   },
   {
-    "id": "nli_003",
-    "task": "nli",
-    "text": "premise: She bought a red dress. hypothesis: She went shopping.",
-    "label": "neutral"
-  },
-  {
-    "id": "toxicity_001",
-    "task": "toxicity",
-    "text": "I hope you have a wonderful day and achieve all your goals.",
-    "label": "non-toxic"
-  },
-  {
-    "id": "toxicity_002",
-    "task": "toxicity",
-    "text": "You are completely worthless and nobody likes you.",
-    "label": "toxic"
-  },
-  {
-    "id": "toxicity_003",
-    "task": "toxicity",
-    "text": "This policy decision will have serious consequences for the economy.",
-    "label": "non-toxic"
-  },
-  {
-    "id": "qa_001",
-    "task": "qa",
-    "text": "context: The Eiffel Tower is located in Paris, France. question: Where is the Eiffel Tower?",
-    "label": "Paris, France"
-  },
-  {
-    "id": "qa_002",
-    "task": "qa",
-    "text": "context: Water boils at 100 degrees Celsius at sea level. question: At what temperature does water boil at sea level?",
-    "label": "100 degrees Celsius"
-  },
-  {
-    "id": "qa_003",
-    "task": "qa",
-    "text": "context: Marie Curie won two Nobel Prizes, one in Physics and one in Chemistry. question: How many Nobel Prizes did Marie Curie win?",
-    "label": "two"
-  },
-  {
-    "id": "sent_004",
-    "task": "sentiment",
-    "text": "Outstanding performance by the lead actor, a truly memorable film.",
-    "label": "positive"
-  },
-  {
-    "id": "nli_004",
-    "task": "nli",
-    "text": "premise: All birds can fly. hypothesis: Penguins can fly.",
-    "label": "entailment"
-  },
-  {
-    "id": "toxicity_004",
-    "task": "toxicity",
-    "text": "The research findings were inconclusive and require further investigation.",
-    "label": "non-toxic"
+    "id": 5,
+    "task": "sentence_elimination",
+    "question": "Si John Wheeler hubiese ignorado totalmente el trabajo de Oppenheimer,",
+    "options": [
+      "nadie habría enseñado física en Princeton.",
+      "la teoría de la relatividad habría sido abandonada.",
+      "se habría doctorado en ciencias astronómicas.",
+      "Schwarzschild no habría propuesto su fórmula.",
+      "no habría estudiado la física del agujero negro."
+    ],
+    "answer": 4,
+    "rationale": "La inspiración de Oppenheimer fue fundamental para estudiar los efectos del colapso gravitatorio, lo que lo condujo a la idea de los agujeros negros."
   }
 ]

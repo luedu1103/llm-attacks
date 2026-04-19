@@ -8,6 +8,6 @@ class ShortcutRemovalAttack(Attack):
     Placeholder — returns example unchanged until implemented.
     """
 
-    def apply(self, example: dict[str, Any]) -> dict[str, Any]:
+    def _perturb_text(self, text: str) -> str:
         # TODO: implement shortcut detection and removal
-        return dict(example)
+        return text
