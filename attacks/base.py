@@ -29,6 +29,7 @@ class Attack(ABC):
         ...
 
     def apply(self, example: dict[str, Any]) -> dict[str, Any]:
+        """Return a shallow copy of example with FIELDS_TO_PERTURB rewritten; all other keys unchanged."""
         result = dict(example)
         for field in self.FIELDS_TO_PERTURB:
             if field not in example:
@@ -41,4 +42,5 @@ class Attack(ABC):
         return result
 
     def apply_dataset(self, dataset: list[dict[str, Any]]) -> list[dict[str, Any]]:
+        """Apply the attack independently to each example in the dataset."""
         return [self.apply(ex) for ex in dataset]

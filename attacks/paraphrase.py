@@ -22,6 +22,7 @@ _SUBS: list[tuple[str, str]] = [
 
 
 def _apply_some_subs(text: str, k: int) -> str:
+    """Apply at most k regex substitutions from _SUBS in random order."""
     if not text or k <= 0:
         return text
     subs = list(_SUBS)
@@ -38,9 +39,17 @@ def _apply_some_subs(text: str, k: int) -> str:
 
 
 class ParaphraseAttack(Attack):
-    """Paraphrase sentences while preserving meaning, scaled by self.intensity."""
+    """Surface-level paraphrase via lexical and connective substitution.
+
+    At low-to-medium intensity: replaces connectives and common phrases with
+    functionally equivalent alternatives (e.g. 'porque' → 'ya que').
+    At high intensity (>= 0.5): additionally swaps the two clauses around the
+    first semicolon if one is present, altering surface order without changing
+    the propositional content.
+    """
 
     def _perturb_text(self, text: str) -> str:
+        """Apply k substitutions (k ∝ intensity) then optionally reorder clauses."""
         if not text.strip():
             return text
 

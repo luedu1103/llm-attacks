@@ -21,9 +21,16 @@ _FLIP_MAP = {
 
 
 class MinimalPairAttack(Attack):
-    """Remove or flip negations/quantifiers scaled by self.intensity."""
+    """Create minimal pairs by removing or inverting polarity markers.
+
+    Primary strategy: drop negation tokens (no, nunca, jamás, nadie…) so the
+    perturbed sentence has the opposite truth value with minimal surface change.
+    Fallback (intensity >= 0.5, no negations found): flip a universal/existential
+    quantifier via _FLIP_MAP (siempre ↔ nunca) instead of deleting it.
+    """
 
     def _perturb_text(self, text: str) -> str:
+        """Remove n negation tokens (n ∝ intensity); flip a quantifier as fallback."""
         tokens = simple_tokenize(text)
         if not tokens:
             return text

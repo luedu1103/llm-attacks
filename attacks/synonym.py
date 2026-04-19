@@ -102,9 +102,15 @@ def _wordnet_synonym(word: str) -> str | None:
 
 
 class SynonymAttack(Attack):
-    """Replace words with synonyms scaled by self.intensity."""
+    """Lexical substitution: replace a fraction of words with near-synonyms.
+
+    Lookup priority: static dictionary (_SIMPLE_SYNONYMS) → NLTK WordNet/OMW.
+    WordNet is optional; the attack degrades gracefully if it is not installed.
+    Case of the source token is transferred to the replacement via preserve_case.
+    """
 
     def _perturb_text(self, text: str) -> str:
+        """Replace round(len(words) * intensity) words with synonyms, chosen at random."""
         tokens = simple_tokenize(text)
         if not tokens:
             return text
@@ -113,7 +119,7 @@ class SynonymAttack(Attack):
         if not widx:
             return text
 
-        # Build candidate map: index -> replacement (resolved once)
+        # Resolve replacements eagerly so each token is evaluated only once.
         candidate_map: dict[int, str] = {}
         for i in widx:
             lw = tokens[i].lower()

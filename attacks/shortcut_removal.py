@@ -16,6 +16,7 @@ _MULTI_CONNECTIVES: list[tuple[str, ...]] = [
 ]
 
 def _find_multi_spans(tokens: list[str]) -> list[tuple[int, int]]:
+    """Return (start, end) token spans matching any pattern in _MULTI_CONNECTIVES."""
     spans: list[tuple[int, int]] = []
     lower = [t.lower() for t in tokens]
     for pat in _MULTI_CONNECTIVES:
@@ -27,9 +28,16 @@ def _find_multi_spans(tokens: list[str]) -> list[tuple[int, int]]:
 
 
 class ShortcutRemovalAttack(Attack):
-    """Remove causal connectives from text, scaled by self.intensity."""
+    """Remove causal/consecutive connectives that act as spurious shortcuts.
+
+    Targets single-token connectives (porque, entonces, luego) and multi-token
+    phrases (por eso, así que). Removing them forces the model to rely on the
+    content of the clauses rather than surface connective cues.
+    Spans are deleted highest-index-first to keep earlier indices stable.
+    """
 
     def _perturb_text(self, text: str) -> str:
+        """Delete n connective spans (n ∝ intensity) from the token sequence."""
         tokens = simple_tokenize(text)
         if not tokens:
             return text
