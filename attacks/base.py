@@ -1,7 +1,10 @@
 from __future__ import annotations
 
 from abc import ABC, abstractmethod
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from typing import Any
+
+MAX_WORKERS = 8  # concurrent Ollama requests
 
 
 class Attack(ABC):
@@ -42,5 +45,10 @@ class Attack(ABC):
         return result
 
     def apply_dataset(self, dataset: list[dict[str, Any]]) -> list[dict[str, Any]]:
-        """Apply the attack independently to each example in the dataset."""
-        return [self.apply(ex) for ex in dataset]
+        """Apply the attack to all examples in parallel."""
+        results: list[dict[str, Any]] = [{}] * len(dataset)
+        with ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
+            futures = {executor.submit(self.apply, ex): i for i, ex in enumerate(dataset)}
+            for future in as_completed(futures):
+                results[futures[future]] = future.result()
+        return results

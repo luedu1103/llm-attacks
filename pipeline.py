@@ -7,6 +7,8 @@ import json
 import sys
 from pathlib import Path
 
+from tqdm import tqdm
+
 import config
 from attacks import SynonymAttack, ParaphraseAttack, MinimalPairAttack, ShortcutRemovalAttack
 from attacks.base import Attack
@@ -42,7 +44,17 @@ def run(attack_name: str, intensity: float, dataset_path: Path, output_path: Pat
     attack_cls = ATTACK_REGISTRY[attack_name]
     attack = attack_cls(intensity=intensity)
     print(f"Applying attack '{attack_name}' (intensity={intensity})")
-    perturbed = attack.apply_dataset(dataset)
+    perturbed = []
+    with tqdm(total=len(dataset), unit="ex") as pbar:
+        original_apply = attack.apply
+
+        def apply_with_progress(ex):
+            result = original_apply(ex)
+            pbar.update(1)
+            return result
+
+        attack.apply = apply_with_progress
+        perturbed = attack.apply_dataset(dataset)
 
     if output_path is None:
         output_path = config.PERTURBED_DATA_DIR / f"{dataset_path.stem}_{attack_name}_{intensity}.json"

@@ -1,69 +1,32 @@
 from attacks.base import Attack
-import random
-from utils.text_utils import detokenize, n_modifications, sample_indices, simple_tokenize, word_indices
-
-_SINGLE_CONNECTIVES = {
-    "porque",
-    "entonces",
-    "luego",
-}
-
-# Multi-token patterns expressed as lowercase token tuples
-_MULTI_CONNECTIVES: list[tuple[str, ...]] = [
-    ("por", "eso"),
-    ("así", "que"),
-    ("asi", "que"),
-]
-
-def _find_multi_spans(tokens: list[str]) -> list[tuple[int, int]]:
-    """Return (start, end) token spans matching any pattern in _MULTI_CONNECTIVES."""
-    spans: list[tuple[int, int]] = []
-    lower = [t.lower() for t in tokens]
-    for pat in _MULTI_CONNECTIVES:
-        L = len(pat)
-        for i in range(0, max(0, len(tokens) - L + 1)):
-            if tuple(lower[i : i + L]) == pat:
-                spans.append((i, i + L))
-    return spans
+from utils.llm_client import chat
 
 
 class ShortcutRemovalAttack(Attack):
-    """Remove causal/consecutive connectives that act as spurious shortcuts.
-
-    Targets single-token connectives (porque, entonces, luego) and multi-token
-    phrases (por eso, así que). Removing them forces the model to rely on the
-    content of the clauses rather than surface connective cues.
-    Spans are deleted highest-index-first to keep earlier indices stable.
-    """
+    """Remove explicit logical/causal connectors using an LLM."""
 
     def _perturb_text(self, text: str) -> str:
-        """Delete n connective spans (n ∝ intensity) from the token sequence."""
-        tokens = simple_tokenize(text)
-        if not tokens:
-            return text
-
-        widx = word_indices(tokens)
-        if not widx:
-            return text
-
-        spans = _find_multi_spans(tokens)
-        single_candidates = [i for i in widx if tokens[i].lower() in _SINGLE_CONNECTIVES]
-
-        units: list[tuple[int, int]] = []
-        units.extend(spans)
-        units.extend((i, i + 1) for i in single_candidates)
-
-        if not units:
-            return text
-
-        n = min(len(units), n_modifications(len(widx), self.intensity))
-        chosen_units = sorted(sample_indices(list(range(len(units))), n, rng=random), reverse=True)
-
-        new_tokens = list(tokens)
-        for u in chosen_units:
-            start, end = units[u]
-            for _ in range(end - start):
-                if 0 <= start < len(new_tokens):
-                    del new_tokens[start]
-
-        return detokenize(new_tokens)
+        prompt = (
+            f"Tarea: eliminar conectores lógicos y causales de un texto en español.\n"
+            f"Reglas estrictas:\n"
+            f"- Elimina SOLO conectores como: porque, entonces, por tanto, sin embargo, "
+            f"dado que, en consecuencia, luego, así que, por eso, no sólo...sino, "
+            f"y así, en un principio, de otro lado, por ello, debido a, a causa de.\n"
+            f"- NO agregues palabras ni contenido nuevo.\n"
+            f"- NO corrijas errores del texto original.\n"
+            f"- NO completes frases incompletas.\n"
+            f"- Conserva exactamente todas las demás palabras.\n"
+            f"- Si el texto no tiene conectores, devuélvelo sin modificar.\n\n"
+            f"Ejemplo:\n"
+            f"Entrada: \"Luego, la lava se enfrió y se convirtió en piedra.\"\n"
+            f"Salida: \"La lava se enfrió y se convirtió en piedra.\"\n\n"
+            f"Ejemplo:\n"
+            f"Entrada: \"Juan llegó tarde porque perdió el bus.\"\n"
+            f"Salida: \"Juan llegó tarde. Perdió el bus.\"\n\n"
+            f"Ejemplo:\n"
+            f"Entrada: \"Se puede inferir que\"\n"
+            f"Salida: \"Se puede inferir que\"\n\n"
+            f"Ahora aplica la tarea al siguiente texto y devuelve ÚNICAMENTE el resultado:\n"
+            f"{text}"
+        )
+        return chat(prompt)

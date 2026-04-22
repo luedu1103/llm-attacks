@@ -19,15 +19,9 @@ INTENSITY_LEVELS = {
 
 DEFAULT_INTENSITY = INTENSITY_LEVELS["medium"]
 
-# --- Model settings ---
-AVAILABLE_MODELS = [
-    "gpt-4o",
-    "gpt-4o-mini",
-    "claude-sonnet-4-6",
-    "claude-haiku-4-5-20251001",
-]
-
-DEFAULT_MODEL = "gpt-4o-mini"
+# --- Ollama settings ---
+OLLAMA_BASE_URL = "http://localhost:11434/v1"
+OLLAMA_MODEL = "qwen2.5" # deepseek-r1
 
 # --- Evaluation settings ---
 SEMANTIC_SIMILARITY_THRESHOLD = 0.85
