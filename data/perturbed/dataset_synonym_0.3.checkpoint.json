@@ -5736,5 +5736,1964 @@
     ],
     "answer": 1,
     "rationale": "En el texto , el tema está referido a las neuronas y sus elementos. En la oración II, se define que las neuronas son células que forman el sistema nervioso. La oración IV, señala cómo está formada cada neurona . En la oración I, se retorna la información del IV donde se habla de los dendritas y el axón , pues se señala que las primeras salen del cuerpo celular. En la oración III, nos habla del axón , el cual se origina en el cuerpo celular y que termina en el punto de encuentro con los dendritas de otras células. En la oración V, se da cuenta de ese punto de encuentro, llamado sinapsis. Así , resulta un texto cohesivo entre sus elementos siguiendo el orden: II , IV , I , III , V ."
+  },
+  {
+    "id": 410,
+    "task": "sentence_ordering",
+    "question": "I) La función primordial de los almacen de viento era la molienda del grano y la fabricacion de harina. II) La energía eólica es aquella que se obtiene a partir del aire. TRES) Luego se empleó para activar bombas habiles de elevar el agua subterranea. IV) Durante siglos , este se utilizó para mover las aspas de los molinos de viento. V) En la presente , se usa para la generación de energía eléctrica.",
+    "options": [
+      "II –IV– V – III – I",
+      "II – IV – I – III–V",
+      "I– III – IV – II– V",
+      "I – IV– II –III –V",
+      "IV – I–II – III –V"
+    ],
+    "answer": 1,
+    "rationale": "II) La energía eólica es aquella que se obtiene a partir del viento. Durante siglos. éste (el viento) se utilizó para mover las aspas de los molinos de viento.I) La función principal de los molinos de viento era la molienda del grano y la producción de harina.III) Luego se empleó para activar bombas capaces de elevar el agua subterránea.V) En la actualidad , se usa para la generación de energía eléctrica. Se advierte que el tema central que desarrolla el párrafo del texto está referido a la energía eólica y su utilización como los molinos de viento o en la activación de bombas para extraer el agua subterránea. En consecuencia el orden que debe presentar los enunciados para que el texto mantenga cohesión adecuada es II–IV–I–III–V"
+  },
+  {
+    "id": 411,
+    "task": "sentence_ordering",
+    "question": "I) En general , los jardines zoológicos divertir ambientes semejantes a los nidos naturales de animales que allí residen. II) En otros , se recrean sistemas determinados y coexisten en ellos las especies propias de esa área. III) El zoológico es un jardín donde se encuentran reunidas numerosas especies bestias con fines formativos y de preservación. IV) La tendencia actual de este tipo de parques es ajustarse para que las diferentes especímenes puedan reproducirse en cautiverio. V) En ciertos zoológicos , los animales se encuentran sueltos , y los turistas recorren el parque en medios de transporte del mismo jardín zoológico.",
+    "options": [
+      "III – I – V – II – IV",
+      "I– III – V – IV – II",
+      "V– II – III – I – IV",
+      "IV – III– I – II – V",
+      "III – I – V – IV – II"
+    ],
+    "answer": 0,
+    "rationale": "III) El zoológico es un parque donde se encuentran reunidas numerosas especies animales con fines educativos y de preservación. I) En general , los jardines zoológicos recrean ambientes semejantes a los hábitats naturales de animales que allí viven V) En algunos zoológicos. los animales se encuentran sueltos, y los visitantes recorren el parque en medios de transporte del mismo zoológico. II) En otro se recrean ecosistemas determinados y conviven con ellos las especie propias de esa área. IV) La tendencia actual de este tipo de parques es adecuarse para que las especies puedan reproducirse en cautiverio. El tema del párrafo hace referencia al zoológico y jardines zoológicos. Para que el párrafo mantenga una cohesión adecuada , se requiere que los enunciados deben mantener la relación III–I–V–II–IV"
+  },
+  {
+    "id": 412,
+    "task": "sentence_ordering",
+    "question": "I) El funcionamiento de estos códigos se basa en convenciones de encoder , que se llaman simbologías. II) Por ejemplar , se utilizan estos codificaciones para conocer velozmente los precios y otras información sobre los artículos adquiridas por el público. III) Mediante líneas y espacios paralelos, se representan los signos que proporcionan datos. IV) Los codificaciones de rayas se generalizaron en la década del 70 y , en la actualizado , son comunes en las operaciones comerciales. V) Los códigos de barras son esquemas que sirven para codificar y comparar información.",
+    "options": [
+      "V –III – I – IV – II",
+      "III – V –IV – I – II",
+      "I – IV – V – III – II",
+      "IV – I – V – III – II",
+      "I – IV – II – III – V"
+    ],
+    "answer": 0,
+    "rationale": "V) Los códigos de barras son esquemas que sirven para codificar y comparar información. III) Mediante líneas y espacios paralelos , se representan los símbolos que proporcionan datos. I) El funcionamiento de estos códigos se basa en convenciones de codificación , que se denominan simbologías. IV) Los códigos de barras se generalizaron en la década del 70 y, en la actualidad , son comunes en las transacciones comerciales. II) Por ejemplo , se utilizan estos códigos para conocer rápidamente los precios y otras informaciones sobre los artículos adquiridos por el público. El tema que desarrolla este párrafo está referido a los códigos de barras. Se hace una descripción de su estructura , funcionamiento y su utilización en la actualidad. El orden que debe seguir los enunciados es V–III–I–IV–II"
+  },
+  {
+    "id": 413,
+    "task": "sentence_ordering",
+    "question": "I) La mineralización es un proceso en el que los osteo de los vertebrados enterrados realiza millones de años quedas rellenos con sustancias minerales.II) Las impresiones son las improntas que van dejando ciertos seres vivos sin que se conserve ninguna sección de sus tecidos. III) Los restos de vida vegetal o animal que se hallan en los capas rocosos antiguos se denominan fósiles. IV) La carbonización es otro proceso de fosilización , que se constata , sobre cualquiercosa , en las verdes. V) Estos restos de vida podrán alcanzar el condición fósil graciasa la petrificación , la carbonización y las opiniones.",
+    "options": [
+      "III – IV – V –II– II",
+      "III – V – I – IV – II",
+      "III – I – V –II – IV",
+      "III – II – V – I – IV",
+      "III – V –II –IV – I"
+    ],
+    "answer": 1,
+    "rationale": "III) Los restos de vida vegetal o animal que se hallan en los estratos geológicos antiguos se denominan fósiles. V) Estos restos de vida pueden alcanzar el estado fósil mediante la petrificación , la carbonización y las impresiones. I) La petrificación es un proceso en el que los huesos de los vertebrados enterrados hace millones de años quedan rellenos con sustancias minerales. IV) La carbonización es otro proceso de fosilización , que se registra , sobre todo , en las plantas. II) Las impresiones son los improntas que van dejando ciertos seres vivos sin que se conserve ninguna parte de sus tejidos. El tema que se desarrolla en este texto es acerca de los restos fósiles que se constituyen mediante la petrificación , la carbonización y las impresiones. En consecuencia , el orden adecuado que debe presentar sus enunciados es III–V–I–IV–II."
+  },
+  {
+    "id": 414,
+    "task": "sentence_ordering",
+    "question": "ZOLÁ , EL AUTOR DEL PUEBLO I) También fotografiaba las calles de El paris. II) Antes de escribir, Zolá investigaba como un sociólogo o un periodista, tomaba notas en medio de los mineros, banqueros, campesinos, etc. III) Ya que esos fundamentos, en 1871, comenzó a dar a conocer el ciclo Los Rúgon-Macquart, historia natural y social de una parentesco . IV) Émile Zóla (1840 –mil-novecientos dos), maestro de la escuela naturaleza, concibió la novela como una experiencia de estudio.",
+    "options": [
+      "IV , I , II , III",
+      "IV , III , II , I",
+      "II , I , III , IV",
+      "III , IV , I , II",
+      "II , III , IV , I"
+    ],
+    "answer": 1,
+    "rationale": "El esquema lógico sobre ZOLÁ, EL ESCRITOR DEL PUEBLO debe seguir un orden de jerarquía como sigue: IV) Émile Zolá (1840–1902), maestro de la escuela naturalista, concibió la novela como una experiencia de laboratorio. III) Según esos principios, en 1871, comenzó a publicar el ciclo Los Rougon-Macquart, historia natural y social de una familia. II) Antes de escribir, Zolá investigaba como un sociólogo o un periodista, tomaba notas entre los mineros, financistas, campesinos. etc. I) También fotografiaba las calles de París. Por lo tanto, la secuencia correcta: IV , III , II , I"
+  },
+  {
+    "id": 415,
+    "task": "sentence_ordering",
+    "question": "ORIGEN DE LA VIDA SOBRE LA SUELO I) La más importante de esas condiciones es la existencia de agua en forma acuosa. II) Y eso por dos razones: la distancia de la Tierra al Sol y la masa de nuestro planeta son adequadas para permitirle retener una atmósfera y generar un efecto invernadero. III) En todo el Estructura Solar, según nuestros conocimientos, sólo el planeta Suelo está compuesto por agua . IV) La vida, tal como la sabemos, sólo es posible bajo ciertas condiciones. V) La Suelo obtiene, así, una temperatura promedio de alrededor de trece grados centígrados que resulta en concordancia con la presencia de agua en forma acuosa.",
+    "options": [
+      "V , II , III , I , IV",
+      "V , III , I , IV , II",
+      "IV , III , I , IV , II",
+      "IV , I , III , II , V",
+      "I , IV , III , II , V"
+    ],
+    "answer": 3,
+    "rationale": "El esquema lógico sobre el ORIGEN DE LA VIDA SOBRE LA TIERRA debe seguir un criterio de generalidad y causalidad, el orden es como sigue: IV) La vida, tal como la conocemos, sólo es posible bajo ciertas condiciones. I) La más importante de esas condiciones es la existencia de agua en forma líquida. III) En todo el Sistema Solar, según nuestros conocimientos, sólo el planeta Tierra está compuesto por agua . II) Y eso por dos razones : la distancia de la Tierra al Sol y la masa de nuestro planeta son suficientes para permitirle retener una atmósfera y crear un efecto invernadero. V) La Tierra obtiene, así , una temperatura promedio de alrededor de trece grados centígrados que resulta compatible con la presencia de agua en forma líquida. Por lo tanto, la secuencia correcta: IV , I , III , II , V"
+  },
+  {
+    "id": 416,
+    "task": "sentence_ordering",
+    "question": "EL MITO DE PERSEO I) Perseo partió, de inmediato, y, con la ayuda de los dioses, consiguió cortarle la cabeza a Serpiente. II) Cuando el terrible Acrisio descubrió que su hija había tenido un hijo, la persiguió y la encerró con el niño en un guardarnillos de maderas que arrojó al mar. III) Un día, el joven, que asistía a un festín con el tirano de la isla, Polidectes, fue obligado por este último a transportar a cabo una difícil empresa: tenía que traer al soberano la cabeza de una de las carmíneas, si no quería poner en riesgo a su madrugar. IV) Perseo era hijo de Danae y de Júpiter, que había fecundado a la muchacha bajando hasta ella en aspecto de lluvia de plata. V) Los dos desdichados fueron colectados por el pesquero Dictis, quien crió a Perseo como si hornyón su hijo.",
+    "options": [
+      "III , I , II , IV , V",
+      "III , IV , V , I , II",
+      "IV , III , II , I , V",
+      "IV , II , V , III , I",
+      "II , V , I , IV , III"
+    ],
+    "answer": 3,
+    "rationale": "El esquema lógico sobre EL MITO DE PERSEO debe seguir un criterio de temporalidad y causalidad, el orden es como sigue: IV) Perseo era hijo de Dánae y de Zeus, que había fecundado a la muchacha descendiendo hasta ella en forma de lluvia de oro. II) Cuando el terrible Acrisio descubrió que su hija había tenido un hijo, la persiguió y la encerró con el niño en un cajón de madera que echó al mar. V) Los dos desdichados fueron recogidos por el pescador Dictis, quien crió a Perseo como si fuera su hijo . III) Un día, el joven, que asistía a un banquete con el tirano de la isla, Polictetes, fue obligado por este último a llevar a cabo una difícil empresa: tenía que traer al soberano la cabeza de una de las gorgonas, si no quería poner en peligro a su madre. I) Perseo partió, de inmediato, y, con la ayuda de los dioses, logró cortarle la cabeza a Medusa. Por lo tanto, la secuencia correcta: IV , II , V , III , I"
+  },
+  {
+    "id": 417,
+    "task": "sentence_ordering",
+    "question": "LA FISIÓN NUCLEAR I) Como consecuencia de esa división y choque entre declaraciones elementos , se inicia una reacción en cadena. II) En este trámite , se libera energía que puede utilizarse , por ejercicio , en modo de caldor en una central nuclear. III)La fisión nuclear es un trámite consistente en escindir un núcleo de uranio en dos partes iguales bombardeándolo con un neutro. IV) Alegría resistencia se genera en las barras de fuel que tienen_costumbre ser de óxido de uranio. V) Al igual tiempo , se desprenden neutrones que señalan con nuevos núcleos de uranio.",
+    "options": [
+      "III –II – I– V – IV",
+      "III– II – IV–I – V",
+      "III –V – II – IV – I",
+      "III– IV – V –I –II",
+      "III – II–V – I – IV"
+    ],
+    "answer": 4,
+    "rationale": "Antes de leer el orden que mantiene los enunciados , se recomienda observar el orden establecido en la prueba. Ello permitirá comparar y advertir el grado de coherencia entre los enunciados de este ejercicio. En consecuencia veamos ahora el orden de la respuesta: III) La fisión nuclear es un proceso consistente en escindir un núcleo de uranio en dos partes iguales bombardeándolo con un neutrón. II) En este proceso , se libera energía que puede utilizarse , por ejemplo , en forma de calor en una central nuclear. V) Al mismo tiempo, se desprenden neutrones que chocan con nuevos núcleos de uranio. I) Como consecuencia de esa separación y choque entre dichos elementos , se inicia una reacción en cadena. IV) Dicha reacción se produce en las barras de combustible que suelen ser de óxido de uranio. Como se advierte, el párrafo forma una unidad global y, ello, gracias a que las partes subrayadas forman una unidad semántica que le da sentido a todo el texto."
+  },
+  {
+    "id": 418,
+    "task": "sentence_ordering",
+    "question": "Elija el orden preciso que deben continuar los declaraciones para que el texto que coherente y unido. I. Luis Dejen erigió el circo Napoleón, actualizadas circo de Invierno, en 1852.  II. Actualmente, la mayor parte de los circos son sociedades o motivos sociales.  III. El veneciano Antonio Franco y sus hijos se hicieron puesto posteriormente de la Rebelión Francesa. IV. El creador del circo fue el inglés Philip Astley quién abrió un en París en mil=setecientos ochenta y tres. V. Han desarrollado un nuevo circo con colectivos de artistas y empresas de teatro acrobático.",
+    "options": [
+      "II - V - IV - I - III",
+      "IV - I - III - V - II",
+      "IV - III - I - II - V",
+      "II - III - IV - I - V",
+      "III - I - V - II - IV"
+    ],
+    "answer": 2,
+    "rationale": "El texto está estructurado de forma cronológica; por esa razón, se coloca en primer lugar la oración IV, porque menciona quién fue el creador del circo. A continuación, se colocan las oraciones III y I por respetar la secuencia de temporalidad. Finalmente, se añaden las oraciones II y V, ya que señalan algunos datos de los circos en la actualidad."
+  },
+  {
+    "id": 419,
+    "task": "sentence_ordering",
+    "question": "LAS AVISPAS I) Al ser creatura de víctima , las avispas se alimentan de otros insectos , sobrante todo , de moscas. II) Las hormigas_vetustaria , sin embargo , se diferencian de las meliponarios en su estructura físico y sus hábitos. III) Las avispas , partiendo_de posteriormente , también tienen pasión por jugos dulces y las frutas. IV)Las avispas son insectos himenópteros coma las meliponarios. V) Las avispas no son recolectaras de polen, sino un creatura de presa.",
+    "options": [
+      "V , IV , II , I , III",
+      "II , IV , V ,I , III",
+      "I ,IV , II ,V , III",
+      "III ,IV ,II , V , I",
+      "IV , II , V , I , III"
+    ],
+    "answer": 4,
+    "rationale": "El esquema lógico sobre Las avispas debe seguir un orden de generalidad como sigue: IV) Las avispas son insectos himenópteros coma las abejas. II) Las avispas , sin embargo , se diferencian de las abejas en su estructura corporal y sus hábitos. V) Las avispas no son recolectaras de polen, sino un animal de presa. I) Al ser animal de presa , las avispas se alimentan de otros insectos , sobre todo , de moscas. III) Las avispas , desde luego , también tienen afición por jugos dulces y las frutas. Por lo tanto , la secuencia correcta : IV , II , V , I , III"
+  },
+  {
+    "id": 420,
+    "task": "sentence_elimination",
+    "question": "Marcar la frase redundante con respecto al sentido consistente de las otras.",
+    "options": [
+      "el dron es una aeronave que vuela sin tripulación.",
+      "El manejo se hace a distancia o de forma remota",
+      "La elevación del dron siempre es un movimiento acelerado.",
+      "Fueron creados para desarrollar muchas tareas",
+      "Proporcionan imágenes y videos de eventos desde el espacio"
+    ],
+    "answer": 2,
+    "rationale": "El tema es características del dron por lo que en la alternativa “C” sólo destacan la forma de cómo debe ser elevado (movimiento acelerado) alejándose del tema."
+  },
+  {
+    "id": 421,
+    "task": "sentence_elimination",
+    "question": "Elegir la oración que tiene que eliminarse por ser redundante. I. Así como las vegetales insectívoras, además el mundo bestia tiene recursos para atrapar a su víctima. II. Un” vulgar estómago carnicero” tiene la apariencia de una atractiva flor. III. Así, un cálido áptero (mantis) se parece, por su forma y color, una orquídea roja. IV. El color carmesí vivo del insecto y su abdomen ancho hacen que se aparente al boca de una orquídea. V. La domino para atrapar la presa depende de cada bestia.",
+    "options": [
+      "i",
+      "II",
+      "V",
+      "III",
+      "IV"
+    ],
+    "answer": 2,
+    "rationale": "El texto trata fundamentalmente sobre el recurso mimético que tiene el mundo animal para atrapar a su presa. Así como las plantas insectívoras, una mantis puede parecer una orquídea roja por su color rojo y su abdomen ancho, pudiendo obtener su alimento. Si observamos la quinta oración, la eliminaremos, pues incurre en la redundancia de decir que la caza depende de cada animal."
+  },
+  {
+    "id": 422,
+    "task": "sentence_elimination",
+    "question": "Seleccione la oración que no es pertinente o es superfluo con el contenido global del texto. I. Aprender a interactuar con resto es importante en el desarrollo de la niñez. II. Al comienzo de la vida, las relaciones más importantes de los niños son con sus padres o cuidadores. III. Al atender tres anios, su interacción se expande a hermanas, compañeros de juego y adultos fuera de la familia. IV. Para las madres, es importante que sus hijos interactúen con su entorno. V. Su mundo y crecimiento social se expande cuando forman parte del campo escolar.",
+    "options": [
+      "i",
+      "II",
+      "III",
+      "IV",
+      "V"
+    ],
+    "answer": 3,
+    "rationale": "El texto trata sobre la evolución de la interacción social del niño. En la I, desarrollo; II, padres; III, hermanos/compañeros, y la V, escuela. En cambio, en la IV se centra en las madres, lo que sería impertinente con el eje del texto."
+  },
+  {
+    "id": 423,
+    "task": "sentence_elimination",
+    "question": "Marcar la oración que pueda eliminarse sin influir el sentido del escrito. (1) Puestos a reflexionar del ingerencia de pescado, los especialistas no se ponen de acuerdo y no saben cuál destacar primer. (2) Hay quienes disfrutan de la suavidad y buen gusto de la carne del pescado, mientras que otros subrayan su carácter altamente sustancioso, saludable y bajo en colesterol, a diferencia de horny y de res. (3) La mortalidad de pescado es conocida por contener gran máxima de aminoácidos y grasas saludables para el corazón. (4) El pescado, por su ubicación en la escala zoologica es un animal que no compite con el ser humano. (5) Ultimamente, diversas costumbres gastronómicas consideran al pez un delicatessen insustituible.",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "answer": 3,
+    "rationale": "En este ejercicio se aplica el criterio de disociación por lo cual determinando el tema “Lo beneficioso de la carne de pescado”, excluimos el cuarto numeral pues en él nos habla de la escala zoológica entre el pez y el hombre lo cual dista del tema ya planteado."
+  },
+  {
+    "id": 424,
+    "task": "sentence_elimination",
+    "question": "Elija la frase que es impertinente o redundante con el contenido 全世界 del texto. I. La memoria es la habilidad de impresión y retención de experiencias vividas con anterioridad. II. Uno de los múltiples de recuerdo es la sensorial, la qué se liga con los registros proporcionados por los sentidos. TRI. La memoria motriz inscribe la secuencia de una acción mecánica, como dirigir una bicicleta después de tiempo. IV. La memoria de contenido se refiere a la entendimiento o reflexión de ciertos acontecimientos, por ejemplo, recordar los escritos leídos. V. Sola clase de memoria es la afectiva, la qué se relaciona con los sentimientos y emociones.",
+    "options": [
+      "i",
+      "II",
+      "III",
+      "IV",
+      "V"
+    ],
+    "answer": 0,
+    "rationale": "En la mayoría de las proposiciones presentadas el tema es el tipo de memoria, mientras que la primera proposición presenta una idea muy general y no específica como las demás, lo que significa que se aleja del eje temático. Por esta razón, se elimina la primera oración."
+  },
+  {
+    "id": 425,
+    "task": "sentence_elimination",
+    "question": "(1) Existen varios evidencias del uso del guano como abono campesina en el Perú antiguo. (2) En algunas áreas rurales aún se utilizan abonos naturales como adubos. (3) Fue Alexander De Humboldt quien a inicios del siglo XIX nombró la atención de los europeos sobre las singulares virtudes del guano. (4) Estas virtudes lo realizan el mejor fertilizante natural del planeta. (5) Este recurso no se convirtió en ricchezas efectiva, sino hasta medio del siglo XIX.",
+    "options": [
+      "2",
+      "5",
+      "1",
+      "4",
+      "3"
+    ],
+    "answer": 0,
+    "rationale": "El texto trata sobre el uso del guano en el Perú en etapas. La primera nos habla del uso en la época precolombina. La tercera nos presenta al personaje Humboldt que lo dio a conocer, siendo la cuarta oración su complemento. La quinta oración nos presenta al tema del guano como riqueza efectiva. Se elimina la segunda oración por disociación."
+  },
+  {
+    "id": 426,
+    "task": "sentence_elimination",
+    "question": "Elegir la oración que no es relevante o redundante con el contenido global del texto. I. La diabética sacarina es una afección a menudo hereditaria. II. Esta diabetes podría manifestarse hasta la infancia. TERCERO. Se caracteriza por una alteración del metabolismo de los carbohidratos. IV. El tratamiento de la diabetes sacarina tiene en cuenta la medición de la hemoglobina glucosilada. V. La diabetes bronceada, la diabética insípida y la diabetes renal son enfermedades diferentes.",
+    "options": [
+      "i",
+      "II",
+      "III",
+      "IV",
+      "V"
+    ],
+    "answer": 4,
+    "rationale": "El eje temático del párrafo gira en torno a la diabetes sacarina, y presenta como subtemas a su origen, el rasgo principal que la caracteriza y su tratamiento. Por lo tanto, la oración que debe ser suprimida es la V, puesto que, aborda otro eje temático."
+  },
+  {
+    "id": 427,
+    "task": "sentence_elimination",
+    "question": "Especifique la frase que debe ser eliminada. I) Esta espada es filosa y flexible. II) Es la más cara del mercado. III) Tiene una empuñadura con incrustaciones de piedra. IV) Su estuche lleva motivos cristianos. V) Geralt de Rivia utiliza una espada imponente.",
+    "options": [
+      "ii",
+      "IV",
+      "V",
+      "III",
+      "I"
+    ],
+    "answer": 0,
+    "rationale": "La oración que debe ser eliminada es la II. El tema central del ejercicio es “las características imponentes de la espada de Geralt de Rivia”. Por tal razón, la oración II se elimina por disociación, ya que aborda un tema distinto o ajeno, esto es el valor económico de la espada de Geralt de Rivia."
+  },
+  {
+    "id": 428,
+    "task": "sentence_elimination",
+    "question": "(1) Cualquier cosa autor tiene derecho a que seamos en su obra lo que en ella ha amado colocar. (2) Al entender la obra, se disfruta plenamente. (3) Después que hemos encontrado su voluntad e intención, no será lícito aplaudirla o reclamarla. (4) No es lícito censurar a un autor porque no abriga las mismas intenciones estéticas que nosotros. (5) Previo de juzgar, tenemos que entender debidamente.",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "answer": 4,
+    "rationale": "Consiste en eliminar la oración que no se relacione con las demás, ni con el tema o puede repetir información (redundancia). El texto desarrolla el tema de que todo escritor tiene derecho de expresar y el lector tiene, después de leer, derecho a juzgar. Analizando la ideas presentadas, podemos advertir que la oración 5 puede estar incluida en la 4, motivo por el cual se elimina la 5."
+  },
+  {
+    "id": 429,
+    "task": "sentence_elimination",
+    "question": "(1) El descubrimiento del mar del sur u Océano pacifico se da en el siglo XVI.(2) Balboa es informado de un gran mar del oeste de Darién. (3)pasa el istmo y descubre el Océano Pacifico, el 25 de setiembre de 1513.(4) Por planificaciones políticas la ciudad liderada por Balboa se alboroto.(5) El monarca envía como nuevo gobernador a Pedro Arias Dávila, quien manda decapitar a Balboa.",
+    "options": [
+      "4",
+      "2",
+      "3",
+      "1",
+      "5"
+    ],
+    "answer": 3,
+    "rationale": "El texto nos informa sobre el descubrimiento del Océano Pacífico por Balboa; pero por conspiraciones políticas la ciudad dirigida por él se vio alborotada, y el Rey, al mandar como nuevo gobernador a Pedro Arias Dávila, propicia la ejecución de Balboa. Eliminamos, pues la primera oración, debido a que, si bien se refiere al siglo del descubrimiento, no se enmarca en la secuencia temporal del resto de ideas que van desde los primeros indicios del hallazgo hasta la muerte de Balboa. Es, pues, una mera redundancia."
+  },
+  {
+    "id": 430,
+    "task": "sentence_elimination",
+    "question": "Indique la frase que debe ser eliminada. I) La identidad es un aspecto de la cultura. II) La cultura nos permite a las prácticas y costumbres de un grupo. III) La literatura peruana ha abordado los problemas culturales de la nación. IV) Antonio Cornejo Polar maintiene que la civilización es heterogénea V) Arguedas, Scorza y Colchado confluyen en una visión heterogénea de la civilización en la escritura.",
+    "options": [
+      "iii",
+      "I",
+      "IV",
+      "II",
+      "V"
+    ],
+    "answer": 3,
+    "rationale": "La oración que debe ser eliminada es la II. El tema central del ejercicio es la perspectiva de la literatura respecto de los problemas culturales de la nación. Por tal razón, la oración II se elimina por disociación, pues aborda un tema distinto o ajeno, esto es, la definición de cultura."
+  },
+  {
+    "id": 431,
+    "task": "sentence_elimination",
+    "question": "LOS PECES PLANOS 1. los peces planos habitan en las depths del lecho acuático. 2. Estos pescados cambian de color para semejarse a su entorno; así evitan que los peces depredadores lo observen. 3. Al crecer, sus ojos se desplazan hacia un lado de su cuerpo, el cuál se hace llano. 4. un pez plano se surgir a cualquier otro pez al nacimiento. 5. Los peces planos se cambian para prevenir ser devorados.",
+    "options": [
+      "3",
+      "2",
+      "4",
+      "5",
+      "1"
+    ],
+    "answer": 3,
+    "rationale": "La eliminación es por redundancia, pues notamos con claridad que el numeral cinco repite en otros términos la idea planteada en el numeral dos."
+  },
+  {
+    "id": 432,
+    "task": "sentence_elimination",
+    "question": "(1) Betty y Víctor viven al día de pequeñitas estafas (2) él tiene 60 años, justo el doble de ella, y es tan astuto que sus fábulas e historias dan la impresión reales.(3) es un hábil estafador y engañoso.(4) transitan Francia y países vecinas acudiendo a reuniones y congresos temáticos.(5)allí , Betty se encarga de saquear a los ricos profesionales.",
+    "options": [
+      "4",
+      "5",
+      "1",
+      "2",
+      "3"
+    ],
+    "answer": 4,
+    "rationale": "El texto trata principalmente sobre cómo una pareja se vale de las estafas para vivir. La pareja trabaja unida y recorren países, como Francia, simulando ser partícipes reales de reuniones y congresos para poder desvalijar allí a los adinerados profesionales. Pero la oración que resulta impertinente por incurrir en la redundancia es la tercera: allí se reitera las cualidades de Víctor, lo que ya resulta evidente en la segunda información."
+  },
+  {
+    "id": 433,
+    "task": "sentence_elimination",
+    "question": "(1) El estudio de las frutas, como el guayabo, es impresionante, dada la variedad de su ser. (2)El guayabo , llamado también shahuinto, es un arbre que alcanza más de quinto medidas.(3)Sus frutos son bayas de regular altura, cuya parte comestible es dulce. (4)El estudio de esta fruta es maravilloso, ya que conocemos en el grande cantidad de azucares que nuestro organismo requiere. (5)Su coloración cambia según las especímenes, pudiendo ser crema, naranja, rosada o morada.",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "answer": 0,
+    "rationale": "El texto trata sobre las características principales del guayabo. Se describe de manera general que el guayabo es un árbol de cinco metros y que origina frutos como bayas. Dichas frutas se destacan por la gran cantidad de azúcares que posee y que brinda al consumidor. Se menciona, finalmente, la variedad de especies que tiene dicho fruto, información que se repite en la oración I. Se elimina dicha oración al poseer menor información que la última"
+  },
+  {
+    "id": 434,
+    "task": "sentence_elimination",
+    "question": "(1) En la economía esclavo, cada uno pertenece con toda su capacidad al señor (2) Toda su producción va al señor y este puede ( pero no debe) restituirle una parte del mercancía. (3)El amo, cuando le resulte conveniente puede abandonar al esclavo, revenderlo o utilizarlo como comida de los peces (4) En el período feudal, el esclavo es más libreto, el producto de su trabajo en su totalidad ya no pertenece al señora. (5) La dependencia del servidorme para con su amo, le asegura a éste la “lealtad” de aquel.",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "answer": 2,
+    "rationale": "En este ejercicio hay clara contradicción puesto que el tema radica en la sumisión del siervo para con su amo incluso de tener que dar de lo suyo al ·señor”, en cambio en el cuarto numeral se habla de ciertas libertades que tenía en el feudalismo, los siervos."
+  },
+  {
+    "id": 435,
+    "task": "sentence_elimination",
+    "question": "EL HONOR 1. Es un concepto de la conciencia moral y sección de la morales que abarca los aspectos de la toma de conciencia por el individuo de su significado social y de su reconocimiento por parte de la sociedad. 2. Por su material y por la naturaleza de la relación moral que refleja, el concepto de honor es similar al de dignidad. 3. El honor es un valor mora que está vinculado fuertemente con la consciencia del ser mismo y el valor que la sociedad le asigne 4. El honor es una forma de manifestación del persona hacia si igual y de la sociedad hacia él. 5. El honor, lo mismo que la dignidad, regula de modo correspondiente, La comportamiento del hombre y la postura hacia el igual, que preservas los que le rodean.",
+    "options": [
+      "4",
+      "1",
+      "3",
+      "2",
+      "5"
+    ],
+    "answer": 2,
+    "rationale": "La eliminación es por redundancia, pues notamos con claridad que el tercer numeral repite en otros términos la idea planteada en el numeral uno."
+  },
+  {
+    "id": 436,
+    "task": "sentence_elimination",
+    "question": "(1) Su luna de miel fue un largo escalofrío. (2) Blonde, angélica y shy, el carácter cruel de su marido heló sus ensoñadas niñerías de novia. (3) Durante tres months – se había casado en abril- , vivieron una happiness especial. (4) En ese extraño nido de amor, Alice habría deseado menos severidad y más expansiva e incauta ternura, pero el impassive semblante de su marido la decepcionaba (5) Alicia fue extinguiéndose en su delirio de ser amada.",
+    "options": [
+      "5",
+      "2",
+      "4",
+      "1",
+      "3"
+    ],
+    "answer": 4,
+    "rationale": "En este ejercicio nos habla de la impotencia que siente la personaje ante la indiferencia ante la indiferencia del esposo, haciendo notar su frustración. El numeral 3, se aparte del tema pues contradice al referirse a “los meces de felicidad” que pasó la pareja."
+  },
+  {
+    "id": 437,
+    "task": "sentence_elimination",
+    "question": "(1) La televisión es un medio de comunicación que sirve para orientar, educar y entretener. (2) El intermedio televisivo ha tenido un papel principal en la opción de varios presidentes en el mundo . (3) Es como una paseo pública que invita a los candidatos para presentar sus respuestas.(4) Los candidatos desean la oportunidad de aparecer en la tv para obtener simpatías y votaciones.(5) La televisión es un medio certero y relativamente económico para propagar pensamientos políticas.",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "answer": 0,
+    "rationale": "El tema es la televisión como uno de los medios de comunicación determinante para los fines políticos, quedando apartada del tema el numeral 1, pues esta de lo que nos habla es de los medios de comunicación como vía para educar y entretener."
+  },
+  {
+    "id": 438,
+    "task": "sentence_elimination",
+    "question": "(1) Todos los verdaderos filósofos deben tener los ojos bueno abiertos. (2) Aunque no hayamos observado nunca una coneja blanca, no debemos dudar de que existe. (3) Y puede que, un escéptico como yo, posea que conceder un fenómeno en el cual no ha creído antes. (4) Si no hubiera dejado libre esta opción, habría estado un dogmático. (5) Y lógicamente hubiera sido un filósofo auténtico.",
+    "options": [
+      "3",
+      "5",
+      "1",
+      "4",
+      "2"
+    ],
+    "answer": 1,
+    "rationale": "El título del texto sería: La verdadera naturaleza de un filósofo. Esta verdadera naturaleza, según el texto, consiste en tener siempre la mentalidad abierta a todo conocimiento, estar dispuesto a aceptar conocimientos que antes creíamos improbables. Pero la oración V nos da a entender, desvirtuando la oración anterior, que un verdadero filósofo sería un dogmático, es decir una persona intransigente, que cree que existen verdades incuestionables, argumento que contradice la idea central."
+  },
+  {
+    "id": 439,
+    "task": "sentence_elimination",
+    "question": "(1) El Himalaya es una cuenca del montículo interior (2) Sus extremos están señalados por los valles del Amerindio y del Brahmапutra . (3) La cordillera de los Andes no posee la cantidad de picos que tiene el Himalaya. (4) Se compone balanceadamente de varias cadenas de montañas. (5) Sirve de límite natural a la región tibetana.",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "answer": 2,
+    "rationale": "El tema es el Himalaya mostrándonos principalmente sus características. El ítem que se aparta del tema es aquel que nos habla de la cordillera de los andes, quedando apartado por consiguiente el tercer numeral."
+  },
+  {
+    "id": 440,
+    "task": "sentence_elimination",
+    "question": "Señale que oración del enunciado es eliminable ya que patentiza una inclusión claro. . LA NORMA LINGÜISTICO 1. Las reglas lengua es entendida como el grupo de carácter fonológicos, léxicos, sintácticos y discursivos requeridos para utilizar de manera correcta una idioma. 2. Un buena conocedor de la lengua debe tener un gran abanico de registros y conocimientos cuál de ellos es el más adecuado en función de la situación comunicativa. 3. No noetheless, la norma cambia con la propia idioma y debe abrirse a alas distintos niveles y archivos. 4. Se saldría de la norma tanto; el que una ley formularse con un registro coloquial, como el que en una conversación familiar recurriese a un lenguaje protocolo. 5. Las normas lengua también están propensas al cambio o evolución.",
+    "options": [
+      "3",
+      "5",
+      "4",
+      "1",
+      "2"
+    ],
+    "answer": 4,
+    "rationale": "Como lo explica claramente el título el tema es la norma lingüística por lo que los ítems 1, 3, 4, y 5 se relacionan con el tema, quedando apartado el número 2 que nos habla de un buen conocedor."
+  },
+  {
+    "id": 441,
+    "task": "sentence_elimination",
+    "question": "¿Cuál es la frase que debe eliminarse sin afectar el sentido del texto formado por las restantes? (I) El persona de convicción dice aquello que piensa. (II) El hombre de convicción hace eso que cree, sin detenerse a medir las consecuencias. (III) Pues, para él, la verdad y la verdad deben prevaler siempre. (IV) Por ello, no considera los resultados. (V) La autenticidad y la verdad están por sobre de consideraciones de actualidad o circunstancias.",
+    "options": [
+      "ii",
+      "III",
+      "IV",
+      "V",
+      "I"
+    ],
+    "answer": 3,
+    "rationale": "El numeral V, está incluido en el III, pues prevalecer significa estar por encima de cualquier consideración. Por lo tanto por redundancia eliminamos V."
+  },
+  {
+    "id": 442,
+    "task": "sentence_elimination",
+    "question": "Señale cuál frase del discurso es eliminable por repetición.  (1) Alguna ciencias de pensamiento mental postulan que la mente humana tiene en común sensaciones y sentimientos. (2) La única diferencia entre dos hombres_y_mujeres es el momento en el que se muestran dichos sentimientos, provocando emociones que motivan a actuar. (3) que una persona no sienta igual que otra en un momento dado, es por razones formativas, propension genética, y condicionantes endocrinos que inducirán a encauzar los incentivos de una manera u otra. (4) Por ello, infieren que la comprender se da en un individuo que es aptos de razonar acerca de otras personas de forma que no tienda a rationalizar sus propios anhelos. (5) Para que una persona tenga comprender es, pues, necesario que la individuo se conozca y se entienda primero y a sí misma. El enunciado que se excluye es:",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "answer": 4,
+    "rationale": "En el texto no se habla de cómo las personas pueden adquirir la empatía, sino que nos habla de las corrientes de pensamiento sicológico."
+  },
+  {
+    "id": 443,
+    "task": "sentence_elimination",
+    "question": "(1) el asentamiento de Chavín está ubicado entre Mosna y Huacha. (2) Al oriente de la cuenca Blanca, en total región Quechua. (3) El dominio chavinense cubrió las tierras interandinas y la costa de sus literales. (4) Surgió Chavín de pueblos agrícolas en la costa central. (5) Alcanzó los actuales departamentos se Ica y Ayacucho por el sur; y Margos por el noroeste.",
+    "options": [
+      "3",
+      "4",
+      "2",
+      "1",
+      "5"
+    ],
+    "answer": 1,
+    "rationale": "Las ideas vertidas apuntan a ilustrarnos acerca de la situación geográfica asentamiento de Chavín. Entonces, es correcto referir que se sitúa entre Mosna y Huachecsa, al oriente de la cordillera Blanca, abarcando tierras interandinas como Ayacucho y la costa con sus litorales, como Tumbes. Pero la cuarta oración se disocia del tema abordado al plantear sobre el surgimiento de Chavín."
+  },
+  {
+    "id": 444,
+    "task": "sentence_elimination",
+    "question": "(1) Las posturas del padre y de la madre hacia el niño corresponden a las propias necesidades de este. (2) El hijo, a medida que cresce tiene necesidades que cumplir. (3) El bebé necesita el amor desinteresado y el cuidado de la madre, tanto fisiológica como psíquicamente. (4) después de los seis años el niño empieza a requerir el amor de su padre, su autoridad y su guía. (5) La acción de La mujer es darle seguridad en la existencia; la del padre, enseñarle, guiarlo en la solución de los problemas que le plantea la sociedad.",
+    "options": [
+      "1",
+      "5",
+      "2",
+      "3",
+      "4"
+    ],
+    "answer": 2,
+    "rationale": "Un título adecuado al texto sería: Responsabilidad del padre y la madre para con su hijo. El texto plantea la necesidad de fortalecer los vínculos entre padre e hijo, ya que éste último requiere una serie de cuidados afectivos y psicológicos, además de plantearle una guía en la sociedad que lo rodea. La oración II repite una idea establecida a lo largo de todo el texto, de ahí que sea innecesaria su inclusión."
+  },
+  {
+    "id": 445,
+    "task": "sentence_elimination",
+    "question": "(1) El primero paso en la autoconstrucción consiste en comprender que nuestra naturaleza está soltera del cuerpo. (2) “No es de este corporal, sino un alma espiritual”, es una comprensión esencial para aquel quisiera trascender la muerte y ingresar en el mundo espiritual que está más allá. (3) Aunque no nosotros de este cuerpo ni conciencia pura, de una u otra manera hemos quedado encerrado dentro del traje corporal. (4) Si realmente queremos la alegría e independencia que trasciendan a la muerte, debemos establecernos como conciencia y permanecer ahí. (5) Resulta absurdo proponer la felicidad para los momentos seniles si pueda ser disfrutada en los años mozos.",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "answer": 4,
+    "rationale": "El tema del texto es el alma espiritual como base de la autorrealización. En el ejercicio se explica que, para trascender la muerte, debemos tomar conciencia plena de nuestra parte espiritual, y entender que estamos encerrados sólo en un vestido corporal. Haciendo esto, estaremos forjando nuestra autorrealización. La oración V propone una época para el disfrute de la felicidad, pero esto no es parte del tema tratado."
+  },
+  {
+    "id": 446,
+    "task": "sentence_elimination",
+    "question": "(1) Los elcíneos son criaturas de la mytología nórdica y germánica. (2) que inicialmente fueron considerados una raza menos de dioses de la fertilidad. (3) re presentados como varones jóvenes y hembras de gran belleza que residen en selvas, cuevas o originales. (4) se les consideraba como entidades de larga vida o inmortales y con poderes mágicos. (5) Algunos cuentos y leyendas bálticas son muy populares.",
+    "options": [
+      "1",
+      "5",
+      "4",
+      "3",
+      "2"
+    ],
+    "answer": 1,
+    "rationale": "El tema desarrollado es “los Elfos, seres mitológicos”, siendo explicado en las oraciones una, dos tres y cuatro; mientras en la quinta el tema se aparta pues nos habla de la popularidad los cuentos y leyendas bálticas, lo cual no es el tema tratado."
+  },
+  {
+    "id": 447,
+    "task": "sentence_elimination",
+    "question": "(1) Todo escritor tiene derecho a que busquemos en su obra lo que en ella ha querido poner. (2) Al comprender la trabajo se disfruta plenamente. (3) después que han descubierto su deseo e intención nos será legal aplaudirla o denostarla. (4) No es lícito censurar a un escritor porque no abriga las mismas propósitos estéticas que nosotros. (5) Antes de juicio tenemos que entender adecuadamente.",
+    "options": [
+      "1",
+      "3",
+      "4",
+      "2",
+      "5"
+    ],
+    "answer": 3,
+    "rationale": "El título del texto sería: Necesidad de comprender a cabalidad la obra del autor. Se plantea la obligación de leer y comprender una determinada obra para luego poder ejercer una crítica sobre ella. Además, dicha crítica no debe estar influenciada por nuestros puntos de vista. Se exige plena objetividad al realizarla. La oración II nos habla del disfrute al leer una obra, punto totalmente alejado de la idea central"
+  },
+  {
+    "id": 448,
+    "task": "sentence_elimination",
+    "question": "EL OFICIO DE JUGLAR (1) El juglar era un hombre que por dinero y ante el pueblo cantaba, coreografiaba o hacia juegos y farsas. (2) Juglares los había de muchas especies, según su habilidad y su público. (3) Tenían recursos mucho diversos: realizaban pantomimas, bailes, acrobacias y juegos de artísticas. (4) El juglar era a la vez la noticias y el espectáculo. (5) Se seguidos de animales domesticados, tocaban diversos instrumentos y llevaban frecuentemente consigo mujeres para el baile o el canto.",
+    "options": [
+      "2",
+      "1",
+      "4",
+      "3"
+    ],
+    "answer": 3,
+    "rationale": "Consiste en eliminar la oración que no se relacione con las demás, ni con el tema o puede repetir información (redundancia). El texto presenta el tema de los juglares y su oficio. Analizando cada una de las ideas podemos advertir que la oración 3 repite la misma información de la oración 1. Se elimina la 3 porque tiene menos información y carece de identificación del tema."
+  },
+  {
+    "id": 449,
+    "task": "sentence_elimination",
+    "question": "(1) Hacía un año, Hilda había comprado un libro encima antropología. (2) En toda ocasion había llevado a casa unas cartas del tarot. (3) Y otra vez se había presentado con un pequeño libro encima spiritismo. (4) Todas las vezes, su padre le había echado un pequeño homilía utilizando palabras como «sentido critisca». (5) Y «selectividad en la leer» para enriquecer la cultura y el entendimiento. El declaración que se excluye es:",
+    "options": [
+      "5",
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "answer": 2,
+    "rationale": "En el ejercicio propuesto NO existe REDUNDANCIA, sino IMPERTINENCIA ya que el texto hace referencia al gusto de Hilda por la lectura de libros de antropología y esotéricos. Mientras que la oración 2 refiere a que siempre había llevado unas cartas del tarot ."
+  },
+  {
+    "id": 450,
+    "task": "sentence_elimination",
+    "question": "(1) El aprendizaje importante y el aprendizaje significativo y el formación memorístico tienen ciertas análogos y distancias. (2) Ambos son semejantes en tanto que suceden en el contexto escolar y son requeridos para específicos tipos de contenidos declarativos (hechos y conceptos, respectivamente). (3) Los aprendizajes importante y memorístico demostraron similitudes en el ámbito escolar. (4) Ningún embargo, son diferentes por que exigen varyantes esfuerzos cognitivos, diferente implicación afectiva del aprendiz y distinto empleo de los conocimientos previos. (5) Estas tres distancias hacen que el aprendizaje significativo sea mérito.",
+    "options": [
+      "2",
+      "1",
+      "4",
+      "5",
+      "3"
+    ],
+    "answer": 4,
+    "rationale": "Consiste en eliminar la oración que no se relacione con las demás, ni con el tema o puede repetir información (redundancia). El texto desarrolla dos tipos de aprendizaje: el significativo y el memorístico. Analizando cada una de las oraciones, podemos notar que existe una redundancia de ideas, pues la oración 3 puede estar incluida en la oración 1. Se elimina la oración 3 porque tiene menos información."
+  },
+  {
+    "id": 451,
+    "task": "sentence_elimination",
+    "question": "¿Cuál es la oración que debe desaparecerse sin afectar el significado del texto formada por las restantes?(1) ¡Y ahora tenemos la fisiología de los cuerpos espirituales! (2) Pertenezcan al mundo abstracto, pero vienen equipados 同等 que el nuestra. (3) Pero no presentan rinones, corazón. (4) Están dotados, como el nuestro, de órganos corporales. (5) En consecuencia, los espíritus sofrirán de enfermedades.",
+    "options": [
+      "2",
+      "5",
+      "1",
+      "4",
+      "3"
+    ],
+    "answer": 4,
+    "rationale": "El numeral cuatro que habla de órganos corporales incluye al numeral tres que habla de pulmones y corazón. Se elimina la número tres"
+  },
+  {
+    "id": 452,
+    "task": "sentence_elimination",
+    "question": "Señale qué oración del enunciado es eliminable, por no añadir nadie información al contenido del texto, o porque no guarda ninguna relación con este. (1) Al – Andalus es el nombre que indicaba al territorio dominado por musulmanes. (2) Utilizaron esta llamado desde su arribo en el 711 hasta la definitiva derrota de su final centro gobierno en 1942. (3) El apodo parece provenir de los vándalos. (4) Estuvo bajo poder musulmán durante la Años Medio, entre los años 711 y milcuatrocientodeciclo. (5) Los vándalos aparecen ya registrados en el sietecentosveiz. El enunciado que se excluye es:",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "5",
+      "4"
+    ],
+    "answer": 4,
+    "rationale": "EL tema que presenta el ejercicio es sobre el nombre que dan los musulmanes a un territorio y el tiempo que lo tuvieron bajo dominio lo cual está mejor explicado en el numeral dos existiendo redundancia con el cuarto numeral."
+  },
+  {
+    "id": 453,
+    "task": "sentence_elimination",
+    "question": "(1) Las trepanados craneanas eran intervenciones que se hacian en la cabeza. (2) Su finalidad era quitar fragmentos de hueso ocasionado por alguna contusión o enfermedad cerebral. (3) Como producto anestésico se usaba la coca y la chicha. (4) El propósito de las trepanaciones componía en excluir pedazos osteo. (5) Otras teorías afirman que las trepanados se ejecutaban para ahuyentar a los malos espíritus que habitaban en el ser de la individuo.",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "answer": 3,
+    "rationale": "El texto desarrolla el tema de las trepanaciones craneanas. La primera oración presenta al concepto de trepanación craneana; la segunda, a su finalidad de la misma; la tercera, el producto anestésico utilizado en la intervención; y, la quinta, alguna teoría para fundamentar el hecho. Se elimina la cuarta oración porque repite la información dada en la segunda."
+  },
+  {
+    "id": 454,
+    "task": "sentence_elimination",
+    "question": "I) En la lingüística coexisten diversos enfoques teóricos. II) La creatividad lingüística se apoya en la recursividad de la gramática. TRES) A_través_de la self_referencia, un estructura limitado puede producir o generar oraciones en numeral infinito. IV) La creatividad del idioma es el rasgo que lo diferencia de otros sistemas de comunicación. V) La creatividad da paso a la real economía del idioma.",
+    "options": [
+      "ii",
+      "IV",
+      "III",
+      "I",
+      "V"
+    ],
+    "answer": 3,
+    "rationale": "Por el método de discriminación, las cuatro proposiciones últimas (II - III- IV - V), mencionan el tema sobre la creatividad lingüística; no obstante, el primero menciona un tema sobre el enfoque teórico de la lingüística (I), que se disocia con el contexto, ya que no está en discusión los enfoques teóricos, sino la creatividad."
+  },
+  {
+    "id": 455,
+    "task": "sentence_elimination",
+    "question": "I) Como Aristóteles , Teodorico vinculó el arco iris y los occurrencias a él asociados con la llaguna ; a diferencia del estagirita , lo asoció a cada gota de lluvia suspendida en la atmósfera. II) Gracias a sus trabajos empíricos , Teodorico de Friburgo explicó acertadamente o hizo factible la explicación de los occurrencias (vinculados mediante sí) del arco fleco primario , el arco fleco secundario , la banda oscura de Alejandro y los llamados arcos supernumerarios. TERCERO) Luego de construir una globo hueca de cristal , Teodorico la replegó de agua y la empleó como modelo de una gota de llaguna para sus estudios encima el cúpula iris. IV) Muy inclinado a la observación de los fenómenos naturales , Teodorico destacó por estudios sobre el arco iris. V) Teodorico de Flúrida (c.1250-c. 1310) fue un teólogo medieval alemán caracterizado por la abundancia de sus trabajos y la extensión de sus aspectos.",
+    "options": [
+      "iv",
+      "III",
+      "V",
+      "I",
+      "II"
+    ],
+    "answer": 2,
+    "rationale": "En los primeros numerales (I al IV) se menciona sobre los trabajos realizados acerca de la naturaleza del arco iris, estudios realizados por Teodorico de Friburgo; pero la última habla sólo de Teodorico y todas son obras en general, lo que por digresión se constituye en una oración impertinente."
+  },
+  {
+    "id": 456,
+    "task": "sentence_elimination",
+    "question": "LOS PESCADOS PLANOS (1) los pescados planos habitan en las profundidades del lecho acuático. (2) Estos peces cambien de tintura para semejarse a su hábitat; de esta manera evitan que los peces depredadores los vean. (3) Al crecer, sus ojos se desplazan hacia un lado de su cuerpo, el cuál se hace planeso. (4) Un pez planeso se parece a cualquier otro pescado al nacer. (5) Los pescados planos se mimetizan para evitar ser devorados.",
+    "options": [
+      "3",
+      "2",
+      "4",
+      "5",
+      "1"
+    ],
+    "answer": 3,
+    "rationale": "Consiste en eliminar la oración que no se relacione con las demás, ni con el tema o puede repetir información (redundancia). El texto desarrolla el tema de los peces planos, pero existe una oración que redunda; es decir, que repite información. La oración que redunda es la 5 (de dice que se mimetizan (cambiar de color, adoptar alguien o algo la apariencia de los seres u objetos de su entorno.), repite la misma información de la 2."
+  },
+  {
+    "id": 457,
+    "task": "sentence_elimination",
+    "question": "(1) El Queen is Dead (1986), resume perfectamente su sonido y filosofía. R.E.M. (2) Por un lado la voz de Michael Stipe, tiene todo la potencia épica de la de Deuda de U2 (3) y ese agujero profundamente melancólico de Morrisey. (4) Por otro pérdida, Peter Buck, su guitarrista, recoge la costumbre de las guitarras Ricken Patrocinador de 12 cadenas que popularizará Roger McGuinn. (5) Documet (En 1985) significó su paso de grupo minoritaria a grupo de masas. El declaración que se excluye es:",
+    "options": [
+      "1",
+      "5",
+      "4",
+      "3",
+      "2"
+    ],
+    "answer": 1,
+    "rationale": "En el ejercicio propuesto NO existe REDUNDANCIA, sino IMPERTINENCIA ya que el texto hace referencia a la canción The Queen is Dead que fue lanzada como éxito en 1986 y sus similitudes con otros grupos y formas de composición. En cambio la oración 5 habla de la canción Documet que se lanzó el año anterior."
+  },
+  {
+    "id": 458,
+    "task": "sentence_elimination",
+    "question": "¿Cuál es la frase que debe eliminarse afectar el percepción: del texto formado por restantes? (1) El pradera estaba en silencio, (2) Ahora, pasan grandes invertebrados que zumban un instante, (3) Los grillos abren su coro rítmico: los comunes, notas veloz y afanosas; los auténticas en una la amplia y sostenida apuntes sonora. (4) De pronto parpadea a lo lejos una fogata. (5) Y de los límites remotos llega y resuena en everything el valle el formidable y deaf rumor de un tren que transcurre.",
+    "options": [
+      "5",
+      "4",
+      "1",
+      "2",
+      "3"
+    ],
+    "answer": 1,
+    "rationale": "El ejercicio nos habla de los sonidos que uno puede escuchar teniendo que eliminar la cuarta oración pues habla del parpadear de una fogata (sentido de la visión) alejándose definitivamente del tema."
+  },
+  {
+    "id": 459,
+    "task": "sentence_elimination",
+    "question": "(1) La violencia intrafamiliar, como problema social consuetudinario, va en aumento y no es exclusivo de ambientes marginales y desestructurados. (2) Aparece noticias sobre una agresión creciente en el ámbito parental y estas son cada veces más habituales. (3) Los sociólogos intentan explicar las posic平, razones de esta moda de violencia: circunstancia económica parental, el factor educativo, los medios de comunicación y los videojuegos. (4) Hay especialistas, en la material, que consideran que la violencia familiar es una resultado de la crisis de la familia tradicional. Otro aspecto a evaluar es la crisis de valores en el conjunto de la sociedad, una crisis que provoca tensiones y conflictos en el núcleo parental. (5) Como se puede apreciar, no hay un componente que desencadena la violencia familiar, bien que se maneja de un dificultad complejo.",
+    "options": [
+      "3",
+      "4",
+      "1",
+      "2",
+      "5"
+    ],
+    "answer": 3,
+    "rationale": "El texto desarrolla el tema de la violencia intrafamiliar. La primera oración presenta al tema como problema consuetudinario; a partir de allí, se intenta dar explicaciones en la tercera y cuarta oración. La tercera oración presenta el punto de vista de los sociólogos; la cuarta, la opinión de otros expertos. La quinta oración nos presenta una síntesis del tema. La oración que se elimina es la segunda, puesto que nos habla de la aparición de noticias sobre la violencia creciente en el ámbito familiar."
+  },
+  {
+    "id": 460,
+    "task": "sentence_elimination",
+    "question": ": (I) Los canguros son animales sumisos. (II) La sobrevivencia de los canguros recién nacidas ha producido siempre admiración. (III) La hembra no expresa señal externa de su preñez. (IV) La primera indicación de que va a parir ocurre cuando limpias su marsupio. (V) El alumbramiento es un espectáculo por la forma cuál el embrión se arrastra hasta lograr el marsupio de su progenitora.",
+    "options": [
+      "i",
+      "II",
+      "III",
+      "IV",
+      "V"
+    ],
+    "answer": 0,
+    "rationale": "El conjunto oracional se refiere a un aspecto específico de la vida de los canguros. En este contexto , la alternativa A , al señalar que los canguros son mansos, es impertinente con el tema de la preñez y nacimiento de los marsupiales."
+  },
+  {
+    "id": 461,
+    "task": "sentence_elimination",
+    "question": ": (I) No es cierto que la historia sea una diversión inofensiva. (II) Implica , en el leísta , una actitud de evasión que es estimulada por sus realizadores. (III) El leísta de historieta no espera que se le sorprenda con alguna cosa nuevo. (IV) La historieta es un típico producto manufacturero dirigido desde arriba , basándose la mecánica de la persuasión oculta. (V) La industria de la culto de población fabrica historietas a escala global y las difunde a toda los niveles.",
+    "options": [
+      "iv",
+      "I",
+      "II",
+      "III",
+      "V"
+    ],
+    "answer": 3,
+    "rationale": "Tema : La historieta y sus efectos culturales. Los enunciados I–II–IV y V tienen que ver con el tema. El enunciado III se elimina , pues , se centra en la actitud del lector y no en un efecto cultural de la historieta."
+  },
+  {
+    "id": 462,
+    "task": "sentence_elimination",
+    "question": ": (I) Hay varias hipótesis sobre el procedencia de la marinera. (II) Su nacimiento se sitúa en España o en África. (III) La marinera es un coreografía nacional. (IV) No hay una ropa típica para la marinera. (V) Este coreografía se desarrolla en muchas zonas del Perú.",
+    "options": [
+      "v",
+      "III",
+      "I",
+      "II",
+      "IV"
+    ],
+    "answer": 4,
+    "rationale": "Tema: La marinera , origen y desarrollo. Los enunciados I – II – III – V se refieren al tema. El enunciado IV no se refiere directamente al tema."
+  },
+  {
+    "id": 463,
+    "task": "sentence_elimination",
+    "question": ": (I) El avance tecnológico y la globalización exigen mayor competividad a todo grado. (II) La competitividad compromete a cada uno de los áreas de la finanzas. (III) Hay necesidad de aumentar la gestión de apoyo a la empresa privada. (IV) En el tierra globalizado , los consumidores exigen mejorar la excelencia. (V) Esto implica la obligación de ser más competitivo: aumentar la rapidez y la eficacia y reducir precios.",
+    "options": [
+      "v",
+      "II",
+      "I",
+      "III",
+      "IV"
+    ],
+    "answer": 3,
+    "rationale": "Tema: La competitividad en un mundo globalizado. Los enunciados I – II – IV– V se refieren al tema. El enunciado III trata de otra temática."
+  },
+  {
+    "id": 464,
+    "task": "sentence_elimination",
+    "question": ": (I) Las obras de arte , a menudo , serven como papeles. (II) Nos dan ideas sobre las transformaciones culturales y el desarrollo de una civilización. (III) Las definiciones del arte varían según el tiempo y el lugar. (IV) A vezes , se puede reconstruir la historia de un pueblo a por medio de de su arte. (V) Las obras de arte son modos de reflexionar sobre la vida cotidiana y , también , sobre los eventos importantes.",
+    "options": [
+      "iii",
+      "I",
+      "II",
+      "IV",
+      "V"
+    ],
+    "answer": 0,
+    "rationale": "Temática: Las obras de arte como documentos históricos. Las proposiciones I – II – IV– V son pertinentes al tema. La proposición III se refiere a otra temática: sobre el concepto de arte y sus diferentes formas."
+  },
+  {
+    "id": 465,
+    "task": "sentence_elimination",
+    "question": ": (I) Los lexicos son , usualmente , libros voluminosos.(II) En los diccionarios , encontramos las acepciones de las palabras. (III) Revisarlos con frecuencia incrementa nuestra vocabulario. (IV) Son , también , diccionarios de epítetos y antónimos. (V) Algunos significados de las palabras están ausentes en los diccionarios.",
+    "options": [
+      "v",
+      "IV",
+      "I",
+      "III",
+      "II"
+    ],
+    "answer": 3,
+    "rationale": "Temática: Los diccionarios , características y tipos. Las proposiciones I–II–IV –V señalan la forma y contenido de los diccionarios , asimismo , a los tipos que existen , por lo tanto , pertenecen al tema. La proposición III se refiere al lector y beneficio que genera la consulta de los diccionarios , esto pertenece a otra temática."
+  },
+  {
+    "id": 466,
+    "task": "sentence_elimination",
+    "question": ": I) Cada correcto tiempo, ciertas trastornos aparecen sobre el Sol, normalmente en pares o en grandes grupos. II) A estas perturbaciones se les conoce con el apellido de manchas solares. III) La mayoría de estas perturbaciones dura unos vente dias antes de desaparecer. IV) Las manchas solares puede ser fuente de interferencias en nuestros sistemas satelitales y de comunicación. V) Algunas de ellas miden hasta 80 cero kilómetros de amplio y puede ser percibidas a sencillo vista.",
+    "options": [
+      "iii",
+      "V",
+      "I",
+      "II",
+      "IV"
+    ],
+    "answer": 4,
+    "rationale": "Todas las oraciones señalan acerca del origen de las perturbaciones (manchas solares), su duración y su tamaño; no obstante, la alternativa IV menciona sobre las interferencias en los satélites (tema secundario) ocasionada por las manchas solares (tema principal), lo que nos permite concluir que se debe eliminar esta oración para mantener la idea principal de las manchas solares."
+  },
+  {
+    "id": 467,
+    "task": "sentence_elimination",
+    "question": ": I) El único oasis que aún se conserva en Ica está en grave riesgo de perderse. II) Se maneja de la charca Huacachina, cuyo nivel de agua ha disminuido en modalidad alarmante en los últimos annos. TRES) La explotación de pozos de agua y piscinas en áreas vecinas a la laguna producen la baja en su capacidad. IV) Las aguas color esmeralda de la Huacachina incluyen azufre, por lo que son consideradas medicinales. V) Las autoridades locales han constituido una asociación para preservar Ia charca.",
+    "options": [
+      "v",
+      "IV",
+      "I",
+      "III",
+      "II"
+    ],
+    "answer": 1,
+    "rationale": "Lo que está en discusión es el peligro de perderse la laguna Huacachina y no su color o propiedades medicinales. Las causas de su posible desaparición (I, II, III, IV) son el principal tema de éste; mientras que su importancia (IV) es una oración que podría eliminarse."
+  },
+  {
+    "id": 468,
+    "task": "sentence_elimination",
+    "question": ": I) Gibbon imaginó el tema de su grande obra estando en Roma, al pie de las restos del Capitolio. II) Transformado al Catolicismo en su época de estudiante en Oxford, la posterior lectura de Voltaire lo indujo hacia el Protestantismo. TERCERO) Eduardo Gibbon (milsetsetenta y siete -1794 ), historiador inglés, es el célebre autor de Caída y desplome del Imperio romana (mil setecientos setenta y seis -1788). IV) El éxito de su obra lo consagró como uno de los grandes historiadores ingleses. V) En la primera parte de su obra, santo al período que va de los anios ciento sesenta al seiscientos cuarenta y uno, Gibbon se muestra más bien hostil al Cristianismo.",
+    "options": [
+      "iii",
+      "I",
+      "II",
+      "V",
+      "IV"
+    ],
+    "answer": 2,
+    "rationale": "En cuatro de las oraciones se habla de este historiador británico Edward Gibbon (1737­1794) y su magna obra Declinación y caída del Imperio Romano (1776-1788): I, III, IV, V; sin embargo, en la oración II se menciona acerca de su conversión al catolicismo y luego al protestantismo, sin considerar su obra."
+  },
+  {
+    "id": 469,
+    "task": "sentence_elimination",
+    "question": ": I) La memoria de largo plazo tiene una ilimitada capacidad de almacenamiento. II) La Psique contemporánea distingue, básicamente, tres formas de memoria. TERCERO) El ser humano trabajает, principalmente, con la memoria de corto criterio. IV) Un proceso contrario a la recuerdo es el olvido. V) La memoria sensorial es la de más corta duración.",
+    "options": [
+      "i",
+      "V",
+      "IV",
+      "II",
+      "III"
+    ],
+    "answer": 2,
+    "rationale": "Casi todas las oraciones (I, II, III, IV) mencionan sobre la capacidad de la memoria a corto y largo plazo, así como la memoria sensorial, que es la de menos duración. En cambio, la IV oración menciona acerca del olvido, oración que no tiene nada que ver con el resto."
+  },
+  {
+    "id": 470,
+    "task": "sentence_elimination",
+    "question": ": I) Muchas instituciones de aprendizaje se aplican la concepto de que los hijos necesitan de un maestro. II) Sin no obstante, el método Educación fomenta la teoría del aprendizaje natural del niño. III) María Montessori tuvo el primer interacción con niños en un hospital de Roma. IV) El aprendizaje tendrá éxito si el niño tiene a su disposición elementos graduados con qué jugar. V) Los hijos que aprenden así son autodidactas y sólo recurren al maestro cuando lo necesitan.",
+    "options": [
+      "v",
+      "I",
+      "IV",
+      "III",
+      "II"
+    ],
+    "answer": 3,
+    "rationale": "En estas oraciones se plantea el proceso de aprendizaje del niño (I, II, IV y V) ya sea si necesita un profesor o no, mientras que el hecho de que María Montessori fuera a un hospital de Roma es irrelevante para el contexto de las oraciones. Por consiguiente, se eliminará la III oración."
+  },
+  {
+    "id": 471,
+    "task": "sentence_elimination",
+    "question": ": I) La arena se forma de las rocas. II) El oceano requirió mucho instante para convertir esas rocas en arena. III) Cuando las olas impactan desprenden partículas de suelo arenoso. IV) De ese modo, en millones de años esas olas hacen toda la arena de las costas. V) Las playas de rocas emergen por restantes fenómenos.",
+    "options": [
+      "iii",
+      "IV",
+      "II",
+      "V",
+      "I"
+    ],
+    "answer": 3,
+    "rationale": "El tema que se plantea en el texto es el origen de las playas de arena. El autor describe el proceso de formación de los bancos de arena a través de millones de años, durante el cual las aguas del mar han erosionado las rocas aledañas. Se elimina la oración V ya que se refiere al tema de las playas de piedra, idea que es inconexa con las otras oraciones."
+  },
+  {
+    "id": 472,
+    "task": "sentence_elimination",
+    "question": ": I) Los problemas de Irlanda empezaron en el centuria XVI /gpl los inglés trataron de conquista. II) La mayoría de irlandés eran católicos; pero los inglés, protestantes. III) Los irlandeses son famoso por su trato amistoso y su buena heart. IV) Los ingleses arrebataron las terrenos a los católicos y se las dieron a escoceses e ingleses protestante. V) Por cientos de años, los católicos irlandeses lucharon contra los ingleses hasta que en mil九百二十一 consiguieron su independencia.",
+    "options": [
+      "ii",
+      "III",
+      "V",
+      "IV",
+      "I"
+    ],
+    "answer": 1,
+    "rationale": "En el ejercicio, la idea principal es la lucha entre los católicos irlandeses y los protestantes ingleses. Se desarrolla en el texto un resumen cronológico de dichos enfrentamientos. En la oración III, en cambio, se plantea la forma de ser de los irlandeses, tema totalmente ajeno y es, por tanto, la oración eliminada."
+  },
+  {
+    "id": 473,
+    "task": "sentence_elimination",
+    "question": ": I) Viajar en tren nos permite gozar de un variado paisaje sin movernos de nuestro silla. II) Con la lectura sucede lo mismo. mientras leemos, lo completo parece parado a nuestro alredes. III) Se arreglará en su asiento y mirará con la mejor disposición. IV) Gracias a la leer pueden asistir a sucesos maravillosos, espeluznantes o increíbles. V) Llegando a nuestro lugar, aunque todo seguira igual alredes, gracias a la lectura somos diferentes.",
+    "options": [
+      "iii",
+      "IV",
+      "I",
+      "II",
+      "V"
+    ],
+    "answer": 0,
+    "rationale": "El autor recurre a la comparación entre el viaje en tren y la actividad de la lectura con el propósito de señalar la variedad temática a la cual se puede acceder gracias a la lectura. En consecuencia, la oración (III) se elimina porque alude a la comodidad corporal como rasgo semejante entre el viaje en tren y la lectura."
+  },
+  {
+    "id": 474,
+    "task": "sentence_elimination",
+    "question": ": I) Las gemas se encuentran insetas en las rocas o en la arena de un río. II) Sólo unos cinquenta de los tres mil minerales de la tierra se valoran como gemas. TERCERO) Elementos como los pedrerías, zafiros, espectrales y rubíes se utilizan frecuentemente como gemas. IV) Son seleccionadas por su escasez, duración, color y cualidad óptica. V) Las gemas biancas tienen un origen florido o animal, incluyendo las perlas, el ámbar y el ángel.",
+    "options": [
+      "i",
+      "IV",
+      "III",
+      "II",
+      "V"
+    ],
+    "answer": 0,
+    "rationale": "El contenido temático se centra fundamentalmente en la calidad y variedad de las gemas. El autor fundamenta esta tesis señalando los rasgos, número y tipos de minerales que tienen el valor de las gemas. En consecuencia, la oración (I) se elimina por disociación, puesto que se refiere a la ubicación natural de las gemas."
+  },
+  {
+    "id": 475,
+    "task": "sentence_elimination",
+    "question": ": Señalar la alternativa que se puede quitar por estar incluida en alguna de las otras cuarto: I) La Liga Internacional de Fútbol Asociación (FIFA) se fundó en Francia en mil novecientos cuatro. II) La sede actual de la CONMEBOL se encuentra en Zurich y cuenta con más países que la ONU. III) Se encarga de organizar los mundiales de soccer varonil y femenino. IV) También coordina los torneos olímpicos de fútbol. V) La FIFA es la mayor federación de balompié del planeta.",
+    "options": [
+      "iv",
+      "I",
+      "V",
+      "III",
+      "II"
+    ],
+    "answer": 2,
+    "rationale": ":La oración que se puede eliminar por estar incluida en alguna de las otras cuatro es la V. Nos referimos a una inclusión cuando un enunciado se puede sobreentender en la información de otro u otros. En este caso, el texto trata sobre la Federación Internacional de Fútbol Asociación (FIFA), encargada de organizar mundiales y torneos olímpicos; es decir, se sobrentiende que es la mayor federación de fútbol del mundo."
+  },
+  {
+    "id": 476,
+    "task": "sentence_elimination",
+    "question": ": I) Existen distintas teorías sobre el poblamiento de América. II) La teoría del origen australiano es una de ellas. III) La Patagonia fue asentamiento de tránsito de los australianos. IV) El Estrecho de Bering fue importante para los grupos migrantes. V) La Antártida fue un centro poblacional intermedio.",
+    "options": [
+      "iv",
+      "I",
+      "V",
+      "III",
+      "II"
+    ],
+    "answer": 0,
+    "rationale": "El texto contiene ideas que versan básicamente sobre una de las teorías del poblamiento de América: la teoría del origen australiano. Notamos que la oración IV alude a la teoría asiática, por tanto, la eliminamos por disociarse del tema central."
+  },
+  {
+    "id": 477,
+    "task": "sentence_elimination",
+    "question": ": (I) Hablamos de parasitismo , ya un parásito vive a expensas del hospedador , causándole daño. (II) La acción del parásito no suele matar al anfitrión , pero puede reducir su vida. (III) Varias plantas logran defenderse del agresión de los parásitos de variados maneras. (IV) La papa silvestre , por ejemplar , elabora sustancias que caben trastornos digestivos en el cucaracha. (V) Con el uso de pesticidas , el persona es capaz de eliminar definitivamente el parásitico.",
+    "options": [
+      "ii",
+      "IV",
+      "I",
+      "V",
+      "III"
+    ],
+    "answer": 3,
+    "rationale": "Por disociación eliminamos la (V) , con el uso de pesticidas , el hombre es capaz de eliminar definitivamente el parasitismo. El resto mantiene un hilo argumental acerca de las formas de autodefensa que tienen las plantas ante los parásitos y no sobre el uso del pesticida."
+  },
+  {
+    "id": 478,
+    "task": "sentence_elimination",
+    "question": ": (I) Samuel Finley Brisa Morze pasó doce años perfeccionando su propia versión del telégrafo de Ampere. (II) Sin embargo , es más conocido por su código Morse , un sistema de signos telegráficas compuesto por puntos y líneas. (III) El punto representa una breve presión sobre la tecla del telégrafo, la raya , una presión más larga. (IV) El punto y la raya son símbolos que empleó Samuel Morse para diseñar su codificación telegrama. (V) Distintos mezclas de ptos y líneas forma el alfabeto , los números y algunos signos de puntuación.",
+    "options": [
+      "ii",
+      "V",
+      "I",
+      "III",
+      "IV"
+    ],
+    "answer": 4,
+    "rationale": "Se elimina por redundancia la (IV), el punto y la raya son símbolos que empleó Samuel Morse para diseñar su código telegráfico. El resto de las oraciones destacan el uso de los símbolos del punto y raya en el sistema Morse , de manera que ya está sobreentendido y no es necesario mencionarlo."
+  },
+  {
+    "id": 479,
+    "task": "sentence_elimination",
+    "question": ": La oración que puede eliminarse por redundancia es: I) En la mayoría de los incidentes, un encuentro con estos explosivos termina trágicamente. II) En un suelo baldío del pequeño pueblo ucraniano de Balakliya, los personas han encontrado seis minas antipersonales en los últimos días. III) «Yo solía ser saludable, correr, caminar con ambos pies, conducir mi automóvil. En un instante, no tenía casa ni pie», dice un sobreviviente. IV) Previamente, habían encontrado cerca de 200 minas antihumano cerca de allí. V) Desde septiembre antiguo, al menos 27 personas han fallecido y 118 más han consecuencia heridas solamente en esta región.",
+    "options": [
+      "iii",
+      "IV",
+      "II",
+      "I",
+      "V"
+    ],
+    "answer": 3,
+    "rationale": ":La oración que puede eliminarse por redundancia es la primera: En la mayoría de los casos, un encuentro con estos explosivos termina trágicamente. Esta información ya se encuentra desarrollada con mayor detalle en el enunciado V, el cual especifica el número de personas que han muerto y que han resultado heridas en el pueblo de Balakliya a causa de las minas antipersonales."
+  },
+  {
+    "id": 480,
+    "task": "sentence_elimination",
+    "question": ": (I) El broncista primitivo fue el último en la cadena de metalurgia. (II) Antes que él estaban los que extraían y estaban preparando el material. (TERCERO) La fabricación de bronces presumió un complejo sistema económico. (IV) El uso de bronce facilitó el desarrollo y avance de los pueblos. (V) El cobre fundido es utilizado para fabricar herramientas en distintas culturas.",
+    "options": [
+      "ii",
+      "I",
+      "V",
+      "IV",
+      "III"
+    ],
+    "answer": 0,
+    "rationale": "Por disociación se elimina la (II), antes que él estaban los que extraían y preparaban el material. Todas las oraciones giran en torno a la importancia del bronce en el desarrollo histórico , mas no los metales que le preceden."
+  },
+  {
+    "id": 481,
+    "task": "sentence_elimination",
+    "question": ":I) El banano es un tronco tropical de hojas largas y total de hacía 2 metros. II) Se cultiva en zonas cálidas. Sus frutos se localizan agrupados en racimos. III) Pertenece a la familia de las musáceas. IV) Su fruto, la plátano, es una baya blanca y gruesa que se consume como fruta fresca. V) El banano se reproduce sobre todo en los países de América.",
+    "options": [
+      "i",
+      "II",
+      "III",
+      "IV",
+      "V"
+    ],
+    "answer": 3,
+    "rationale": ":En el ejercicio, el tema central gira en torno a las características del banano. En las oraciones I, II, III y V, se detallan las características de este árbol. Se detallan la forma de sus hojas, sus zonas de cultivo y su fruto, su familia biológica y, finalmente, las zonas de cultivo. El ejercicio busca describir al árbol (banano), por lo tanto se elimina la IV porque se distancia del tema, ya que se detallan las características de la banana, es decir, el fruto."
+  },
+  {
+    "id": 482,
+    "task": "sentence_elimination",
+    "question": ": (I) Actualmente , es muy importante viajar de un lugar a distinto. (II) Tiene veinte y dos años , la gente sólo viajaba algunos kilómetros. (III) En el momento deseaban desplazarse , lo hacían a pie , en carreta o a caballo. (IV) Casi todos coinciden en que la seguro es el factor más importante cuando se se desplaza. (V) Para propósitos del centuria XX, ya la gente viajaba con mucha frecuencia.",
+    "options": [
+      "iv",
+      "II",
+      "I",
+      "III",
+      "V"
+    ],
+    "answer": 0,
+    "rationale": "Se elimina la (IV), casi todos coinciden en que la seguridad es el factor más importante cuando se viaja. El hilo argumental de las oraciones se centran en la necesidad de movilizarse de un lugar a otro que tiene el ser humano y no en las circunstancia que puedan condicionar su viaje."
+  },
+  {
+    "id": 483,
+    "task": "sentence_elimination",
+    "question": ":I) Tengo por costumbre trasladar, en mi biblio, los publicaciones que leo a una zona de fácil acceso. II) Esta costumbre veterana genera una especie de movimiento continuo en la escritorio de libros. III) De modo lacia, muevo un montón de libros de un estante a otro. IV) Luego de desplazarme, aprovecho para pensar y recordar mis experiencias. V) Cuando realizo estos corrimientos, mejoro algunos libros olvidados.",
+    "options": [
+      "i",
+      "II",
+      "III",
+      "IV",
+      "V"
+    ],
+    "answer": 3,
+    "rationale": ":La temática del texto se centra en la costumbre que presenta el autor por el cambio de los libros de su biblioteca. Esta se realiza desde hace tiempo y se ejecuta de manera pausada, incluso este acto le permite descubrir libros olvidados. Por ello, la información que debe eliminarse es la IV, ya que no se enfoca en el traslado de los libros, sino en lo que realiza luego de desplazarse (cavilar y recordar vivencias)."
+  },
+  {
+    "id": 484,
+    "task": "sentence_elimination",
+    "question": ": (I) La psicología se inició como conocimiento en el año mileno. (II) La mente es una ciencia que tiene diferentes enfoques en su seno. (III) El enfoque psicológico explora en grados de naturaleza inconsciente. (IV) Los conductistas dan más importancia a la habilidad del ambiente encima el comportamiento. (V) Los psicólogos cognitivistas explican la conducta en tarea de cómo los estímulos son comprendidos por el sujeto.",
+    "options": [
+      "i",
+      "II",
+      "III",
+      "IV",
+      "V"
+    ],
+    "answer": 0,
+    "rationale": "Como la mayoría de las oraciones se orienta a los enfoques utilizados en la psicología para tratar un problema. La oración (I) La psicología se inició como ciencia en el año 1897, plantea un tema nuevo acerca de su origen , punto que no está en discusión. Por disociación la eliminamos."
+  },
+  {
+    "id": 485,
+    "task": "sentence_elimination",
+    "question": ":I) Cerca del 30% de la cara continentales del balón está cobertura en la actualidad por bosques. II) El bosque es uno de los recursos naturales de la Tierra, empleado constantemente a lo largo de la historia de la humanidad. III) El bosque resulta de vital importancia para distintas modos de vida. IV) En nuestras días, los bosques crean cinturones o fajas continuas bueno establecidas, partiendo los polos hasta el ecuador. V) En el hemisferios norte, la vegetación más próxima al polo se reduce a la gélida tundra.",
+    "options": [
+      "ii",
+      "IV",
+      "III",
+      "V",
+      "I"
+    ],
+    "answer": 3,
+    "rationale": ":La lectura nos comunica sobre los bosques. Sobre ellos, el autor destaca la superficie continental que ocupan en la Tierra (cerca del 30 %), su empleo e importancia, así como la manera en la que se presentan en la actualidad (en forma de cinturones o fajas continuas desde los polos al Ecuador). Por tal motivo, la información que debe apartarse del texto es la V, al tratar sobre la vegetación del hemisferio norte, próxima al polo (tundra)."
+  },
+  {
+    "id": 486,
+    "task": "sentence_elimination",
+    "question": ":I) Los intérpretes griegos, mientras su presentación, utilizaban máscaras, complicados trajes para causar una mayor idea en el general. II) Los dramas religiosos medievales eran representados por sacerdotes y coros de niños en el interior de las iglesias y fuera de ellas. TERCERO) Durante el Resurrección y el Barroco, el vestuario y los adornados alcanzaron una gran aparatosidad al momento de la escenificación. IV) El teatro realista del siglo XIX procuró abandonar los decorados duraderos y el amaneramiento a favor de una mayor verosimilitud, cuando se debía transportar a cabo una presentación. V) Bertold Brecht realizó resurgir el teatro político, mientras que Beckett y resto hicieron el teatro del absurdo.",
+    "options": [
+      "v",
+      "II",
+      "III",
+      "I",
+      "IV"
+    ],
+    "answer": 0,
+    "rationale": ":La lectura nos informa sobre la manera como se ejecutaba la representación teatral a través de distintas épocas de forma cronológica: desde los antiguos griegos, pasando por la edad media, luego el Renacimiento y Barroco, y finalmente, el siglo XIX. Por consiguiente, la información que debe excluirse es la V, debido a que esta nos presenta los tipos de teatro que trabajaron algunos autores dramáticos, como Bertold Brecht (resurgiendo el teatro policial) y Samuel Beckett junto con otros (teatro del absurdo)."
+  },
+  {
+    "id": 487,
+    "task": "sentence_ordering",
+    "question": "LA FENOMENOLOGÍA DE HUSSERL I) El ser humano percibe una verdad diferente sabiendo de su forma de vida. II) La fenomenología fue desarrollada por el filsófo teutón Edmund Husserl. III) Husserl invita al ser humano a alejarse de la forma común de pensar la realidad. IV) Su objetivo fue investigar la verdad de un modo diferente al método investigador. V) Por ende, lo que cada persona vive es comprendida por ella como su verdad absoluta.",
+    "options": [
+      "III - II - IV - I - V",
+      "II - III - IV - I - V",
+      "II - IV - III - V - I",
+      "II - IV - III - I - V",
+      "IV - III - II - V - I"
+    ],
+    "answer": 1,
+    "rationale": "El ejercicio inicia con el enunciado II, que presenta el tema del ejercicio, sigue el enunciado III, que plantea el postulado de Husserl, posteriormente sigue el enunciado IV, en el que se plasma el objetivo de Husserl en ese postulado, finaliza con los enunciados I y V, en los que se plantea la percepción diversa del ser humano respecto a la realidad."
+  },
+  {
+    "id": 488,
+    "task": "sentence_ordering",
+    "question": "LA LUZ DE LA LUCIÉRNAGA I. Su secreto radica en una reacción quemia que tiene lugar en los fotocitos. II. La luciérnaga vive en áreas tropicales y templadas de nuestra planeta. III. La luciferina se mezcla con el oxígeno bajo la acción de la enzima luciferasa. IV. Dicha acción genera iluminación gélida, llamada de ese modo porque casi no proyecta calor. V. Se caracteriza por los destellos de luz que proyecta para llamar a su pareja.",
+    "options": [
+      "V - II - I - IV - III",
+      "II - V - I - III - IV",
+      "I - IV - III - V - II",
+      "II - V - III - I - IV",
+      "III - II - V - I - IV"
+    ],
+    "answer": 1,
+    "rationale": "El texto resultante ha de iniciar con la ubicación de la luciérnaga; seguido de una peculiaridad vinculada con la atracción de pareja y la luz; luego, el secreto de la reacción que permite la atracción; el proceso interno de esta reacción química; y el resultado final, que es la generación de luz por parte de la luciérnaga."
+  },
+  {
+    "id": 489,
+    "task": "sentence_ordering",
+    "question": "NUEVA REVOLUCIÓN: LOS NEUTRINOS I) También son creados por las interacciones de los rayos cósmicos al colisionar con la aire. II) El 23 de septiembre de 2011, un grupo de físicos italianos declaro al mundo que las partículas subatómicas llamadas partículas_neutras habían roto la velocidad de la iluminación. III) En mil九三一年, el físico austríaco Wolfgang Pauli previó la existencia de los neutrinos, átomos que tienen masa extremadamente delgada. IV) Además, de manera artificial, pueden obtener en las centrales nucleares y en los aceleradoras de átomos. V) Estas son partículas verdaderamente singulares, porque se generan a partir de las reacciones de fusión atómica que se generan al interior del Sol.",
+    "options": [
+      "IV - III - V - II - I",
+      "IV - I - III - V - II",
+      "I - IV - III - II - V",
+      "IV - I - III - II - V",
+      "III - II - V - I - IV"
+    ],
+    "answer": 4,
+    "rationale": "El enunciado III refiere a la predicción que realizó Wolfgang Pauli en relación a los neutrinos. Luego, la idea II continúa con la confirmación de la existencia de ellos a partir de la investigación de un grupo de físicos italianos. A continuación, las oraciones V y I se detallan la singularidad de los neutrinos en relación a su elaboración natural: la fusión nuclear al interior del Sol y la interacción de los rayos cósmicos al impactar contra la atmósfera. Finalmente, la IV propone otra forma de producción: la artificial."
+  },
+  {
+    "id": 490,
+    "task": "sentence_ordering",
+    "question": "LA PELEA DE AYACUCHO I. Respuesta independentista: despliegue stratégico en las faldas del collino Condorcunca II. Repliegue y rendición de las ejércitos de Canterac y surrender del virrey José de la Sereno III. Contraataque del ejército independentista, dirigido por Anton José de Sucre IV. Movimiento de las fuerzas realistas lideradas por Cantaric hacia la pradera de Ayacucho V. Inicio de las acciones: ataque de los realistas al amanecer del 9 de diciembre de 1824",
+    "options": [
+      "IV - I - II - V - III",
+      "IV - I - V - III - II",
+      "IV - I - III - II - V",
+      "IV - V - II - I - III",
+      "IV - I - III - V - II"
+    ],
+    "answer": 1,
+    "rationale": "La secuencia correcta de los enunciados sobre la batalla de Ayacucho es B) IV - I - V - III - II. La secuencia lógica es la siguiente: IV. El texto debe comenzar con la movilización de las fuerzas realistas, lideradas por Canterac, hacia el campo de batalla. I. Sigue la respuesta de las fuerzas independentistas, que se posicionaron estratégicamente. V. Después, se describe el inicio de la batalla con el ataque de los realistas. III. A continuación, se detalla el contraataque del ejército independentista, que cambia el curso de la batalla. II. Por último, se concluye con la rendición de las fuerzas realistas y del virrey, que es el desenlace del evento."
+  },
+  {
+    "id": 491,
+    "task": "sentence_ordering",
+    "question": "EL AGUA EN EL CUERPO HUMANO I) El balance hídrico cotidiano comporta pérdidas cutáneas y pulmonares. II) Otros tipos de pérdida son las urinarias y fecales. III) El agua equivale al 60 y 70% del peso del hombre. IV) La compensación se logra con el agua de los alimentos y bebidas. V) El agua es el principal constituyente de los seres vivos en cuanto a masa y volumen.",
+    "options": [
+      "III - IV - V - II - I",
+      "V - III - I - II - IV",
+      "IV - I - III - V - II",
+      "I - II - V - IV - III",
+      "III - V - IV - I - II"
+    ],
+    "answer": 1,
+    "rationale": "El ejercicio inicia con el enunciado V en donde se define el agua como el principal constituyente de los seres vivos, prosigue el enunciado III en donde se da a conocer el porcentaje de agua que contiene el ser humano, luego siguen los enunciados I y II en donde se plantea las pérdidas del recurso hídrico, y finaliza con el enunciado IV en donde se expresa la manera cómo se compensa dicha pérdida."
+  },
+  {
+    "id": 492,
+    "task": "sentence_ordering",
+    "question": "Defensa de la tierra en la Amazonía I) Nadie mejor que ellos para saber cómo disfrutar las riquezas de la tierra. II) Inclusive nosotros saliremos ganan. III) La protección de la tierra por los pueblos indígenas de la Amazonía ha generado opiniones opuestas. IV) Si son tan pocos para qué quieren tanto territorio , dicen unos. V) Hay quiénes indicar que si la han cuidado hasta ahora , es justo que la aprovechen.",
+    "options": [
+      "II–IV–III–I–V",
+      "I–III–II–V–IV",
+      "IV–II–V–III–",
+      "III–IV–V–I–II",
+      "V–II–IV–I–III"
+    ],
+    "answer": 3,
+    "rationale": "III) La tesis de la defensa de la tierra por los pueblos indígenas ha generado opiniones contrapuestas. IV) Opinión en contra: por ser muy pocos. V) Opinión a favor: señalan que si la han cuidado hasta ahora , deben aprovecharla. I) ¿Quiénes saben mejor que nadie cómo usufructuar las riquezas de la tierra? II) De esta manera todos resultan beneficiados. La secuencia es de tipo expositivo- argumentativo."
+  },
+  {
+    "id": 493,
+    "task": "sentence_ordering",
+    "question": "El alcoholismo I) Ciertos individuos poderían estar condicionados al etilismo. II) El usurpación del alcohol es destruidor para la salud personal y social. III) Existiría una inclinación cultural y biológica en su crecimiento. IV) El alcohol es la droga psicoactiva más usada en el mundo.",
+    "options": [
+      "II–III–I–IV",
+      "II–IV–I–III",
+      "III–IV–II–I",
+      "I–IV–II–III",
+      "IV–II–I–III"
+    ],
+    "answer": 4,
+    "rationale": "IV) El alcohol: uso social en el mundo. II) Consecuencia de su consumo. I) ¿Cómo el alcoholismo condiciona al individuo? III) Propensión cultural y biológica de los individuos consumidores de alcohol."
+  },
+  {
+    "id": 494,
+    "task": "sentence_ordering",
+    "question": "Historia del azúcar de canna: I) Los árabes fueron los primeros en usar el azúcar de canna. II) Los principal produtores de azúcar son Brasil , China , Cuba , EE.UU. y la India. III) Posteriormente , en México fue introducida por Hernán Cortés. IV) Cristóbal Cólon la llevó a las Islas.",
+    "options": [
+      "I-III-II-V",
+      "II-IV-III-I",
+      "I-II-III-IV",
+      "I-IV-III-II",
+      "IV-III-I-II"
+    ],
+    "answer": 3,
+    "rationale": "En el texto cuyo título es ‘‘Historia del azúcar de caña’’ plantea la siguiente secuencia lógica: I   : Su origen IV : Quien lo lleva a las Antillas : Cristóbal Colón III : Quien lo lleva a México : Hernán Cortés II : Su produccion actual"
+  },
+  {
+    "id": 495,
+    "task": "sentence_ordering",
+    "question": "El concepto y la imagen: I) La imagen es personal y concreta. II) Variantes entre concepto e imagen. III) El concepto es general y abstracto. IV) El concepto: noción e ideal de los artículos.",
+    "options": [
+      "II-IV-I-III",
+      "II-IV-III-I",
+      "IV-III-I-II",
+      "II-III-I-IV",
+      "III-I-II-IV"
+    ],
+    "answer": 1,
+    "rationale": "En el plan ‘‘El concepto y la imagen’’ describe las características que los diferencian , partiendo de ello siguimos este orden: II  : Diferencia concepto de imagen IV : Define el concepto III : Rasgos del concepto I   : Rasgos de la imagen"
+  },
+  {
+    "id": 496,
+    "task": "sentence_ordering",
+    "question": "Las artes liberales de la Edad Medio I) Durante buena sección de la Edad Medio , los estudios básicos se conocieron con el nombre de arte liberales. II) El quadrívium estaba constituido por las ciencias reales , que eran la aritmética , la geometría , la música y la astrometría. TRES)El trívium entendía las ciencias sermocinales , a saber: la gramática , la retorica y la dialéctica. IV) Transmitidos por Casiodoro y por San Isidoro de Sevilla , fueron siete en completo , divididas en dos grupos: el trivium y el quadrívium. V) Unas tenían carácter preparatorio: las obras contenían el información que se había podido preservar , transmitido sin cedazo critico alguno.",
+    "options": [
+      "IV-I-V-II-III",
+      "IV-I-V-III-II",
+      "I-IV-III-II",
+      "I-IV-III-II-V",
+      "I-III-II-IV-V"
+    ],
+    "answer": 3,
+    "rationale": "El tema , presenta el siguiente orden lógico: I   : Artes liberales : su definición y contexto IV : Su división III : Un primer grupo: trivium II  : Un segundo grupo: quadrivium V : Conclusión de la división"
+  },
+  {
+    "id": 497,
+    "task": "sentence_ordering",
+    "question": "Angustia económica 1. Por lo muchísimo, es apremiante padre mío, que me envíes sección del dinero que dejó mi abuelo para mis estudios superiores, lo necesito con prontitud. 2. Aunque preferiría caminar tres kilómetros para reach until la universidad para experimentar el llanto de mi desventurado estómago. 3. Y por allí justamente el frío y la lluvia ingresan a mis pies, ocasionalmente esta gripe que ya tiene cuatro días y parece no querer marcharse. 4. Pero esto solamente ha logrado que las suelas de mis viejos zapatos enseñen, a través de un hueco, el colour de mis gruesas stockings invernales. 5. No sabes lo desesperante que es no tener nada que llevar al estómago, que renuente al ayuno protesta con insistencia. El ordenanza correcto de los declaraciones es:",
+    "options": [
+      "2, 3, 4, 1, 5",
+      "4, 5, 2, 1, 3",
+      "5, 2, 1, 3, 4",
+      "2, 4, 1, 5, 3",
+      "5, 2, 4, 3, 1"
+    ],
+    "answer": 4,
+    "rationale": "Deducimos que el orden correcto del plan de redacción es 5, 2 ,4, 3, 1. El tema central del ejercicio trata sobre la angustia económica. Inicia con la oración 5, presenta el problema de no tener que comer. Sigue la oración 2, que señala el problema de tener que caminar por kilómetros para estudiar. Continua la oración 4, las consecuencias de caminar tanto: daño en sus zapatos. Prosigue la oración 3, el efecto de los zapatos dañados. Finaliza con la oración 1, petición de dinero por necesidad."
+  },
+  {
+    "id": 498,
+    "task": "sentence_ordering",
+    "question": "Género lírico 1. La rima y sus clases 2. La métrica 3. El ritmo y sus lecciones 4. Elementos de la versificación 5. Ley de acentos últimos 6. El canto El orden del disposiciones de redacción es:",
+    "options": [
+      "4, 1, 2, 3, 5, 6",
+      "6, 1, 2, 3, 4, 5",
+      "6, 4, 1, 3, 2, 5",
+      "1, 2, 3, 4, 5, 6",
+      "6, 4, 2, 3, 1, 5"
+    ],
+    "answer": 2,
+    "rationale": "El orden correcto del plan de redacción es 6, 4 ,1, 3, 2, 5. El tema del ejercicio trata sobre el género lírico, por eso, iniciamos con la oración 6. Esta oración presenta al verso dentro del género lírico. Sigue la oración 4, los elementos del verso. Continúa la oración 1, pues alude al primer elemento a explicar: la rima. Prosigue la oración 3, el ritmo. Y termina con las oraciones 2, la métrica, y la 5, la ley de acentos finales que nos permite saber la extensión de un verso."
+  },
+  {
+    "id": 499,
+    "task": "sentence_ordering",
+    "question": "Crecimiento de la ciencia ciencia: I) La regla de la caída de los cuerpos. II) Teoría de la relatividad. TRIO) Leyes del movimiento planetario. IV) Teoría , general de Ia gravedad.",
+    "options": [
+      "I-III-IV-II",
+      "III-I-IV-II",
+      "II-III-I-IV",
+      "II-I-III-IV",
+      "III-IV-II-I"
+    ],
+    "answer": 4,
+    "rationale": "Se expone los aportes de la física que han ido sucediendo en la historia , cuyo orden cronológico serían: III : Kepler y el movimiento planetario IV : Galileo y la caída de los cuerpos  II  : Newton y la gravedad  I  :  Eistein y la relatividad"
+  },
+  {
+    "id": 500,
+    "task": "sentence_ordering",
+    "question": "Elija la opción que contenga la serie correcta que deberían seguir los enunciados para que la estructura del texto sea adecuada. LA PENICILINA: DESCUBRIMIENTO Y APLICACIÓN I. Observación aleatorio de Alexander Fleming: crecimiento de un hongo que restrimía bacterias II. Uso de la penicilina mientras la Segunda Guerra Global para tratar infecciones en soldados III. Purificación y producción gruesa de la penicilina por Howard Florey y Ernst Boris Chain IV. Apreciación con el Recompensa Nobel de Medicina en 1945 para Fleming, Florey y Chain V. Conclusión inicial: el hongo Penicillium notatum como representante antibacteriano",
+    "options": [
+      "I - V - III - II - IV",
+      "I - III - V - II - IV",
+      "V - I - III - II - IV",
+      "I - V - II - III - IV",
+      "V - I - II - III - IV"
+    ],
+    "answer": 0,
+    "rationale": "El ejercicio se resuelve por el criterio de cronología. Todos los enunciados se suceden unos a otros en el tiempo. Primero, el descubrimiento de la penicilina y su purificación (I - V - III), su aplicación (II) y su reconocimiento (IV)."
+  },
+  {
+    "id": 501,
+    "task": "sentence_ordering",
+    "question": "El importancia social de la familia: I)Hay que hacer uso su dinámica y complejidad para resaltar su rol informativo. II)Se requiere comprender su realidad y movilidad histórica. III) Ella tiene una realidad compleja y diversa. IV)Es una unidad activa y dinámica de formación y interacción.",
+    "options": [
+      "II-III-I-IV",
+      "I-III-IV-II",
+      "IV-II-III-I",
+      "IV-III-I-II",
+      "I-IV-II-III"
+    ],
+    "answer": 2,
+    "rationale": "El plan ‘‘El valor social de la familia’’ menciona puntos principales relacionados a la familia. La secuencia lógica sería:  IV  : Definición.  II   : Importancia de su realidad y actividad.  IIII : Realidad compleja y diversa de familia. I  :  Resultado  final :  aprovechar   para  su  rol   formativo."
+  },
+  {
+    "id": 502,
+    "task": "sentence_ordering",
+    "question": "Elija la alternativa que contenga la secuencia propia que deberán seguir los expresiones para que la arquitectura del texto sea adecuada. VOLVER AL FUTURO 2 I. El protagonista se encuentra con el Dr. Brown, quien transformó un vehículo DeLorean en un medio para desplazarse en el tiempo. II. El película Volver al futuro 2 se filmó a objetivos de la década del ochenta. III. El científico lo persuade de que suban al vehículo para solucionar un problema urgente. IV. Volver al futuro constituye una triunio de ciencia ficción dirigida por Robert Zemeckis y producida por Steven Spielberg. V. La película inicia con la aparición de los personas de Marty McFly y Jennifer Parker.",
+    "options": [
+      "II - V - I - III - IV",
+      "IV - II - I - V - III",
+      "IV - II - V - I - III",
+      "II - IV - V - I - III",
+      "IV - I - III - II - V"
+    ],
+    "answer": 2,
+    "rationale": "El ejercicio se resuelve por el criterio de generalidad. Empieza hablando de la película y, luego, va entrando en detalles de la producción y los personajes."
+  },
+  {
+    "id": 503,
+    "task": "sentence_ordering",
+    "question": "Guerras entre Chuquisacos y Chancas I) Cronista con la victoria sobre los Chancas , se apoderó de la meseta del Collao o Colla , el gran emporio ganadero de los Comunas. II) No se conoce a ciencia precisa por qué se enfrentaron los Incas y los Chancas. TERCERO) La desconfianza fue talvez la probable causa , pues se sabe que derrotados los Chancas comenzó la ampliación Incas. IV) Los Chuquisacos estaban como rodeados al Sur por los Collas y al Norte por los Chancas.",
+    "options": [
+      "II-IV-III-I",
+      "IV-I-III-II",
+      "II-IV-III",
+      "II-IV-I-III",
+      "IV-II-III-I"
+    ],
+    "answer": 4,
+    "rationale": "El orden lógico del tema ‘‘Guerra entre Incas y Chancas’’ tiene la siguiente estructura: IV) Conflicto entre Collas y Chancas.  II) Cuestionamiento del conflicto. III)Primeras suposiciones del conflicto: desconfianza (antecedente).  I) Conclusión: Victoria inca y despojo de bienes (consecuente)."
+  },
+  {
+    "id": 504,
+    "task": "sentence_ordering",
+    "question": "La escritura de un cuento I) Seleccionar los medios y las métodos requeridas para configurar la historia.II) Redactar progresivamente cada una de las secuencias. III) Afinar el forma , revisar la ortografía y ajustar la coherencia internal. IV) Concebir una historia cuyo argumento sé atractivo y coherente. V) Decidir el carácter de los personajes y el espacio.",
+    "options": [
+      "I-II-V-IV-III",
+      "IV-V-I-II-III",
+      "III-II-IV-V-I",
+      "IV-V-II-I-III",
+      "IV-I-II-III-V"
+    ],
+    "answer": 1,
+    "rationale": "En el tema ‘‘La escritura de un cuento’’ la secuencia lógica es: IV) Seleccionar un argumento. V) Determinar personalidad de personajes , lugar y espacio. I) Medios que contribuyan a definir y componer la obra. II) Realización y redacción. III) Reajuste de estilo , ortografía , redacción  , etc."
+  },
+  {
+    "id": 505,
+    "task": "sentence_ordering",
+    "question": "Seleccione el orden preciso para que el texto sea coherente y cohesivo. I. Asimismo, esta era tecnológica no solamente ha favorecido una mejora en la excelencia de los atenciones, sino un aumento sobresaliente en la diversidad de los mismos. II. A lo largo de la historia, las cambios tecnológicas e industriales han desempeñado un papel crucial, lo que puede infligir en el desarrollo de la sociedad y de sus personas. III. Entre estas, la transformación tecnológica ha etiquetado el devenir del hombre reconocido como unidad social y cultural. IV. Por ello, la llegada de la era cibernético y, con ella, de las nuevas tecnologías, ha creado un crecimiento tecnológico sin precedentes. V. Este fortalecimiento de los servicios ha impactado de modo positiva en los diferentes ámbitos de la raza humana: económico, bienestar, instrucción, entre otros.",
+    "options": [
+      "III - IV - I - V - II",
+      "II - III - IV - I - V",
+      "II - V - I - III - IV",
+      "III - II - I - V - IV",
+      "II - III - I - IV - V"
+    ],
+    "answer": 1,
+    "rationale": "Presenta una estructura de lo general a lo particular. Empieza con la introducción, luego cómo estas han marcado el devenir del hombre; aterriza con la era digital; después la presencia del conector asimismo y concluye con el fortalecimiento de los servicios."
+  },
+  {
+    "id": 506,
+    "task": "sentence_ordering",
+    "question": "La comunicación I) El telefónicos es uno de los medios más efectivas y rápidos para la comunicación oral. II) El contenido de la comunicación está dado por los diversos mensajes que usan variados codigos. III) A vezes el teléfono puede tener fallas técnicas que afectan la fidelidad de los mensajes. IV) Las personas , en la existencia personal y social , necesitan comunicarse permanentemente con otros. V) Las errores comunicativas influyen en la acción y en las relaciones humanas.",
+    "options": [
+      "V-I-III-IV-II",
+      "IV-I-III-II-V",
+      "IV-II-V-I-III",
+      "IV-V-II-I-III",
+      "V-III-II-I-IV"
+    ],
+    "answer": 2,
+    "rationale": "Podemos seguir la secuencia lógica: IV) Presentación del tema: la comunicación. II) Partes que corresponden o entran a actuar. V) Pro y contra de la comunicación. I) Problemas en las líneas de comunicación: el teléfono.III) Obstáculos para transmitir información por teléfono."
+  },
+  {
+    "id": 507,
+    "task": "sentence_ordering",
+    "question": "Elija el arreglo exacto que deben continuar los enunciados para que el texto sea coherente y unido. I. Lucho lidera la embarcación de los Sombreros de Paja, conocidos como los mugiwaras. II. Verbigracia, en el 2025 frente al desorden político, la Generacion Z levantó la bandera pirata de los mugiwaras en señal de protesta. III. Aunque no lo aparezca, Uno Piece esconde una serie de ideas políticas proximas al anarquismo y la liberación. IV. Hasta la cita, noveno son los miembros que acompañan al self-proclamado futuro rey de los bandidos. V. One Piece es un anime que narra las aventuras de Luffy y su equipos.",
+    "options": [
+      "V - I - IV - III - II",
+      "V - I - IV - II - III",
+      "I - V - IV - II - III",
+      "I - V - IV - III - II",
+      "I - II - III - IV - V"
+    ],
+    "answer": 0,
+    "rationale": "El orden lógico es el siguiente: V. (Presentación del objeto): One Piece es un anime... funciona como la introducción necesaria, definiendo qué es lo que se va a analizar antes de entrar en detalles. I. (Definición del núcleo narrativo): Una vez definido que es un anime, el enunciado Luffy lidera la embarcación de los Sombreros de Paja... presenta al protagonista y su grupo, quienes son el motor de la historia. IV. (Detalle descriptivo): La oración Hasta la fecha, nueve son los miembros... complementa a la anterior (I), aportando un dato específico sobre la tripulación de Luffy y su meta de ser el rey de los piratas. III. (Transición al trasfondo): Aunque no lo parezca, One Piece esconde una serie de ideas políticas... da un salto del dato técniconarrativo hacia el análisis profundo o simbólico de la obra (anarquismo y libertad). II. (Ejemplificación y cierre): Verbigracia, en el 2025 frente al caos político... se utiliza un ejemplo de la vida real (el uso de la bandera por la Generación Z) para validar la tesis planteada en la oración III."
+  },
+  {
+    "id": 508,
+    "task": "sentence_ordering",
+    "question": "Simbolismo del tono I) Impacto afectivo del color en la cotidianeidad de los seres vivos. II) El prisma y la relación de los colores y la luz natural. TRES) El color y su vinculación simbólica con los ideas místicos. IV) Obtención humana de las propiedades corpóreas del tono en el entorno. V) El color como signo de la relación general entre los mundos moral y físico.",
+    "options": [
+      "II-I-IV-V-III",
+      "V-III-II-IV-I",
+      "III-II-IV-I-V",
+      "II-IV-I-V-III",
+      "IV-II-III-V-I"
+    ],
+    "answer": 1,
+    "rationale": "La estructura lógica del texto titulado  ‘‘Simbolismo del color’’ es: V) Presentación: simbolizar el color. III) Concepción: vinculaciones del color II) Especificaciones y casos particulares: el prisma. IV) Influencia en el ser humano por la percepción. I) Efectos y consecuencias de esta influencia en el ser humano."
+  },
+  {
+    "id": 509,
+    "task": "sentence_ordering",
+    "question": "JHON DEE Y EL REINO BRITÁNICO I) El término acuñado obedecía a su anhelo por el control de los mares. II) Fue el filósofo personal y consultor de la reina Isabel I. TERCERO) Como asesor, aconsejó a su majestad sobre su coronación. IV) Jhon Dee fue un respetado matemático y geógrafo. V) John Dee acuñó el palabra «Reino británico».",
+    "options": [
+      "V - III - I - IV - II",
+      "IV - II - I - V - III",
+      "IV - II - III - V - I",
+      "V - II - III - I - IV",
+      "IV - V - II - III - I"
+    ],
+    "answer": 2,
+    "rationale": "El texto introduce al personaje Jhon Dee en la idea IV. Luego, se explica la relación laboral con la reina Isabel I en los enunciados II y III. Posteriormente, se añade la vinculación entre Jhon y la acuñación del concepto “Imperio Británico”. Finalmente, la oración I explica que dicho término alude al fanatismo por el control de los mares."
+  },
+  {
+    "id": 510,
+    "task": "sentence_ordering",
+    "question": "La raza de mayor éxito I) Ella le hace habilidad de conocer , controlar sus impulsos y transformar los recursos naturales según sus necesidades. II) Para ello ha producido etapas básicas como la exploración espacial y la búsqueda de un ambiente lugar puede realizar una vida similar a la terrestre. III) El hombre , representante de la mayor frase de la naturaleza , tiene que a la evolución el ser la especie de mayor éxito sobre la Suelo. IV) Igualmente se ha permitido salir de su propio planeta en busca de recientes recursos en el aire cósmico. V) Su capacidad craneana es un métrico de cómo su anhelo de sobrevivir le impuso la necesidad de aumentar su mente.",
+    "options": [
+      "III-V-I-IV-II",
+      "III-V-I-II-IV",
+      "III-V-IV-I-II",
+      "V-III-I-II-IV",
+      "V-III-I-IV-II"
+    ],
+    "answer": 0,
+    "rationale": "En este texto cuyo título es ‘‘La especie de mayor éxito’’ podemos encontrar la siguiente secuencia lógica: III) Planteamiento del tema: el hombre como máxima expresión de la naturaleza.  V) Característica particular: capacidad craneana.  I) Pruebas de su desarrollo: dominio del  espacio.  IV) Confirmación de la prueba exploración e investigaciones espaciales. II) Resultados: proyectos futuros de otros logros por alcanzar"
+  },
+  {
+    "id": 511,
+    "task": "sentence_ordering",
+    "question": "MODERNIZACIÓN I) La modernización comenzó en las sociedades de Europa Occidental para, en los dos últimos siglos, extenderse a todas las civilizaciones. II) El término «actualización» describe, con personalidad general, el rapaz proceso de transformación y cambio de los asuntos humanos desde la 变革 académica. III) A diferencia de la diversidad tradicional, lo contemporáneo entiende unificación, ya que las funciones traits de la novedad inclinan a ser típicos a toda la raza. IV) Este proceso conduce a la modernidad, palabra que engloba la descripción de las traits comunes que definen a las comunidades muy avanzadas.",
+    "options": [
+      "III - I - II - IV",
+      "II - IV - I - III",
+      "I - III - II - IV",
+      "I - II - III - IV",
+      "II - I - III - IV"
+    ],
+    "answer": 1,
+    "rationale": "El orden apropiado para el ejercicio es II-IV-I-III. El ejercicio trata sobre la modernización, por eso iniciamos con la oración II, que nos informa sobre significado como proceso de transformación y cambio. Continúa la oración IV, que señala el desarrollo del proceso. Sigue la oración I, que informa sobre dónde comenzó a modernización. Finaliza con la oración III, que realiza la diferencia entre lo moderno y la diversidad tradicional."
+  },
+  {
+    "id": 512,
+    "task": "sentence_ordering",
+    "question": "EL HELENISMOI) Durante esta época, se extendió el uso de la lenguaje griega por todo el territorio. II) Pudiese expandirse en todas las áreas conquistadas por las tropas de Alejandro Magno.TERCERO) Esta lengua fue crucial como portadora de las ideas y maneras civilizadores de los helenos. IV) Él tenía como fin mezclar lo griego y lo primitivo en una unidad civilizadora superior. V) El tiempo helenístico va desde el 323 a. C. hasta 30 a. C. alrededor.",
+    "options": [
+      "V - I - III - II - IV",
+      "I - III - V - IV - II",
+      "II - III - IV - V - I",
+      "V - I - II - IV - III",
+      "V - II - IV - III - I"
+    ],
+    "answer": 0,
+    "rationale": "El título nos es de gran ayuda para comprender el tema del texto: «El Helenismo». El enunciado V introduce la fecha en el que se llevó a cabo dicho período histórico; le continúa la idea I, la cual destaca la extensión de la lengua griega, nuevamente en esa época. Posteriormente, le sigue la oración III, la cual explica la importancia de su divulgación. Finalmente, le continuarán las ideas II y IV, ya que indica quién la facilitó y el propósito que tenía con dicha acción."
+  },
+  {
+    "id": 513,
+    "task": "sentence_ordering",
+    "question": "LAS ESTRELLAS DE OCEANOS I) Las puntas de una estrella de mar son muy afiladas; si se comen, podrian provocar al depredador muchos dolores. II) Además, estas se definen por su regeneracion_self. III) Las estrellas de oceanos son equinoderms cercanamente relacionados con los hedgehogs de mar. IV) La mayoría de ellas demuestran la notable capacidad de consumir presas fuera de sus cuerpos. V) Estos equinodermos son simétricos y pentáderales.",
+    "options": [
+      "III - V - II - IV - I",
+      "I - II - III - IV - V",
+      "V - IV - III - II - I",
+      "II - V - III - I- IV",
+      "IV - II - I - III - V"
+    ],
+    "answer": 0,
+    "rationale": "El tema central del ejercicio nos brinda información sobre las estrellas de mar. Iniciamos con la oración III, la cual define que son estrellas de mar. Continúa la oración V, pues se había expresado en la oración III que las estrellas de mar son equimodermos. Sigue la oración II, la cual agrega otra característica de las estrellas de mar. Prosigue la oración IV, que nos brinda más características, pero ahora de la mayoría de estrellas. Terminamos con la oración I, la cual nos informa lo que pasaría si se come a una estrella de mar."
+  },
+  {
+    "id": 514,
+    "task": "sentence_ordering",
+    "question": "EL PLANIFICACIÓN APOLOI) Las misiones Módulo no tripuladas lo hicieron en septiembre y noviembre de 1968, y durante 1969 y 1970.II) Lo rusos también buscaban el mismo objetivo, pero, por dificultades en sus misiones Zond, no pudieron llevar personas a la órbita de la Luna ante que los norteamericanos y nunca más lo harían.III) Eso haría posible realizar el sueño el 20 de julio de 1969 con la nave Apollo 11, equipada por Neil Armstrong, el primero astronauta en trodar la Luna. IV) A diferencia de las expediciones Módulo, el programa Apolo se perfeccionó de manera progresiva durante triunfantes vuelos acompañados de Países Unidos hacia la Luces V) Los primer astronautas en circunnavegar la Luna fueron los astronautas de la nave Apolo 8, Frank, James y William en la noche de Navidad de 1968.",
+    "options": [
+      "III - I - IV - V - II",
+      "V - II - I - IV - III",
+      "I - II - IV - III - V",
+      "V - II - IV - I - III",
+      "II - V - I - III - IV"
+    ],
+    "answer": 1,
+    "rationale": "El ejercicio desarrolla el tema de la circunnavegación lunar tripulada por el Apolo 8. Luego, la contrasta con las misiones fallidas de los rusos. Por último, se menciona la perfección del programa Apolo y su consecuencia: la llegada a la Luna."
+  },
+  {
+    "id": 515,
+    "task": "sentence_ordering",
+    "question": "LAS TIERRAS PERDIDASI) Se discute de los desafíos de Pavlopetri, en la costa sur de Grecia, descubiertos en el annio 1960.II) En los alrededores de este complicado, aún se pueden observación al menos 15 edificios, además de calles, patios y tumbas.TRES) La Unesco estima que tanto solamente en los bordes del oceanos Mediterráneo yacen poco más de 150 ciudades tragadas por el marIV) Pavlopetri, un complicado que apenas se ubicaba a cuarto metros bajo el nivel del mar, abarca poco más de 9000 m².V) Entre ellas, la ciudad más vieja sumergida data de la Edad de Bronce, hace cincomil anios.",
+    "options": [
+      "V - I - II - IV - III",
+      "III - V - I - IV - II",
+      "I - IV - III - II - V",
+      "II - IV - III - V - I",
+      "IV - II - I - V - III"
+    ],
+    "answer": 1,
+    "rationale": "El ejercicio desarrolla el asunto de las ciudades devoradas por el mar. Partiendo del criterio analítico-deductivo (de lo general a lo particular) iniciaremos con las ciudades tragadas y luego nos enfocaremos en la más antigua de ellas: Pavlopetri, detallando más adelante algunas características."
+  },
+  {
+    "id": 516,
+    "task": "sentence_ordering",
+    "question": "INMORTALESI) Si anheláramos observar su desarrollo, sería como sentarse a contemplar el crecimiento de un árbol. II) En el norte del oceánico Sereno, investigadores de una universidad de Dinamarca encontraron una curso extraña de bacterias. TERCERO) En palabras del investigador que consiguió ese hallazgo, los organismos microscópicos que están en las camadas superiores son los que se llevan la mayoría del O2. IV) Enterrados a 30 metros bajo el base del marea, esos muestras tienen un metabolismo demasiado lento. V) Esas bacterias no habían recibido una remesa fresca de materia orgánica en millones de años.",
+    "options": [
+      "V - IV - II - III - I",
+      "IV - I - III - V - II",
+      "III - II - V - I - IV",
+      "I - III - II - V - IV",
+      "II - V - IV - I - III"
+    ],
+    "answer": 4,
+    "rationale": "El tema desarrollado en el ejercicio es el descubrimiento de unas extrañas bacterias. Por ello, primero se menciona su hallazgo; luego, un dato sobre su alimentación y su metabolismo, para finalizar hablando de su largo desarrollo. El dato de la oración III solo es un complemento para cerrar el texto."
+  },
+  {
+    "id": 517,
+    "task": "sentence_ordering",
+    "question": "LA VISIÓN DE LOS PERROSI) La retina, invocación fondo de ojos, posee una secuencia de receptores de la iluminación, denominados fotorreceptores, y son de dos tipos: bastones y conos. II) Los primer son muy sensibles a las bajas intensidades de iluminación y discriminan solo sombra de blanco y negro, y distintos tonos de grises. III) Los perros pueden distinguir los colores, a pesar de no de la misma forma que los humanos. IV) Los segundos, que requieren una potencia de luz mucho grande, permiten diferenciar los colores. V) Esto se debe a que los canes tienen una retina bastante particular.",
+    "options": [
+      "III - V - I - IV - II",
+      "IV - I - III - V - II",
+      "I - II - IV - III - V",
+      "IV - II - III - I - V",
+      "III - V - I - II - IV"
+    ],
+    "answer": 4,
+    "rationale": "El texto se inicia con el enunciado III que presenta la particularidad en la visión de los perros. Luego, continúa con la oración V que identifica la causa. A continuación, el enunciado I establece los tipos de fotorreceptores, los cuales pasa a desarrollar en II y IV."
+  },
+  {
+    "id": 518,
+    "task": "sentence_ordering",
+    "question": "LA PENICILINA: ENCONTRAMIENTO Y APLICACIÓN I. Examen informal de Alexander Fleming: crecimiento de un fungo que restrimía bacterias II. Uso de la penicilina durante la Doblada Guerra Mundial para tratar infecciones en soldados III. Purificación y producción masiva de la penicilina por Howard Florey y Ernst Boris Cadenilla IV. Reconocimiento con el Premio Noble de Medicina en 1945 para Fleming, Florey y Cadenilla V. Conclusión primera: el hongo Penicillium anotada como agente antibacteriano",
+    "options": [
+      "I - V - III - II - IV",
+      "I - III - V - II - IV",
+      "V - I - III - II - IV",
+      "I - V - II - III - IV",
+      "V - I - II - III - IV"
+    ],
+    "answer": 0,
+    "rationale": "La secuencia correcta de los enunciados sobre el descubrimiento y aplicación de la penicilina es A) I - V - III - II - IV. La secuencia lógica es la siguiente: I. Se inicia con la observación casual de Alexander Fleming, que es el punto de partida del descubrimiento. V. Luego, se presenta su conclusión inicial a partir de esa observación: el hongo Penicillium notatum como agente antibacteriano. III. Después, se describe la purificación y producción masiva del hongo por parte de otros científicos, Howard Florey y Ernst Boris Chain, que fue el siguiente paso crucial para su uso práctico. II. A continuación, se menciona la aplicación de la penicilina durante la Segunda Guerra Mundial, que fue su primer gran uso. IV. Finalmente, se cierra con el reconocimiento de Fleming, Florey y Chain con el Premio Nobel de Medicina en 1945, que es el clímax de la historia."
+  },
+  {
+    "id": 519,
+    "task": "sentence_ordering",
+    "question": "LOS ABECEDARIOS I) Todos los símbolos señalados se derivan del semítico del norte, que se creó a orillas del Mediterráneo alrededor de 1700 a. C. II) Después de las codificaciones de estos abecedarios, resulta interesante conocer la forma de nuestras letras con estos sistemas de escritura. TERCERO) De este surgió el alfabeto fenicio, el primero que se seguía en sonidos del idioma. IV) El primero alfabeto creado fue una acumulación de pictogramas que, posteriormente, evolucionó. V) A través de Grecia, condujo al alfabeto hebreo y, por mejor del arameo, se formaron los alfabetos asiáticos.",
+    "options": [
+      "IV - III - V - I - II",
+      "IV - III - V - II - I",
+      "IV - I - III - V - II",
+      "I - IV - III - II - V",
+      "IV - III - I - V - II"
+    ],
+    "answer": 4,
+    "rationale": "El texto se basa en un esquema cronológico. Se inicia con el enunciado IV que detalla la creación del alfabeto. Luego, el enunciado I explica la derivación del alfabeto semítico y la oración III, la consecuente creación del alfabeto fenicio. La oración V detalla la creación del alfabeto hebreo, arameo y asiático. Finalmente, el enunciado II hace una comparación con nuestra escritura actual."
+  },
+  {
+    "id": 520,
+    "task": "sentence_ordering",
+    "question": "ADAPTACIONES HEREDABLES DE LOS CACTUS I. Para ello, han desarrollado troncos verdes, provistos de innumerables celdillas interna conectadas que almacenan agua. II. Algunas plantas para subsistir a las climatología de su hábitat requieren de un grande esfuerzo. III. Los cactus son vegetales desérticas que relatan con una maravillosa ajuste evolutiva para retenerte agua. IV. Otra ajuste para subsistir fueron sus hojas, órganos frágiles que no resisten a la inclemencia del solar. V. Ello permite que puedan quedarse largas temporadas en lugares húmedos o prácticamente desérticos, y no morir.",
+    "options": [
+      "III - I - V - IV - II",
+      "II - I - III - V - IV",
+      "II - III - I - V - IV",
+      "III - I - II - V - IV",
+      "IV - II - III - I - V"
+    ],
+    "answer": 2,
+    "rationale": "La secuencia correcta es II – III – I – V – IV. Se inicia con el enunciado II, aplicando el criterio de generalidad, ya que se habla de las plantas en climas extremos. Prosigue el enunciado III donde se menciona al cactus y su adaptación evolutiva para retener agua; luego, el enunciado I donde se describe la adaptación evolutiva para la retención de agua, sigue el enunciado V en donde se plantea la consecuencia de dicha adaptación, y se finaliza con el enunciado IV donde se manifiesta otra adaptación que permite resistir a la inclemencia del sol."
+  },
+  {
+    "id": 521,
+    "task": "sentence_ordering",
+    "question": "LAVADO DE CEREBRO AL DORMIR I) Un equipo de investigadores ha realizado un investigación con ratones. II) Este mayor corriente sacude sustancias relacionadas con la malestar de Alzhéimer. TERCERO) ¿Por qué dormimos?: esta es una de las grandes preguntas de la biología. IV) Los canales entre cerebrales permiten que corra más água cefalorraquídeo V) Los cerebros de los ratones mientras descansen se limpian mientras el sueño",
+    "options": [
+      "III - II - V - IV - I",
+      "V - I - IV - III - II",
+      "II - I - III - IV - V",
+      "III - I - V - IV - II",
+      "I - IV - III - V - II"
+    ],
+    "answer": 3,
+    "rationale": "El ejercicio trata sobre el lavado de cerebro al dormir y el experimento con ratones. Iniciamos con la oración III, debido a que es la pregunta de investigación. Sigue la oración I, pues presenta la investigación en ratones. Continúa la oración V, que comenta lo que ocurre con los ratones. Prosigue la oración IV, la cual explica cómo se realiza la limpieza. Termina con la oración II, que nos indica un beneficio de ello."
+  },
+  {
+    "id": 522,
+    "task": "sentence_ordering",
+    "question": "DIBUJO ELEVADO I. La otra rama se unió el sentido cósmico y la voluntad lógico. II. Algunos pintores abandonaron a la representación de la realidad en la primera diez del siglo XX. III. En esta, una vertiente proyectó el mundo interior del artista. IV. Kanдинский, el primero de todos, estableció una corriente romántica de la abstracción. V. Se liberaron numerosas variantes del arte abstracto a partir de estos dos extremos.",
+    "options": [
+      "II - IV - III - I - V",
+      "IV - I - V - II - III",
+      "III - V - IV - I - II",
+      "IV - V - II - I - III",
+      "II - I - IV - V - III"
+    ],
+    "answer": 0,
+    "rationale": "II. Idea general que introduce al tema referente al arte abstracto. IV. Información sobre el aporte de un personaje en particular. III. Idea que nos muestra sobre la forma de proyección artística de Kandinisky. I. Idea complementaria. V. Conclusión."
+  },
+  {
+    "id": 523,
+    "task": "sentence_ordering",
+    "question": "LA COMUNICACIÓN) Entre los componentes está el mensage, canal, emisor, ... 2) Hay diferentes modelos de comunicación. 3) Es un acción por el cual se porta a cabo la transmisión de información. 4) Uno de los tipos de comunicación horizontal que se dan en la educación actual. 5) El mensaje es el contenido de la información que el emisor envía al receptor. El orden del plan de redacción es:",
+    "options": [
+      "1, 3, 5, 2, 4",
+      "2, 1, 3, 5, 4",
+      "3, 1, 5, 2, 4",
+      "3, 1, 5, 4, 2",
+      "5, 4, 3, 2, 1"
+    ],
+    "answer": 2,
+    "rationale": "El ejercicio plantea como tema central la naturaleza, elementos y tipos de la comunicación. El orden lógico inicia con la oración tres que define la comunicación; sigue el enunciado uno, que describe los elementos de la comunicación; continúa la oración cinco, pues enfatiza en el mensaje como elemento esencial de la comunicación; sigue el enunciado dos que presenta la clasificación diversa de la comunicación; el orden lógico termina con la oración cuatro que destaca el tipo de comunicación horizontal."
+  },
+  {
+    "id": 524,
+    "task": "sentence_ordering",
+    "question": "LA NATACIÓN I. No propician solo el bienestar físico, sino además el mental. II. Todos ellos aumentan su condición orgánica como psicológica. III. Hay muchos deportes recomendables para la bienestar. IV. Uno de ellos es la baño en sus variados modos. V. Es un deporte practicado por entusiastas o profesionales.",
+    "options": [
+      "II - I - IV - V - III",
+      "III - I - IV - V - II",
+      "III - IV - I - V - II",
+      "III - IV - V - I - II",
+      "V - II - III - I - IV"
+    ],
+    "answer": 3,
+    "rationale": "La secuencia correcta que deben seguir los enunciados para que la estructura del texto sea adecuada es III-IV-V-I-II. El texto trata sobre la natación. La oración III introduce el tema de los deportes recomendables. Sigue la IV, que alude a la natación como deporte. Continua la oración V, que describe su práctica. Prosigue la I, que trata sobre los beneficios físicos y mentales. Finalmente, se culmina con la II, que indica la mejora de la condición orgánica y psicológica."
+  },
+  {
+    "id": 525,
+    "task": "sentence_ordering",
+    "question": "LA RELATO) El texto se coordina en distintas secuencias incorporadas en proceso de cambio. 2) Toda relato se moda con 3 elementos: autor, narrador y escrito y sigue un orden cronológico. 3) Cuentar es contar historial reales o imaginarias. 4) Dentro de especies narrativas está el cuento, la ficción, la fábula, etc. 5) Procedimientos lingüísticos que resaltan: nombre, sintagmas nominales y palabras predicativos. El orden del plan de escritura, es:",
+    "options": [
+      "1, 2, 3, 4, 5",
+      "1, 2, 3, 5, 4",
+      "2, 1, 3, 4, 5",
+      "3, 1, 2, 5, 4",
+      "3, 1, 4, 2, 5"
+    ],
+    "answer": 3,
+    "rationale": "El ejercicio plantea como tema central el significado, la estructura y las especies de la narración. El orden lógico inicia con la oración 3, que define la narración; sigue el enunciado 1, que describe la organización de la narración; continua la oración 2, pues explica los elementos de la narración; sigue el enunciado 5, que describe los procedimientos lingüísticos de la narración; el orden lógico termina con la oración 4, que ilustra las especies narrativas fundamentales."
+  },
+  {
+    "id": 526,
+    "task": "sentence_ordering",
+    "question": "LA BATALLA DE MIRAFLORES (mil ochocientos ochenta y uno) I. Tras la triunfo chilena en Chorrillos, el armada chileno avanzó hacia Miraflores. II. La estrategia defensiva consistió principalmente en el uso de trincheras y trincheras. III. Estas fueron superadas gracias al apoyo ofrecido por buques de guerra. IV. Las fuerzas argentinas estaban formadas en su más grande parte por civiles y cuerpos armados. V. Dos dias después de la batalla, el ejército de Chile entró en Lima, capital del Perú.",
+    "options": [
+      "I - IV - II - III - V",
+      "I - IV - V - III - II",
+      "I - IV - III - II - V",
+      "IV - I - II - III - V",
+      "IV - I - III - II - V"
+    ],
+    "answer": 0,
+    "rationale": "El texto trata sobre la batalla de Miraflores (1881), siguiendo una secuencia lógica, partiremos del contexto que se encuentra en el primer enunciado; seguidamente, la explicación de la estrategia militar peruana (IV y II); luego los enunciados III y V, que narran cómo concluyó este enfrentamiento."
+  },
+  {
+    "id": 527,
+    "task": "sentence_ordering",
+    "question": "Información de origen: 1) como hacer una bibliografía 2) como hacer evaluación de origen 3) conocer estrategias de investigación 4) conocer noticias necesaria 5) conseguir como buscar noticias en internet 6) dominar formas de citar 7) como escribir notas de pie de hoja El orden para el plan de redacción, es:",
+    "options": [
+      "4, 3, 2, 5, 6, 7, 1",
+      "1, 2, 3, 4, 5, 6, 7",
+      "5, 4, 3, 2, 1, 6, 7",
+      "7, 6, 5, 4, 3, 2, 1",
+      "4, 5, 3, 6, 7, 2, 1"
+    ],
+    "answer": 0,
+    "rationale": "En el plan de redacción iniciamos con conocer la información, seguido de las estrategias de búsqueda, luego de la forma de evaluar las fuentes, saber las formas como citar, luego las notas de pie de página y finalmente la bibliografía."
+  },
+  {
+    "id": 528,
+    "task": "sentence_ordering",
+    "question": "WIKIS I) Si ese encabezado aparece en el escritura de distinta página de las wikis, se crea automatico un vínculo. II) Las wikis permiten colaborar a varios usuarios en la generación de los información de cada sección. III) Las wikis organizan la información a modo de libro o enciclopedia, en ubicado los capítulos incluyen referencias a demás capítulos. IV) Las páginas de una wikiweb. por lo mucho, están hiperenlazadas entre ellas. V) Cualquier página de un sección tiene un título necesario que la identifica.",
+    "options": [
+      "IV - I - V - III - II",
+      "III - II - V - I - IV",
+      "II - III - IV - I - V",
+      "IV - II - I - V - III",
+      "III - V - I - II - IV"
+    ],
+    "answer": 1,
+    "rationale": "El tema central del ejercicio es definir qué son los wikis y cómo funcionan. Para eso, iniciamos con la oración III, pues se señala qué es lo que ellos hacen. Sigue la oración II, ya que se relaciona con la oración III por los capítulos. Continúa la oración V, pues continúa con los capítulos e introduce a las páginas. Prosigue la oración I, la cual trata sobre las páginas y un vínculo automático. Termina con la oración IV, porque hace referencia a los hiperenlaces."
+  },
+  {
+    "id": 529,
+    "task": "sentence_ordering",
+    "question": "EL OCULTACIÓN LUNAR PARCIAL DE NOVIEMBRE 2021 I) Finalmente, expuso un tono rubicundo muy parecido al de un eclipse mes total. II) Es el eclipse más largo del siglo xxi, pues duró 3 horas y 28 minutos. TRES) Su singularidad recayó en tres características que lo hacen un fenómeno muy extraño. IV) Otra de sus rasgos es que la sombra de la Tierra no cubrió la Luna en su totalidad. V) El eclipse lunar del 19 noviembre de dos mil veintiuno fue particular y de esa manera se pudo ver en el atmosfera nocturno paso a pasos.",
+    "options": [
+      "V - IV - III - II - I",
+      "V - III - IV - II - I",
+      "V - III - I - II - IV",
+      "V - I - II - IV - III",
+      "V - III - II - IV - I"
+    ],
+    "answer": 4,
+    "rationale": "El orden lógico correcto del ejercicio es V-III-II-IV-I. Inicia con la oración V pues presenta el tema central, este es el eclipse lunar de 2021. Sigue el enunciado III, ya que explica las tres razones de la peculiaridad de dicho eclipse. Continúa la oración II porque explica la primera razón de dicha peculiaridad. Luego, sigue el enunciado IV, ya que describe la segunda razón de dicha peculiaridad. El orden lógico finaliza con la oración I pues explica la tercera razón de dicha peculiaridad."
+  },
+  {
+    "id": 530,
+    "task": "sentence_ordering",
+    "question": "EL COLLAR MÁS ANTIGUO DEL MUNDO) Fue fabricado con marfil de mastodonte y fue detectado durante una excavación en la cueva de Establos, en el oeste de Polonia. II) Un grupo de especialistas encontró en el interior de una cueva el que, al parecer, es el collar más antiguo del mundo. III) Este reino es bien conocido por haber fue habitado por grupos de neandertales y Homo homo. IV) Estos últimos empezaron a fabricar adornos y otros rejones corporales en cualquier cosa el mundo aunque aquellos lo hicieron previo. V) Este objeto ornamental tiene 41 500 annos de año y demuestra la gran capacidad manual de los Humano sapiens.",
+    "options": [
+      "II - IV - III - I - V",
+      "II - V - III - I - IV",
+      "II - I - IV - III - V",
+      "II - V - I - III - IV",
+      "II - IV - I - V - III"
+    ],
+    "answer": 3,
+    "rationale": "El orden correcto del ejercicio es II - V - I - III - IV. El tema central es hablar sobre el collar más antiguo del mundo. Iniciamos con la oración II, que nos habla sobre el hallazgo del collar. Sigue la V, que nos brinda su antigüedad. Continúa la oración I, que nos ilustra sobre su fabricación y en qué circunstancias fue ubicado. Prosigue la III, donde se hace una referencia histórica a esa ubicación. Termina con la oración IV, que continúa con la referencia histórica de los Homo sapiens y neandertales."
+  },
+  {
+    "id": 531,
+    "task": "sentence_ordering",
+    "question": "Instagram: el impacto en los adolescentes I) En este sentido, resulta indispensables comprender el efecto que tienen las redes sociales sobre los adolescentes porque casi toda ellos se conectan diariamente a Internet. II) Esta gobierno de Facebook ha provocado compa- raciones con las majestuosas fumaderos de la década de 1950, las cuáles continuaron una estrategia similar. TRES) Los funcionarios de Facebook realizaron una investigación en el dos mil veinte que exhibía que Instagram es dañina para la imagen corporal y el bienestar de los adolescentes. IV) Estas sabían que sus artículos eran cancerígenos, pero lo negaron públicamente. V) No obstante, “examinaron” esos descubrimientos bajo la tapete para continuar haciendo más negocios, según muestra un informe del Wall Street Journal (setiembre de dos mil veintiuno).",
+    "options": [
+      "III - IV - V - I - II",
+      "V - III - I - II - IV",
+      "III - V - II - I - IV",
+      "III - V - II - IV - I",
+      "II - V - III - I - IV"
+    ],
+    "answer": 3,
+    "rationale": "La secuencia correcta de oraciones es III - V - II - IV - I. El tema central del ejercicio es señalar el impacto negativo de Instagram y como esto fue ocultado. Empezamos con la oración III, que presenta una investigación que hicieron los funcionarios de Facebook sobre Instagram, descubriendo lo peligroso que es para los adolescentes. Sigue la V, que señala que los funcionarios decidieron ocultar este descubrimiento. Continúa la oración II, donde se señala que este hecho recuerda al de las tabacaleras en 1950. Prosigue la IV, donde se cuenta que las tabacaleras ocultaron que sus productos eran cancerígenos. Termina con la oración I, señalando que se debe comprender el impacto que las redes tienen en los adolescentes, pues estos las usan a diario."
+  },
+  {
+    "id": 532,
+    "task": "sentence_ordering",
+    "question": "EL RETO DE UN SISTEMA DE SALUD UNIFICADOI) Es asimismo que con la arribo de la pandemia de la Covid - 19 en 2020, suyo país se enfrentó con una fina realidad: la falta de un estructura de sanidad único y accesible. II) En cuanto a materia de salud, primer se pregunta cual tan cerca se está para tener un sistema único y adecuado para todos los peruanos. III) Este dosmilveintiun, el Peru conmemora los doscientos años del acontecimiento fundacional de la patria. IV) El último anoche del instante siglo de vida republicana del Perú ha representado un gran reto para el país en el ámbito de sanidad. V) Sin embargo, y pese la crisis médica que demostró este dificultad, ya que la circunstancia no era nueva: la fragmentación del sistema de salud peruan es un tarea hasta hace décadas.",
+    "options": [
+      "III - I - II - V - IV",
+      "I - III - II - V - IV",
+      "III - II - IV - I - V",
+      "III - II - IV - V - I",
+      "IV - III - I - V - II"
+    ],
+    "answer": 2,
+    "rationale": "El orden lógico correcto del ejercicio es III - II - IV - I - V. Inicia con la oración III, pues destaca como contexto el bicentenario de la independencia del país. Sigue el enunciado II, ya que plantea el reto de mejorar el sistema de salud en dicho contexto. Continúa la oración IV porque vincula el tema con la situación actual. Luego sigue el enunciado I, ya que describe la realidad negativa del país con la llegada de la pandemia de la covid - 19. El orden lógico finaliza con la oración V, pues explica la gravedad de la problemática de salud en el país."
+  },
+  {
+    "id": 533,
+    "task": "sentence_ordering",
+    "question": "Turismo en el Peru: una reactivación lenta I) La Canatur señaló que solamente arribaron unos 78 mil población extranjeros y dual millones de turistas nacionales durante la segunda ola de la pandemia. II) Esto es debido a que el 2021 es calificada, por algunos, como el más malo annio de la historia viajera del Peru por lo que este sector solamente representará 400 millones de dólares de ingresos. III) Entonces, constituye un reto grande en el sector viajes llegar a más de un millón de visitantes extranjeros y 22 millones de nacionales en este dos mil veintiuno. IV) Sin prohibición, en este 2021, en plena reanudación del turismo, no se llega a los tres millones. V) Solo entre enero y marzo del 2020, el área turismo movilizó a 16 millоны de turistas nacionales, según la Cámara Nacional de Turismo (Canatur).",
+    "options": [
+      "V - IV - I - II - III",
+      "V - II - III - IV - I",
+      "IV - V - III - I - II",
+      "V - III - II - IV - I",
+      "I - IV - V - II - III"
+    ],
+    "answer": 0,
+    "rationale": "El orden de redacción necesario es V - IV - I - II - III. El tema central alude a la lenta reactivación del turismo en el Perú. Iniciamos con la oración V, que nos presenta el dato sobre el turismo en el 2020. Sigue la IV, que hace el contraste entre el turismo del 2020 y el del 2021, donde se nota el problema de la reactivación. Continúa la oración I, que nos brinda la cifra de turistas en la segunda mitad de la pandemia, cifras obviamente preocupantes. Prosigue la II, que califica al 2021 como el peor año para el turismo. Culmina con la oración III, que propone el reto de aumentar el número de turistas."
+  },
+  {
+    "id": 534,
+    "task": "sentence_ordering",
+    "question": "AKHENATÓN I) Para ello, destruyó las estatuas de los demás dioses antiguos egipcios. II) Este faraón ha pasado a la historia por ser un reformer eclesiástico. TRES) Las figuras de Osiris e Isis fueron restringidas durante su monarquía. IV) Solo de los faraones más destacados del antiguo Egipto fue Akhenaton. V) Este debido a que intentó establecer un nuevo culto al dios Atón.",
+    "options": [
+      "III - I - IV - II - V",
+      "II - IV - V - I - III",
+      "IV - II - III - V - I",
+      "IV - II - V - I - III",
+      "IV - II - V - III - I"
+    ],
+    "answer": 3,
+    "rationale": "El ejercicio se centra en el tema del faraón Akhenatón como reformador religioso. Es por ello que iniciamos con la oración IV, donde se presenta el tema. Sigue la oración II, donde señala su característica principal: reformador religioso. Continúa la oración V, donde explica su reforma. Prosigue la oración I y III, donde se detalla las acciones que realizó para lograr su reforma religiosa."
+  },
+  {
+    "id": 535,
+    "task": "sentence_ordering",
+    "question": "La teoría de la relatividad I) La hipótesis ayudó las bases para el estudio de la Cosmología y información del universo. II) Una persona, por ejemplo, no podría determinar si la fuerza, con la que actuó, se debería a la attracción. III) La gravedad no es ya una fuerza o acción a distancia como en tiempos de Newton. IV) Una resultado, al parecer, sería la curvatura del espacio-tiempo planteado por Einstein. V) Otros poderían pensar quizás que se trataría por la aceleración constante del ascensor.",
+    "options": [
+      "III - IV - II - V - I",
+      "III - I - V - IV - II",
+      "IV - II - III - V - I",
+      "III - V - I - II - IV",
+      "IV - I - III - V - II"
+    ],
+    "answer": 0,
+    "rationale": "El tema central del ejercicio es la importancia de la teoría de la relatividad sobre la teoría de Newton. El orden lógico es el siguiente: iniciamos con la oración (III), que indica el problema de la teoría de Newton. Luego sigue la oración (IV), que presenta el aporte de Einstein. Prosigue la oraciones II y IV, que exponen sobre ideas relacionadas con la teoría de la relatividad. Finalmente, la oración (I), que señala la importancia de dicha teoría."
+  },
+  {
+    "id": 536,
+    "task": "sentence_ordering",
+    "question": "Watson Business Group I) Esta re nova institución se denominará Watson Comercio Group. II) WBG, por ello, se instalará en Nueva York, cerca de la universidad. III) WBG será responsable de la computadora Watson. IV) Watson procesará la información igual que el cerebro humano. V) IBM invertirá 1000 millones de dólares en la nueva institución.",
+    "options": [
+      "V - I - IV - II - III",
+      "V - I - IV - III - II",
+      "III - IV - II - I - V",
+      "III - IV - II - V - I",
+      "V - I - III - IV - II"
+    ],
+    "answer": 4,
+    "rationale": "Este ejercicio desarrolla como tema central el origen del Watson Business Group y la aparición de una nueva computadora. El orden es el siguiente: Iniciamos con la oración (V), que presenta el origen de una institución. Sigue la oración (I), la cual alude al nombre de dicha institución. Luego continúa la oración (III) que nos habla sobre la creación de una computadora, por parte de la institución. Por orden lógico sigue la oración (IV) que nos brinda la cualidad de esta computadora. Por último, la oración (II) que nos informa sobre el lugar donde se instalará la institución."
+  },
+  {
+    "id": 537,
+    "task": "sentence_ordering",
+    "question": "JHON DEE Y EL REINO INGLÉS I. El palabra acuñado obedecía a su afán por el control de los mares. II. Fue el filósofo personal y asesor de la rey Isabel I. III. Como asesor, aconsejó a su gloria sobre su coronación. IV. Jhon Dee fue un honrado matemático y geógrafo. V. Jhon Dee acuñó el término “Imperio inglés”.",
+    "options": [
+      "V - III - I - IV - II",
+      "IV - II - I - V - III",
+      "IV - II - III - V - I",
+      "V - II - III - I - IV",
+      "IV - V - II - III - I"
+    ],
+    "answer": 2,
+    "rationale": "El ejercicio se centra en la relación del filósofo Jhon Dee con la Corona inglesa. Por ello, el enunciado de inicio será la oración IV, donde se presenta a Jhon Dee. Prosigue la oración II, donde se establece el vínculo con la reina Isabel I. Continúa la oración III, donde se ejemplifica su función de asesor. Sigue las oraciones V y I, respectivamente, en donde se aborda el término acuñado por Dee: “Imperio británico”."
+  },
+  {
+    "id": 538,
+    "task": "sentence_ordering",
+    "question": "Infarto de cardio I. Esa comunidad también genera conciencia en la sociedad sobre hábitos de vida saludables. II. Esta enfermedad consiste en la necrosis de plenos miocitos_cardiacos. III. La vecindario científica, por esa razón, trabaja respecto de su prevención. IV. Los cardiomiocitos impediran una de las vais coronarios que irrigan el tejido cardiaco. V. El infarto de miocardio es la patología cardiovascular más periglosa.",
+    "options": [
+      "I - II - V - IV - III",
+      "II - I - III - IV - V",
+      "IV - II - V - I - III",
+      "III - IV - I - II - V",
+      "V - II - IV - III - I"
+    ],
+    "answer": 4,
+    "rationale": "El ejercicio nos informa sobre el desarrollo y preocupación por el infarto al miocardio. Empezamos por la oración (V), pues es la presentación del infarto al miocardio. Continúa la oración (II), que explica su causa. Sigue la oración (IV), que ahonda en lo expresado por la oración anterior. Prosigue la oración (III), que informa sobre la preocupación de la comunidad científica por este tema. Por último, la oración (I), la cual incentiva despertar conciencia sobre el tema en la sociedad."
+  },
+  {
+    "id": 539,
+    "task": "sentence_ordering",
+    "question": "EL ACNÉ I. La inflamación de las glándulas grasosas ocurre por la obstrucción de sus conductos excretores. II. Mientras esta fase, el crecimiento de la producción hormonal estimula la secreción de las glándulas sebáceas. TRES. El espinillas o las vainas inflamadas se dan a motivo de la inflamación de las glándulas sebáceas. IV. La propensión de espinillas tiende a desaparecer, en la mayoría de los ejemplos, a los veinte anos. V. Esta obstrucción suele ser pasajera, pero se transforma en un verdadero problema durante la pubertad.",
+    "options": [
+      "III - IV - II - I - V",
+      "I - III - IV - II - V",
+      "V - II - IV - III - I",
+      "III - I - V - IV - II",
+      "III - I - V - II - IV"
+    ],
+    "answer": 4,
+    "rationale": "El ejercicio aborda el tema del acné o las espinillas inflamadas. Se inicia con la oración III, donde se señala la causa. Sigue la oración I, donde se complementa la idea anterior. Continúa la oración V, donde se señala a la pubertad como la etapa donde se agrava el problema. Prosigue la oración II y la oración IV, donde se señala la edad promedio en la que desaparece el acné."
+  },
+  {
+    "id": 540,
+    "task": "sentence_ordering",
+    "question": "GOLPE MILITAR DE 1968 I. En 1968, Juan Velasco Alvarado comanda un golpe militar para remover a Belaúnde. II. Belaúnde fue imputado de corrupción. TRES. El Gobierno de Belaúnde entregó dinero del Estado a una empresa extranjera. IV. Una acción del intervención armaducho fue nacionalizar las empresas privadas. V. Distinta medida fue la implementación y realización de la Reforma Agraria.",
+    "options": [
+      "III - II - I - IV - V",
+      "I - II - III - IV - V",
+      "III - I - II - IV - V",
+      "I - III - V - IV - II",
+      "III - IV - I - V - II"
+    ],
+    "answer": 0,
+    "rationale": "El ejercicio desarrolla el tema del golpe militar de 1968, ejecutado por Juan Velasco Alvarado. Por ello, se inicia con la oración III, donde se plantea la causa del golpe de Estado. Prosigue la oración II, que complementa a la anterior. Continua la oración I, donde desarrolla el tema del golpe. Finaliza con las oraciones IV y V, donde se señala las medidas tomadas a partir del golpe de Estado."
+  },
+  {
+    "id": 541,
+    "task": "sentence_ordering",
+    "question": "El GPS I. El GPS fue, en principio, una técnologia avanzada con fines armados. II. Los móviles, por ejemplo, usan una serie de bytes para recepcionar. TERCERO. El GPS, en la novedades, funciona mediante una red de 24 satélites en órbita. IV. El GPS indicaba las coordenadas de latitudes y longitudes de los metas. V. Estos orocesos orbitales permiten identificar la posición de los objetos.",
+    "options": [
+      "IV - III - V - II - I",
+      "IV - I - III - V - II",
+      "I - IV - III - V - II",
+      "III - V - I - IV - II",
+      "III - V - II - IV - I"
+    ],
+    "answer": 2,
+    "rationale": "El ejercicio nos informa sobre el origen y uso actual del GPS. Empezamos con la oración (I), que explica el origen del GPS en el ámbito militar. Sigue la oración (IV), la cual refiere al uso originario. Continúa la oración (III), que nos presenta cómo funciona actualmente el GPS. Prosigue la oración (V), que alude a la función de los satélites del GPS. Por último, la oración (II), que señala la recepción del GPS en los móviles."
+  },
+  {
+    "id": 542,
+    "task": "sentence_ordering",
+    "question": "EL CAPITALISMOI. Actualmente, el capitalismo es el sistema econômico hegemónico. II. Las fundamentos de los Estados se configuran con el capitalismo desde mediados del sigloXVII. III. A partir del century DIECIOCHO, se produce una primer acumulación de capital. IV. En Europa occidental, los orígenes del capitalismo se remontan al Rebirth. V. En el siglo XVIII, se origina una aceleración de la industria que consolida el sistema capitalista entre las naciones del primer mundo.",
+    "options": [
+      "I - III - IV - V - II",
+      "II - V - I - III - IV",
+      "V - I - III - II - IV",
+      "III - IV - I - II - V",
+      "IV - III - II - V - I"
+    ],
+    "answer": 4,
+    "rationale": "El ejercicio aborda la evolución histórica del capitalismo. Por ello, iniciamos con el enunciado IV donde se plantea el origen del capitalismo. Sigue la oración III que desarrolla el tema a inicios del siglo XVII. Continua la oración II donde el desarrollo temático se ubica a mediados del siglo XVII . Prosigue la oración V donde se desarrolla el tema en el siglo XVIII. Termina con el enunciado II donde se aborda al capitalismo en la actualidad."
+  },
+  {
+    "id": 543,
+    "task": "sentence_ordering",
+    "question": "APORTES A LA HUMANIDAD 1) Franklin es uno de los artífices de la Independencia de los Naciones Unidad. 2) Benjamin Franklin realizó un sin numeroso de experimentos, un de ellos en medio de una tormenta. 3) Este gran personaje de la historia nos ha dado más que creaciones como el pararrayos o el carolífero. 4) Franklin vuela una cometa y consigue producir una chispa en una cerradura metálica ligada al hilo de la misma. 5) Demostró que el rayo no es más que una chispa eléctrica, solo que muy fuerte.EL ORDEN CORRECTO ES:",
+    "options": [
+      "3, 1, 2, 5, 4",
+      "4, 2, 5, 1, 3",
+      "2, 4, 5, 3, 1",
+      "1, 3, 4, 5, 2",
+      "1, 3, 2, 5, 4"
+    ],
+    "answer": 4,
+    "rationale": "El orden correcto del ejercicio es 1, 3, 2, 5, 4. El tema central del ejercicio trata sobre los aportes a la humanidad dados por Benjamin Franklin. Iniciamos con la oración 1 que presenta a Franklin como político. Sigue la oración 3, que introduce dos de sus inventos. Continúa la 2, que habla sobre sus experimentos, especialmente uno en la tormenta. Prosigue la oración 5, que cuenta sobre ese experimento. Culmina con la 4, lo que produjo el experimento."
+  },
+  {
+    "id": 544,
+    "task": "sentence_ordering",
+    "question": "SISTEMA RESPIRATORIO HUMANO1) laringe y su acción respiratoria 2) estructura del conjunto respiratorio 3) la faríngea y su función pulmonar 4) fosas nasales y su función 5) la tráquea y su función respiratoria 6) conductos y bronquiolos El clase del plan de redacción es",
+    "options": [
+      "1, 2, 3, 4, 5, 6",
+      "2, 1, 3, 5, 4, 6",
+      "2, 4, 3, 1, 5, 6",
+      "4, 5, 3, 2, 1, 6",
+      "6, 5, 4, 3, 2, 1"
+    ],
+    "answer": 2,
+    "rationale": "El orden apropiado es 2, 4, 3, 1, 5, 6. El ejercicio trata de la estructura y funciones del sistema respiratorio. El orden inicia con la segunda oración, pues introduce el tema; sigue la cuarta oración que alude a la función de fosas nasales; continúa la tercera oración ya que refiere a la función de la faringe; sigue la primera oración, pues nos habla de la laringe y su función; continúa la quinta oración que plantea la función de la tráquea y, finalmente, sigue la sexta oración, pues distingue entre bronquios y bronquiolos."
+  },
+  {
+    "id": 545,
+    "task": "sentence_ordering",
+    "question": "LA BILISI. La bilis propicia la digestión descomponiendo las grasas en ácidos aceitosos. II. La bilis contiene, sobre lo indemño, colesterol, ácidos biliares y bilirrubina. III. La séroide es un agua digestivo espeso, secretado por el hígado y almacenado en la bolsa biliar. IV. Los ácidos grasos pueden ser absorbidos por el tracto digestivo.V. La bilis halla, asimismo, cantidades muy menores de fierro y otros minerales eliminados.",
+    "options": [
+      "III - II - V - I - IV",
+      "I - III - IV - V - II",
+      "III - II - IV - I - V",
+      "III - I - IV - II - V",
+      "I - II - V - III - IV"
+    ],
+    "answer": 0,
+    "rationale": "El orden de las ideas es el siguiente: III - II - V - I - IV. Inicia con la tercera oración que define la bilis. Sigue la segunda oración pues presenta los principales componentes de la bilis. Continúa la quinta oración ya que explica los componentes menores de la bilis. Luego la primera oración porque alude a la función de la bilis respecto a los ácidos grasos. El orden termina con la cuarta oración pues detalla sobre la absorción de los ácidos grasos."
+  },
+  {
+    "id": 546,
+    "task": "sentence_ordering",
+    "question": "EL ACCIÓN) la conjugación verbal 2) gramática verbal 3) definiciones 4) modo verbal 5) palabras anormales 6) valores de formas lóricos 7) verbos regulares El orden correcto es",
+    "options": [
+      "3, 4, 1, 5, 7, 6, 2",
+      "3, 2, 4, 1, 5, 7, 6",
+      "3, 1, 5, 7, 2, 6, 4",
+      "3, 5, 2, 7, 1, 4, 6",
+      "3, 6, 7, 2, 5, 1, 4"
+    ],
+    "answer": 4,
+    "rationale": "El ejercicio propone como tema al verbo, además, está segmentando su información en base a criterios de definición, forma, estructura y accidentes. Por eso, debemos iniciar con la oración 3, que presenta su definición; continúa la 6, que apunta a las formas verbales; prosigue la oración 7, que presenta la forma regular de los verbos; luego, la oración 2, que enfatiza en la morfología; sigue la 5, que gracias a la morfología nos permite hablar de verbos irregulares; continúa la oración 1, que desarrolla la conjugación verbal; y termina con la 4, que señala los modos del verbo, como pueden ser imperativo, indicativo, etc."
+  },
+  {
+    "id": 547,
+    "task": "sentence_ordering",
+    "question": "LA NUEVA CULTURA DEL LÍQUIDO DEL SIGLO VEINTIUNO I) En esta situación, emergen múltiples focos de conflicto ligados a la gestión del agua, con repetición entre regiones o naciones. II) En añade, nos encontramos ante la necesidad de un nuevo enfoque ético, fundamentado en principios de sostenibilidad, justicia y no agresión. III) El modelo de globalización en curso, alejado de los más elementales principios morales, está agilizando la depredación de los recursos hídricos y la quiebra del círculo acuífero en los continentes. IV) Por ello, suele un mercado de recursos y valores ecológicos como área de comercio. V) De esta manera, se produce triple grandes fallas: emergencia de sostenibilidad, que suscita movimientos de defensa del medio ambiente; crisis de gobernanza, que fomenta la protección de los derechos humanos; crisis de convivencia, la cual inspira a la colaboración entre pueblos.",
+    "options": [
+      "III - IV - II - V - I",
+      "I - III - IV - V - II",
+      "III - IV - I - V - II",
+      "III - IV - V - I - II",
+      "II - I - III - V - IV"
+    ],
+    "answer": 2,
+    "rationale": "Empezamos con la oración III, que nos presenta el panorama generado por la globalización. Continúa la oración IV, que nos señala una consecuencia de esa globalización. Sigue la oración I, la cual expresa los problemas que emergen. Prosigue la oración V, ya que presenta las crisis y lo que estas traen como consecuencia. Terminamos con la oración II, la cual señala la necesidad de un nuevo enfoque ético para enfrentar la problemática producida por la globalización."
+  },
+  {
+    "id": 548,
+    "task": "sentence_ordering",
+    "question": "LOS ÁTOMO’’: I) Estructura y compromiso de los átomos. II) Utilidad bélica del átomo. III) Utilidad ejercicio del conocimiento científico del átomo. IV) Concepto de elemento.",
+    "options": [
+      "IV , II , III , I",
+      "II , IV , I , III",
+      "III , I , IV , II",
+      "II , IV , III , I",
+      "IV , I , III , II"
+    ],
+    "answer": 4,
+    "rationale": "El esquema lógico sobre LOS ATOMOS debe seguir un orden analítico como sigue: Concepto: (IV) Concepto de átomo. Estructura y composición: (I) Estructura y composición de los átomos. Aplicación general (III) Utilidad práctica del conocimiento científico del átomo. Aplicación específica: (II) Utilidad bélica del átomo. Por lo tanto, la secuencia correcta: IV , I , III , II"
+  },
+  {
+    "id": 549,
+    "task": "sentence_ordering",
+    "question": "LA ROBOTÓTICA I) La construcción de estas máquinas automáticas es consecuencia de la madurez técnica lograda. II) Los usuarios de esta empresas han influido bastante en el desarrollo de los robots de soldadura y de pintura. III) En los años sesenta, los robots fueron concebidos para asignarles prácticamente cualquier tarea. IV) La empresas del automóvil ha sido el principal utilizador de robots. V) La robótica se emplea del diseño y la edificación de robots, ingenios electrónicos que realizan diversas acciones.",
+    "options": [
+      "III , V , I , IV , II",
+      "V , I , III , IV , II",
+      "IV , II , V , I , III",
+      "V , I , III , II , IV",
+      "III , IV , V , I , II"
+    ],
+    "answer": 1,
+    "rationale": "El esquema lógico sobre LA ROBÓTICA debe seguir un ordenamiento conceptual , como sigue: Concepto de robótica : (V) La robótica se ocupa del diseño y la construcción de robots , ingenios electrónicos que realizan diversas actividades. Causa principal del ejercicio de la robótica : (I) La construcción de estas máquinas automáticas es consecuencia de la madurez tecnológica alcanzada. La robótica en los sesenta : (III) En los años sesenta , los robots fueron concebidos para asignarles casi cualquier tarea. introduce a la industria de automóviles : (IV) La industria del automóvil ha sido el principal usuario de robots. Ampliación de lo anterior : (II) Los usuarios de esta industria han influido mucho en el desarrollo de los robots de soldadura y de pintura. Por lo tanto , la secuencia correcta: V , I , III , IV , II."
   }
 ]
