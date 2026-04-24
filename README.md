@@ -40,7 +40,10 @@ llm-benchmark/
 - [Ollama](https://ollama.com) instalado y con el modelo descargado
 
 ### Dependencias Python
-Las dependencias principales son:
+
+```bash
+pip install openai httpx tqdm
+```
 
 | Paquete | Uso |
 |---|---|
