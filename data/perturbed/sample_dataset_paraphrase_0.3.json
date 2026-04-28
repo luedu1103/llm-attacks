@@ -1,0 +1,86 @@
+[
+  {
+    "id": 0,
+    "task": "sentence_ordering",
+    "question": "I. Como fenÛmeno polÌtico, econÛmico, social y cultural, la RevoluciÛn francesa no solo transformÛ el paÌs de origen, sino tambiÈn toda Europa.\n\nII. Tanto estudiantes como filÛsofos alemanes estuvieron fascinados por la RevoluciÛn francesa.\n\nIII. La RevoluciÛn francesa se seÒala como una tentativa por someter la historia a la razÛn.\n\nIV. Pocos fenÛmenos resultan tan trascendentes en la historia como la RevoluciÛn francesa.\n\nV. En FenomenologÌa del espÌritu, Hegel reflexiona sobre el significado de este hecho histÛrico.",
+    "options": [
+      "I - IV - V - III - II",
+      "V - III - II - IV - I",
+      "V - III - IV - II - I",
+      "IV - I - II - V - III",
+      "IV - II - I - V - III"
+    ],
+    "answer": 3,
+    "rationale": "El texto se inicia con una presentaci√≥n en la que se valora la trascendencia hist√≥rica de la Revoluci√≥n (IV), complementado con el concepto de Revoluci√≥n francesa y su repercusi√≥n (I). Luego, la fascinaci√≥n producida en los fil√≥sofos alemanes (II), inmediatamente la reflexi√≥n de Hegel (V); y finalmente el significado filos√≥fico de la Revoluci√≥n para Hegel (III). El orden es IV - I - II - V - III."
+  },
+  {
+    "id": 1,
+    "task": "sentence_ordering",
+    "question": "I. AsÌ la libertad se convirtiÛ en un ideal.\nII. Un factor indispensable para la filosofÌa, asÌ como tambiÈn para la religiÛn, es la libertad.\nIII. Luego, la lava se solidificÛ y se transformÛ en piedra.\nIV. Posteriormente, emergieron las instituciones, las jerarquÌas, las autoridades y los deberes.\nV. Al principio, las religiones eran como lava saliendo de un volc·n en erupciÛn: Jes˙s y Buda son ejemplos de hombres libres.",
+    "options": [
+      "V - III - II - IV - I",
+      "V - II - III - IV - I",
+      "II - V - III - IV - I",
+      "II - V - I - III - IV",
+      "V - I - II - III - IV"
+    ],
+    "answer": 2,
+    "rationale": "El texto comienza con la importancia de la libertad en filosof√≠a y religi√≥n (II). Despu√©s, se citan a Jes√∫s y Buda como personajes religiosos que marcan el origen de la religi√≥n libre (V). De manera inmediata, se completa con una met√°fora que representa la materializaci√≥n de la religi√≥n (III). Luego, la aparici√≥n de entidades formales (IV). Finalmente, la conversi√≥n de la libertad en un ideal (I). La secuencia es II - V - III - IV - I."
+  },
+  {
+    "id": 2,
+    "task": "sentence_ordering",
+    "question": "I. Su proceso de b˙squeda o de creaciÛn est· cargado de rupturas, intentos y confrontaciones.\nII. Es desde la comodidad y desde la sorpresa que ellos descubren algo inesperado, con satisfacciÛn.\nIII. El potencial humano determina que no existe una ˙nica fÛrmula para crear.\nIV. Los artistas creen que el caos es necesario para construir un nuevo orden.\nV. Por otro lado, cuando los niÒos crean lo hacen a travÈs del juego.",
+    "options": [
+      "III - IV - I - V - II",
+      "III - I - V - II - IV",
+      "IV - I - V - III - II",
+      "IV - V - I - III - II",
+      "II - I - III - V - IV"
+    ],
+    "answer": 0,
+    "rationale": "El texto empieza con la idea general de que existen diversas f√≥rmulas para llegar a la creaci√≥n (III). Inmediatamente, se menciona el caso de los artistas que parten del caos (IV). A continuaci√≥n, los elementos presentes en el proceso de creaci√≥n art√≠stica (I). Luego, la creaci√≥n de los ni√±os a trav√©s del juego (V) y finalmente los elementos presentes en la creaci√≥n l√∫dica del ni√±o (II). El orden correcto es III - IV - I - V - II."
+  },
+  {
+    "id": 3,
+    "task": "sentence_elimination",
+    "question": "Sostener que es incompatible con lo desarrollado en el texto resulta",
+    "options": [
+      "la teor√≠a de la relatividad general tuvo, desde sus inicios, una amplia difusi√≥n.",
+      "durante su vida, John Wheeler realiz√≥ investigaciones junto a otras personalidades.",
+      "John Wheeler crey√≥ que los agujeros negros son el estado colapsado de la materia.",
+      "Wheeler dilucid√≥ la naturaleza del esparcimiento de la luz de los √°tomos de helio.",
+      "Princeton fue el primer lugar donde se imparti√≥ un curso de relatividad general."
+    ],
+    "answer": 0,
+    "rationale": "John Wheeler fue el primero en estudiar la teor√≠a de la relatividad, ya que la mayor√≠a de sus colegas estaba analizando la f√≠sica nuclear, por ello, la teor√≠a de Einstein no fue muy difundida en sus inicios."
+  },
+  {
+    "id": 4,
+    "task": "sentence_elimination",
+    "question": "Es posible concluir que respecto a John Wheeler.",
+    "options": [
+      "a diferencia de los dem√°s, estudi√≥ la teor√≠a de la relatividad.",
+      "logr√≥ su doctorado antes de cumplir los veinticinco a√±os.",
+      "ense√±√≥ un curso sobre relatividad general en Princeton.",
+      "desde joven se inclin√≥ por el estudio de la relatividad.",
+      "realiz√≥ todas sus investigaciones sin ning√∫n apoyo."
+    ],
+    "answer": 1,
+    "rationale": "John Wheeler naci√≥ en 1911 y se doctor√≥ en 1933, en consecuencia, logr√≥ ese grado acad√©mico antes de los 25 a√±os."
+  },
+  {
+    "id": 5,
+    "task": "sentence_elimination",
+    "question": "Si John Wheeler no hubiera ignorado por completo el trabajo de Oppenheimer,",
+    "options": [
+      "nadie habr√≠a ense√±ado f√≠sica en Princeton.",
+      "la teor√≠a de la relatividad habr√≠a sido abandonada.",
+      "se habr√≠a doctorado en ciencias astron√≥micas.",
+      "Schwarzschild no habr√≠a propuesto su f√≥rmula.",
+      "no habr√≠a estudiado la f√≠sica del agujero negro."
+    ],
+    "answer": 4,
+    "rationale": "La inspiraci√≥n de Oppenheimer fue fundamental para estudiar los efectos del colapso gravitatorio, lo que lo condujo a la idea de los agujeros negros."
+  }
+]

@@ -1,0 +1,421 @@
+[
+  {
+    "id": 0,
+    "task": "sentence_ordering",
+    "question": "I. Como fenómeno político, económico, social y cultural, la Revolución francesa no sólo transformó el país de origen, sino también toda Europa.\n\nII. La Revolución francesa fascinó tanto a estudiantes como a filósofos alemanes.\n\nIII. La Revolución francesa fue señalada por Hegel como una tentativa para someter la historia a la razón.\n\nIV. Pocos fenómenos resultan tan trascendentes en la historia como la Revolución francesa.\n\nV. En Fenomenología del espíritu, Hegel reflexiona sobre el significado de este hecho histórico.",
+    "options": [
+      "I - IV - V - III - II",
+      "V - III - II - IV - I",
+      "V - III - IV - II - I",
+      "IV - I - II - V - III",
+      "IV - II - I - V - III"
+    ],
+    "answer": 3,
+    "rationale": "Solución:\nEn el ejercicio, se plantea lo que significa la Revolución francesa, y la interpretación de Hegel en particular.\nEl texto se inicia con una presentación, en la que se valora la trascendencia histórica de la Revolución (IV), lo que es complementado con el concepto de Revolución francesa y su repercusión (I), Luego, a modo de consecuencia, se menciona las fascinación producida en los filósofos alemanes (II), inmediatamente, como una prueba de dicha fascinación, sigue la reflexión de Hegel sobre este magno hecho (V); y, finalmente, se describe el significado filosófico de la Revolución para Hegel (III).\nEn consecuencia, el orden es IV - I - II - V - III Rpta. (d)"
+  },
+  {
+    "id": 1,
+    "task": "sentence_ordering",
+    "question": "I. Así la libertad pasó a ser un ideal.\nII. El factor crucial de la libertad es fundamental tanto para la filosofía como para la religión.\nIII. Posteriormente, la lava se enfrió y transformó en piedra.\nIV. Luego surgieron las instituciones, las jerarquías, las autoridades y los deberes.\nV. Inicialmente, las religiones fueron semejantes a la lava emanada de un volcán en erupción: Jesús y Buda son ejemplos de hombres libres.",
+    "options": [
+      "V - III - II - IV - I",
+      "V - II - III - IV - I",
+      "II - V - III - IV - I",
+      "II - V - I - III - IV",
+      "V - I - II - III - IV"
+    ],
+    "answer": 2,
+    "rationale": "Solución:\nBajo el título de Libertad y Religión, en el ejercicio se explica la importancia de la primera, según la trayectoria histórica de la segunda.\nAsí, damos cuenta al texto con la importancia de la libertad en la filosofía, así como en la religión (II); Después, a modo de sustentación de la idea inicial, citamos a dos grandes personajes religiosos como Jesús y Buda, quienes marcan el origen de la religión libre (V). De manera inmediata, completamos con una metáfora que representa la materialización de la religión (III). Luego, como consecuencia, se menciona la aparición de entidades formales que manejan las carencias de las personas (IV). Finalmente, la conversión de la libertad en un ideal. (I).\nPor lo tanto, la secuencia adecuada es II - V - III - IV - I. Rpta. (c)"
+  },
+  {
+    "id": 2,
+    "task": "sentence_ordering",
+    "question": "I. Para Prada, resulta contraproducente que la Iglesia Católica influya en la educación y, en general, en la cultura.\nII. Asimismo, reconoce la dignidad de la mujer y su igualdad con el hombre.\nIII. Sobretodo en su anticlericalismo, se manifiesta el liberalismo de Gonzales Prada.\nIV. \"En el matrimonio verdaderamente humano no hay un jefe absoluto; sino dos socios con iguales derechos\".\nV. En la filosofía de Gonzales Prada es destacable su liberalismo marcado.",
+    "options": [
+      "III - V - IV - II - I",
+      "V - III - I - II - IV",
+      "V - II - IV - III -",
+      "III - I - II - IV - V",
+      "I - III - V - II - IV"
+    ],
+    "answer": 1,
+    "rationale": "Solución:\nBajo el título de El pensamiento de Gonzales Prada, se plantea fundamentalmente el liberalismo de este pensador, manifestado en su anticlericalismo y en el reconocimiento a la dignidad de la mujer.\nEn ese sentido, el nuevo orden se inicia con la tesis general sobre el liberalismo en la filosofía pradista (V). Después, se analiza una manifestación del liberalismo: la postura anticlerical (III). Luego, la justificación de la postura anticlerical, basada en una defensa de la educación y la cultura (I). Inmediatamente, el otro rasgo del pensamiento pradista: equiparar a la mujer con el hombre (II), finalmente se presenta un expresión de Gonzales Prada para evidenciar su postura sobre la mujer (IV).\nPor tanto el orden adecuado es V - III - I - II - IV. Rpta. (b)"
+  },
+  {
+    "id": 3,
+    "task": "sentence_ordering",
+    "question": "I. El proceso de búsqueda o creación involve rupturas, intentos y confrontaciones.\nII. Descubren con satisfacción algo inesperado desde la comodidad y la sorpresa.\nIII. La capacidad humana determina que no existe una fórmula única para crear.\nIV. Los artistas consideran que el caos es necesario para establecer un nuevo orden.\nV. Por otro lado, los niños crean principalmente a través del juego.",
+    "options": [
+      "III - IV - I - V - II",
+      "III - I - V - II - Iv",
+      "IV - I - V - III - II",
+      "IV - V - I - III - II",
+      "II - I - III - V - IV"
+    ],
+    "answer": 0,
+    "rationale": "Solución:\nEn este ejercicio se nos plantea en sentido general que las maneras de llegar a la creación no sólo parten de un dificultad o caos, sino que también se puede llegar a ellas a través del juego, como en los niños.\nPor tanto, el texto empieza con la idea general de que existe diversas fórmulas para llegar a la creación (III). Inmediatamente, se menciona el caso de los artistas, quienes tienen como punto de partida el caos (IV). A continuación, se enumeran los elementos presentes en el proceso de creación artística (I). Luego, se da paso a la creación de los niños a través del juego (V) y, finalmente, se informa sobre los elementos presentes en la creación lúdica del niño (II).\nLuego, el orden correcto es III - IV - I - V - II. Rpta. (a)"
+  },
+  {
+    "id": 4,
+    "task": "sentence_ordering",
+    "question": "I. De esta manera, estará abriendo las puertas al aprendizaje.\nII. Todo alumno necesita estar suficientemente motivado durante el proceso educativo.\nIII. Por el contrario, puede cerrar las puertas de su mente y con ello la posibilidad de adquirir conocimiento.\nIV. Es necesario conocer cuánto está motivado el profesor en cada clase para poder generar inquietudes en sus alumnos.\nV. Sin embargo, la motivación no debe ser sólo del educando.",
+    "options": [
+      "II - V - Iv - I - III",
+      "V - IV - II - I - III",
+      "IV - I - II - III - V",
+      "IV - I - II - V - III",
+      "IV - V - III - I - II"
+    ],
+    "answer": 0,
+    "rationale": "Solución:\nEn el texto titulado trascendencia de la motivación en la escuela, se nos explica la importancia de la motivación no solamente en el educando, sino también en el profesor, pues él es quien guía al alumno en su aprendizaje.\nAsí, comenzaremos el nuevo orden informando sobre la necesidad de la motivación en le alumno (II). Seguidamente se sugiere que la motivación no debe ser exclusiva del alumno (V). Después, se señala la importancia de la motivación en el maestro (IV). Luego, se fundamenta dicha importancia: abrir el aprendizaje a los alumnos (I); y, finalizando, se advierte sobre la consecuencia negativa de una falta de motivación en el docente (III).\nEn consecuencia, el orden adecuado es II - V - IV - I - III. Rpta. (a)"
+  },
+  {
+    "id": 5,
+    "task": "sentence_ordering",
+    "question": "I. Es la interpretación de nuestras sensaciones, la cual varía en función de las características individuales de cada persona.\nII. Sensación y percepción son conceptos distintos.\nIII. Esto implica que un mismo estímulo puede generar percepciones diversas dependiendo del receptor.\nIV. La sensación consiste en la capacidad para captar información de la realidad.",
+    "options": [
+      "IV - I - II - III",
+      "II - I - IV - III",
+      "I - II - IV - III",
+      "II - IV - I - III",
+      "II - IV - III - I"
+    ],
+    "answer": 3,
+    "rationale": "Solución:\nEl ejercicio apunta a esclarecer la diferencia entre los conceptos sensación y percepción. Empezamos con la afirmación general sobre la diferenciación entre sensación y percepción (II). A continuación, se menciona el significado de sensación, basándose en el orden sugerido por el título (IV). Luego, el significado de percepción, que nos va a permitir contrastarlo con el de sensación (I). Culminamos con un detalle sobre la variabilidad de las percepciones (III).\nPor tanto, el orden lógico planteado es II - IV - I - III. Rpta. (d)"
+  },
+  {
+    "id": 6,
+    "task": "sentence_ordering",
+    "question": "I. Según Poe y Verlaine, uno debe acercarse a la música para entender la esencia de la poesía.\nII. Coleridge define la poesía como la composición que contrasta con las actividades científicas, cuyo fin inmediato es el placer, no la verdad.\nIII. El término poesía proviene del griego \"poiesis\", que significa creación.\nIV. Analizando los rasgos de una melodía y un poema, no les faltaba razón.",
+    "options": [
+      "I - II - IV - III",
+      "II - III - IV - I",
+      "III - II - I - IV",
+      "III - IV - I - II",
+      "I - IV - III - II"
+    ],
+    "answer": 2,
+    "rationale": "Solución:\nEl texto apunta a ilustrarnos sobre la significación de la poesía, según diversos puntos de vista. En ese sentido, iniciamos el ejercicio planteando la definición etimológica de poesía (III); seguidamente, se cita la definición vertida por Coleridge (II), después, el punto de vista de Poe Y Verlaine sobre la aproximación de la poesía a la música (I), damos término con la fundamentación del punto de vista de Poe y Verlaine.\nEn consecuencia, ordenamos de la siguiente manera III - II - I - IV. Rpta. (c)"
+  },
+  {
+    "id": 7,
+    "task": "sentence_ordering",
+    "question": "El sentido de la Argumentación\nI. Debe evitarse que predominen las proposiciones subordinadas causales y consecutivas, así se evita la intromisión de lo personal.\nII. El trabajo intelectual resulta fundamental el uso de la argumentación.\nIII. Su propósito es persuadir o convencer.\nIV. Es plantear una serie de razones o pruebas en apoyo de una idea.",
+    "options": [
+      "IV - I - III - II",
+      "IV - III - I - II",
+      "II - IV - III - I",
+      "II - III - I - IV",
+      "III - I - II - IV"
+    ],
+    "answer": 2,
+    "rationale": "Solución:\nEl título de \"El sentido de la Argumentación\" se explica lo que es la argumentación, su propósito y las sugerencias para llevarla a cabo.\nLa estructura del texto empieza con la introducción basada en la necesidad argumentativa propia del trabajo\nintelectual (II); inmediatamente continúa la conceptualización de la argumentación (IV); seguidamente se establece\nel objetivo de la argumentación (III), y se da término al texto con sugerencias precisas sobre lo que conviene y no\nconviene insertar en su elaboración (I).\nAsí, el orden planteado es II - IV - III - I. Rpta. (c)"
+  },
+  {
+    "id": 8,
+    "task": "sentence_ordering",
+    "question": "I. Es difícil observar los beneficios de vivir basándose en principios a corto plazo.\nII. Nelson Mandela pasó 27 años encarcelado debido a su firmeza en el principio de honestidad.\nIII. En contraste, requiere gran convicción y coraje enfrentar las dificultades que implica permanecer fieles a esos principios.\nIV. Nuestro camino vital debe acompañar el cultivo de principios.\nV. Podría haber alcanzado su libertad cambiando públicamente su posición, pero no lo hizo.",
+    "options": [
+      "I - IV - V - II - III",
+      "I - V - IV - II - III",
+      "IV - I - III - II - V",
+      "IV - II - V - I - III",
+      "IV - III - II - I - V"
+    ],
+    "answer": 2,
+    "rationale": "Solución:\nEn el ejercicio se resaltan los beneficios del cultivo de los principios, lo cual se pone de manifiesto a través\ndel caso de Nelson Mandela y su ejemplar posición.\nSe inicia el texto estableciendo la necesidad de vivir cultivando los principios (IV); a continuación se plantea\nque los beneficios de su cultivo no se ven en el corto plazo (I); lo que es complementado con los elementos de\nconvicción y coraje que se tienen que poseer para ser fiel a los principios (III); luego se hace mención a Nelson\nMandela como modelo de firmeza al principio de honestidad (II), y culminamos con la situación de Mandela que\ncorrobora la posición firme y fidelidad a sus principios (V).\nEn consecuencia el orden adecuado es IV - I - III - II - V. Rpta. (c)"
+  },
+  {
+    "id": 9,
+    "task": "sentence_ordering",
+    "question": "I. En 1869, el descubrimiento de Altamira fue hecho de manera casual.\nII. Inicialmente, hubo dudas sobre la exactitud de las pinturas a causa de su sorprendente estado de conservación.\nIII. Mercelino de Santuola fue quien descubrió Altamira.\nIV. Las primeras representaciones identificadas eran imágenes de bisontes.\nV. Finalmente, después de varios años de investigación, las pinturas fueron clasificadas como auténticas.",
+    "options": [
+      "III - I - II - V - IV",
+      "I - III - V - IV - II",
+      "I - III - II - IV - V",
+      "I - III - IV - II - V",
+      "III - II - I - IV - V"
+    ],
+    "answer": 3,
+    "rationale": "Solución:\nEl texto nos comenta sobre el descubrimiento rupestre en Altamira y el punto de vista sobre la fidelidad de sus pinturas.\nDamos comienzo a la estructura del texto con el descubrimiento de Altamira (I); lo que se complementa con el nombre respectivo descubridor (III). Se añade las imágenes representadas (IV); a continuación se plantea el inicial escepticismo sobre la fidelidad pictórica de Altamira (II), y finalmente se menciona los estudios realizados para comprobar la autenticidad de las obras pictóricas y hacer desaparecer el escepticismo inicial (V).\nLuego, el orden correcto es I - III - IV - II - V. Rpta. (d)"
+  },
+  {
+    "id": 10,
+    "task": "sentence_ordering",
+    "question": "I. En aviación y marina, se emplea la hora Zulú para establecer los planes de vuelo y las rutas por el mar.\nII. Es la hora del meridiano de Greenwich y se utiliza como horario universal.\nIII. Respecto a la hora zulú (hora Z), en invierno España es la hora Z+1, mientras que en verano es la hora Z+2.\nIV. De este modo, los controladores conocen con exactitud la posición de todos los aviones y barcos en todo momento sin importar la hora de cada país.",
+    "options": [
+      "III - II - I - IV",
+      "I - III - II - IV",
+      "II - I - IV - III",
+      "I - III - IV - II",
+      "IV - III - II - I"
+    ],
+    "answer": 2,
+    "rationale": "Solución:\nCon la titulación de \"La hora Zulú\", el autor explica qué es, y cómo se usa esta medición horaria.\nIniciamos el nuevo orden estableciendo, primero, la definición de la hora Zulú (II); inmediatamente, se habla de su uso en la aviación y la marina (I); luego se plantea una explicación de la utilidad que tiene para los controladores de barcos y aviones (IV), y culminamos con un ejemplo de la utilidad de la hora Zulú en España, según las estaciones (III).\nPor tanto, el orden establecido es II - I - IV - III. Rpta. (c)"
+  },
+  {
+    "id": 11,
+    "task": "sentence_ordering",
+    "question": "I. Las universidades de Buenos Aires y Oxford fueron donde Estudió.\nII. Cuando publicó \"Feudalismo y capitalismo en América\", Ernesto Laclau ganó prestigio entre los círculos marxistas.\nIII. En su ensayo, refuta las teorías que analizan el capitalismo restandole una concepción del mercado.\nIV. Nació en Argentina Ernesto Laclau.",
+    "options": [
+      "IV - I - III - II",
+      "IV - I - II - III",
+      "I - IV - II - III",
+      "I - III - IV - II",
+      "IV - III - II - I"
+    ],
+    "answer": 1,
+    "rationale": "Solución:\nEl planteamiento del texto titulado \"Ernesto Laclau\" se dirige a darnos una semblanza del personaje, destacando uno de sus ensayos marxista.\nEl orden del ejercicio comienza, obedeciendo al criterio cronológico con el nacimiento de Laclau (IV); a continuación , se menciona sus estudios universitarios (I); luego, se presenta la obra que lo llevó a la fama (II), y culmina con la descripción del contenido de su mencionado ensayo (III).\nAsí, el orden que establecemos es IV - I - II - III. Rpta. (b)"
+  },
+  {
+    "id": 12,
+    "task": "sentence_ordering",
+    "question": "I. Los efectos del traslado de campesinos a las minas para trabajar resultarían nefastos.\nII. En su política socioeconómica colonialista, España dispone la creación de las reducciones.\nIII. Para el hombre andino, significaron la imposición vertical desde la Corona de una serie de cargos.\nIV. Las reducciones se instauraron por el virrey Toledo en 1575.\nV. Sobretodo, la movilización campesina que impulsó su desarraigo de la tierra.",
+    "options": [
+      "IV - III - II - V - I",
+      "II - III - IV - V - I",
+      "II - IV - III - V - I",
+      "II - IV - I - III - V",
+      "IV - III - V - I - II"
+    ],
+    "answer": 2,
+    "rationale": "Solución:\nEl planteamiento textual consiste en la instauración de las reducciones virreinales en el Perú y sus consecuencias.\nIniciamos el ordenamiento, según generalidad, estableciendo primero la creación de las reducciones virreinales hecha por España (II); a continuación, nos remitimos a la instauración del Virreinato del Perú (IV); seguidamente se plantea la significación general que tuvo el Virreinato en el hombre andino (III); luego, mencionamos la consecuencia más resaltaste de las reducciones: el alejamiento del inicio de sus tierras (V), y acabamos con las nefastas consecuencias que ocasionó la movilización (I).\nEn consecuencia, el orden establecido es II - IV - III - V - I. Rpta. (c)"
+  },
+  {
+    "id": 13,
+    "task": "sentence_ordering",
+    "question": "I. Esto ocurre porque tienen que competir por los mismos alimentos.\nII. En tales situaciones, solo sobrevivirán aquellos mejor adaptados; el resto morirá.\nIII. Para Darwin, la lucha por la existencia era un aspecto constante en todos los animales.\nIV. Es entonces cuando entran en juego las pequeñas ventajas, es decir, las pequeñas variaciones con respecto al medio.\nV. No obstante, Darwin afirmaba que la lucha por la existencia suele ser particularmente intensa entre especies cercanas.",
+    "options": [
+      "II - I - V - III - IV",
+      "II - V - I - IV - III",
+      "III - I - II - IV - V",
+      "III - V - I - IV - II",
+      "I - IV - II - III - V"
+    ],
+    "answer": 3,
+    "rationale": "Solución:\nBajo el título \"Darwin y la capacidad de adaptación\", se explica un importante mecanismo la adaptación de los animales en la lucha por la existencia.\nEl ordenamiento se inicia, según generalidad, con la tesis de Darwin sobre la lucha por la existencia (III); a continuación se precisa que la lucha más dura se da entre las especies más cercanas (V), después se explica el motivo de la dureza de esta lucha (I); inmediatamente, se plantea la importancia de las pequeñas variaciones con respecto al medio (IV), y finalmente, a modo de conclusión, se señala la supervivencia como virtud exclusiva de los animales mejor adaptados (II).\nPor tanto, el orden lógico es III - V - I - IV - II. Rpta. (d)"
+  },
+  {
+    "id": 14,
+    "task": "sentence_ordering",
+    "question": "I. Consideró que la filosofía podría emplear un método similar para guiar mejor sus consideraciones.\nII. Halló que la ciencia de su tiempo disponía de un método que ofrecía una explicación confiable y precisa de los fenómenos naturales.\nIII. En el siglo en que vivió Descartes, prevalecía un escepticismo absoluto.\nIV. No obstante, Descartes no cedió a tal perspectiva.\nV. Sus contemporáneos sostenían que el hombre estaba condenado a no saber nada.",
+    "options": [
+      "III - V - IV - II - I",
+      "III - IV - II - I - V",
+      "III - IV - V - II - I",
+      "V - IV - II - III - I",
+      "V - II - IV - I - III"
+    ],
+    "answer": 0,
+    "rationale": "Solución:\nEl autor del texto titulado \"Propuesta filosófica de Descartes\" se dirige a establecer la postura de Descartes\nfrente al escepticismo total que reinaba en su época, sobre la base de un método con resultados exactos y seguros.\nComenzamos el ordenamiento con la unidad informativa, que sitúa a Descartes en la época escéptica (III); seguidamente aclaramos qué afirmaban sus contemporáneos escépticos (V); después se establece la posición que toma Descartes frente a las mencionadas afirmaciones (IV); luego se sustenta a través del descubrimiento de un método que desmentía la posición de sus contemporáneos (II), y damos término al plan mencionado la utilización que podría tener el método descubierto por Descartes (I).\nLuego, el ordenamiento lógico-deductivo es III - V - IV - II - I. Rpeta. (a)"
+  },
+  {
+    "id": 15,
+    "task": "sentence_ordering",
+    "question": "Alcanzaban velocidades superiores a 25 kilómetros por hora. \nDesde 1850, comenzaron a declinar frente a las embarcaciones de vapor.\nRutas entre China, las costas de Estados Unidos, Cabo de Hornos y los puertos de Gran Bretaña, cubrieron.\nEmbarcaciones que utilizaban velas y dependían del viento para navegar.",
+    "options": [
+      "II - I - III - IV",
+      "III - IV - I - II",
+      "IV - I - III - II",
+      "IV - II - III - I"
+    ],
+    "answer": 3,
+    "rationale": "Solución:\nEn el ejercicio titulado \"Conociendo a los Clipper\", se informa lo que fueron estas embarcaciones veleras, sus viajes y su cambio por la novedosa embarcación a vapor.\nSe da principio al texto siguiendo un orden convencional con la conceptualización de los clipper (IV), lo que\ncomplementamos con las características respectivas (I); inmediatamente, se plantea las rutas que cubrieron (III),\ny culminamos con el momento de declinación de su presencia (II).\nEn consecuencia, ordenamos así IV - I - III - II. Rpta. (d)"
+  },
+  {
+    "id": 16,
+    "task": "sentence_ordering",
+    "question": "I. A pesar de todo, la gente no se siente a gusto con la idea de vivir junto a estos pequeños animales voladores.\nII. La labor de los murciélagos es crucial para la agricultura.\nIII. Este proceso ayuda a mantener las condiciones físicas y químicas del suelo en el estado óptimo necesario para la germinación de otras plantas.\nIV. Cada murciélago ingiere aproximadamente 10 gramos de insectos por noche; es decir, se encarga de reducir una de las plagas más perjudiciales para los agricultores.\nV. Asimismo, cada murciélago distribuye entre dos y ocho semillas de plantas pioneras que fomentan el crecimiento de otros vegetales.",
+    "options": [
+      "IV - V - I - II - III",
+      "II - I - III - IV - V",
+      "II - III - I - IV - V",
+      "II - IV - V - III - I",
+      "IV - V - III - I - II"
+    ],
+    "answer": 3,
+    "rationale": "Solución:\nCon la titulación \"Importancia del murciégalo para los cultivos\" el autor se dirige a ilustrarnos la manera cómo\nlos murciélagos contribuyen en el mejoramiento de las suelos y su favorable papel en la labor agrícola.\nIniciamos el nuevo orden estableciendo el resultado trascendente de la acción de los murciélagos como tesis central (II); a continuación argumentamos la primera causa de tal trascendencia: consumo de insecto nocivos (IV), lo que complementamos con el segundo motivo: distribución de semillas (V), luego explicamos la contribución del proceso de distribución (III), y culminamos mencionando la impresión negativa de la gente sobre la idea de convivir con estos animales (I).\nPor ello, el orden lógico a seguir es II - IV - V - III - I. Rpta. (d)"
+  },
+  {
+    "id": 17,
+    "task": "sentence_ordering",
+    "question": "I. En efecto, ocurre un deceso cada 50 segundos y una persona se ve herida cada dos.\nII. Los accidentes vehiculares constituyen uno de los peores desafíos en materia de salud pública.\nIII. Las victimas humanas son más numerosas en naciones avanzadas como Canadá y EE.UU.\nIV. Según información proporcionada por la OMS, anualmente fallecen 700 000 individuos en las vías de todo el planeta y entre 10 y 15 millones sufren heridas.",
+    "options": [
+      "IV - III - I - II",
+      "II - III - I - IV",
+      "I - II - III - IV",
+      "II - IV - I - III",
+      "IV - I - III - II"
+    ],
+    "answer": 3,
+    "rationale": "Solución:\nEl autor del texto \"Los accidentes: el drama de las calles\", explica uno de los peores problemas que enfrenta el público en las calles, especialmente en los países mas desarrollados.\nEstructuramos el plan estableciendo primero, el problema, de los accidentes de tránsito como uno de los peores males para el público (II); seguidamente sustentamos el problema con información estadística sobre los muertos y heridos por accidentes (IV), lo que es aclarado con acotación estadística adicional (I), finalmente, concluimos con resultados de estos accidentes en países desarrollados en particular (III).\nAsí, el orden lógico - deductivo es II - IV - I - III. Rpta. (d)"
+  },
+  {
+    "id": 18,
+    "task": "sentence_ordering",
+    "question": "I. A veces se producen saltos también como resultado de las luchas territoriales.\nII. Cada acuario moderno está cubierto con una tapa de vidrio o otro material similar.\nIII. Generalmente se creía que esta conducta saltarina estaba relacionada con el estado anímico de los peces.\nIV. De este modo, se previene que los peces salten fuera del recinto y se asfixien.\nV. Según los ictiólogos, los saltos son un comportamiento que estos animales realizan en su estado salvaje para liberarse de los parásitos que crecen en la superficie de las escamas y piel.",
+    "options": [
+      "I - II - III - V - IV",
+      "V - I - II - IV - III",
+      "II - IV - III - V - I",
+      "II - IV - I - III - V",
+      "V - IV - II - I - III"
+    ],
+    "answer": 2,
+    "rationale": "Solución:\nBajo el título de \"El porqué de la conducta saltarina de los peces\" se explican los motivos que llevan a los peces a saltar fuera de sus acuarios.\nDamos inicio al texto informando sobre la presencia de la tapa en todos los acuarios modernos (II), a continuación se plantea la razón de la presencia de las etapas: los saltos de los peces (IV); seguidamente se explica la noción común sobre la causa de los saltos (III); esto es complementado con la explicación científica de los ictiólogos acerca de los saltos (V), para luego culminar con una razón adicional de los saltos (I).\nLuego, el orden establecido es II - IV - III - V - I. Rpta. (c)"
+  },
+  {
+    "id": 19,
+    "task": "sentence_ordering",
+    "question": "I. Representar para ellos no dejarlos tocar es una forma de rechazo afectivo.\nII. Les confiere seguridad y sentido de pertenencia; es la base de su autoestima.\nIII. Resulta fundamental el tacto para el ser humano.\nIV. Durante su educación, los niños requieren recurrentemente esta voz.\nV. El tacto es la voz del sentimiento.",
+    "options": [
+      "III - V - IV - II - I",
+      "v - Iv - II - I - III",
+      "V - II - I - Iv - III",
+      "IV - II - I - III - V",
+      "III - IV - V - II - I"
+    ],
+    "answer": 0,
+    "rationale": "Solución:\nEn el ejercicio se nos plantea básicamente la importancia del tacto para los niños, que a decir del autor viene a ser la \"voz de su sentimiento\". Por lo mismo, es necesario estimular el uso de ese sentido para garantizar el logro de una buena autoestima.\nEl texto se inicia destacando la importancia del tacto para el ser humano. (III); luego, se vincula educación del niño (IV); se concluye indicando que utilizar el tacto adecuadamente favorece al desarrollo de la autoestima (II); finalmente se hace una advertencia: no utilizar el tacto sería un error (I).\nEntonces, el nuevo orden es III - V - IV - II - I. Rpta. (a)"
+  },
+  {
+    "id": 20,
+    "task": "sentence_ordering",
+    "question": "Según el cristal con que se mire,\nI. En cambio, un niño desde la orilla puede percibirlo cercano y juguetón, con crestas espumosas.\nII. Todas estas experiencias son aceptables; todas son sobre el mismo mar.\nIII. Podemos decir que conocemos el mar, pero alguien desde el peñón lo ve amplio, lejano y majestuoso.\nIV. Todo conocimiento surge de alguno de los múltiples marcos de referencia que existen.",
+    "options": [
+      "III - I - II - IV",
+      "I - III - IV - II",
+      "III - I - IV - II",
+      "IV - III - I - II",
+      "IV - II - III - I"
+    ],
+    "answer": 3,
+    "rationale": "Solución:\nEl texto explica que el conocimiento que adquiere una persona depende de los múltiples marcos de referencia que lo rodea, de ahí que se obtendrá distintos puntos de vista acerca de un mismo tema.\nEl texto inicia presentándonos el tema, la tesis general (IV); luego, pasará a la ejemplificación del mismo en el caso del mar (III), haciendo la comparación con otro contexto (I). Finalmente, concilia con las dos posiciones, reiterando asi su planteamiento (II).\nPor tanto, el orden sería: IV - III - I - II. Rpta. (d)"
+  },
+  {
+    "id": 21,
+    "task": "sentence_ordering",
+    "question": "El racionalismo apuesta a la razón como origen del conocimiento.\nI. Según este pensamiento, la claridad de una idea incrementa la certeza de que algo real corresponda a esa idea.\nII. Descartes concluye que Dios existe partiendo de la idea clara y distinta de lo perfecto.\nIII. Afirmamos que al nacer traemos ciertas ideas preexistentes en nuestra conciencia, independientemente de nuestras experiencias previas.\nIV. Entre las diferentes posturas filosóficas, sobresale el racionalismo.",
+    "options": [
+      "V - I - IV - II - III",
+      "V - I - II - III - IV",
+      "V - II - IV - III - I",
+      "III - IV - II - I - V",
+      "V - I - IV - III - II"
+    ],
+    "answer": 0,
+    "rationale": "Solución:\nSe nos presenta, básicamente, la postura de un racionalista, que señala a la razón como fuente de todo conocimiento. Además de establecer la inmanencia de algunas ideas fuera de toda experiencia.\nDebemos empezar, por la oración que presenta al tema, pero sin definirlo aún (V); luego definirá la tendencia filosófica mediante la postura del racionalismo siguiendo una estructura expositiva. (I). A continuación una de las posturas del racionalistas: con respecto a las ideas innatas (IV). Luego, se complementa la tesis (II) y finalmente, se ejemplifica lo expuesto a la experiencia cartesiana y la prueba de la existencia de Dios (III).\nEntonces el orden sería V - I - IV - II - III. Rpta. (a)"
+  },
+  {
+    "id": 22,
+    "task": "sentence_ordering",
+    "question": "I. Sus víctimas: el empirismo lógico, más conocido como el círculo de Viena.\nII. En la gran filosofía del siglo XX, Karl Popper se hace notar.\nIII. Con un sable en mano, intenta derribar lo que considera el fantasma de la inducción.\nIV. Plantea una duda iconoclasta acerca de la verdad de las teorías científicas.",
+    "options": [
+      "IV - II - III - I",
+      "III - I - IV - II",
+      "II - IV - III - I",
+      "II - I - III - IV",
+      "II - IV - I - III"
+    ],
+    "answer": 2,
+    "rationale": "Solución:\nSiendo el título tan genérico, lo que realmente trata el texto es acerca de la postura radical del Karl Popper contra la verdad de las teorías científicas, atacando incluso a connotados filósofos del empirismo lógico.\nSe inicia el texto con la presentación del filósofo (II). Se plantea inmediatamente su postura filosófica controversial (IV). De manera deductiva se especifica dicha postura, al hablar del ataque a la inducción (III) y, finalmente, se menciona a quiénes ataca de manera particular (I).\nEn consecuencia, el orden lógico será II - IV - III - I. Rpta. (c)"
+  },
+  {
+    "id": 23,
+    "task": "sentence_ordering",
+    "question": "I. En este sentido, el tiempo necesario para discusiones o polémicas carece de ser concedido.\nII. El aspecto más evidente es la poca difusión de las investigaciones principales aludida bajo el pretexto de limitación presupuestaria.\nIII. La interacción entre docentes y alumnos está generalmente restringida durante únicamente el horario lectivo.\nIV. No se ofrece motivación adecuada para la investigación; los trabajos escasos carecen del nivel de profundidad esperado.\nV. La investigación también presenta síntomas similares.",
+    "options": [
+      "II - Iv - I - III - V",
+      "III - I - V - IV - II",
+      "III - I - IV - V - II",
+      "IV - V - I - II - III",
+      "II - III - I - V - IV"
+    ],
+    "answer": 1,
+    "rationale": "Solución:\nEl texto describe el problema de la educación, sobre todo en dos aspectos: en cuanto a la relación maestro-alumno, y con respecto a la investigación científica. En ambas, las consecuencias perjudican el desarrollo del alumno.\nIniciaremos el texto con el primer problema dado: la relación maestro-alumno (III); a continuación; por una relación de causa-efecto se expresará la implicancia del problema (I). Luego, pasaremos al segundo problema dado (V). Detallaremos las dificultades que trae el poco incentivo a la investigación (IV). Finalmente, las consecuencias de este segundo problema (III).\nPor tanto, el orden es III - I - V - IV - II. Rpta. (b)"
+  },
+  {
+    "id": 24,
+    "task": "sentence_ordering",
+    "question": "I. El primer punto se centra en las características actuales de la epistemología.\nII. Es pertinente tanto para el filósofo como para el investigador científico esta obra.\nIII. Este libro representa un curso de especialización en filosofía de la ciencia.\nIV. La obra se divide en ocho partes:",
+    "options": [
+      "Iv - I - III - II",
+      "IV - III - I - II",
+      "III - II - I - IV",
+      "III - II - IV - I",
+      "Iv - I - II - III"
+    ],
+    "answer": 3,
+    "rationale": "Solución:\nSe plantea la presentación de un libro sobre filosofía de la ciencia o epistemología. Básicamente, se expresa el contenido del mismo y a quiénes podría servir dicho material.\nEmpezaremos expresando de qué trata el libro (III); luego, por el criterio de importancia destacaremos la relevancia del mismo en función a quiénes va dirigido (II). Pasamos a la estructura de la obra (V) y a detallar la primer parte del libro (I).\nEntonces, el orden establecido es III - II - IV - I. Rpta. (d)"
+  },
+  {
+    "id": 25,
+    "task": "sentence_ordering",
+    "question": "I. En contraste, cuando nos enfrentamos al público con una actitud de servicio, el miedo disminuye.\nII. Por esta razón, es una conferencia o clase que dictemos mostremos una actitud de entrega.\nIII. Así, al anticipar una posible tragedia como sentirse poco querido o aceptado, entra en pánico.\nIV. Cuando estamos frente a un público para solicitar aprobación o admiración, nuestro ego tiene mucho que perder.",
+    "options": [
+      "IV - III - I - II",
+      "III - II - I - IV",
+      "III - II - IV - I",
+      "IV - I - II - III",
+      "IV - I - III - II"
+    ],
+    "answer": 0,
+    "rationale": "Solución:\nEn el texto se nos plantea situaciones en la cuales una persona queda expuesta el miedo al momento de enfrentar al público. El autor expresa el origen de este miedo y recomienda, para vencerlo, una actitud de humildad ante el público.\nSe estructura de la siguiente manera: primero se plantea la situación que nos enfrenta al problema del miedo al público (IV), seguiremos con una consecuencia negativa del problema, si nos dejamos vencer por el sentimiento si es aceptado o rechazado (III), luego se plantea la consecuencia contraria si asumimos una postura de servicio (I). Finalmente el autor recomienda esta última actitud (II).\nEl orden lógico será IV - III - I - II. Rpta. (a)"
+  },
+  {
+    "id": 26,
+    "task": "sentence_ordering",
+    "question": "I. Busca el desarrollo de su gente y ayudarles a alcanzar sus objetivos.\nII. Esto fomenta un compromiso genuino a largo plazo.\nIII. Lao Tse提倡服务型领导。\nI. 寻求其团队成员的成长，并帮助他们实现目标。\nII. 这将产生持久的真实承诺。\nIII. 老子提倡服务型领导。\nIV. 领导者不再以自我为中心，而是考虑他人。\nV. 从而赢得追随者的尊重和感激。",
+    "options": [
+      "IV - I - V - II - III",
+      "IV - I - III - V - II",
+      "III - II - IV - I - V",
+      "III - IV - I - V - II",
+      "II - I - III - V - IV"
+    ],
+    "answer": 3,
+    "rationale": "Solución:\nEn el texto se explica la definición de líder, según el pensamiento del filósofo chino Lao Tsé; un líder que debe estar al servicio de los demás, y no ser centro de la atención, es decir, que tenga una gran vocación de ayuda social.\nOrdenaremos el texto de la siguiente forma: Presentamos a Lao Tsé y su propuesta de liderazgo (III); se explica en qué consiste este líder (IV); se menciona su finalidad (I) y finalmente se expresa las consecuencias de estas actitudes a corto plazo (V) y a largo plazo (II).\nPor tanto, el orden será III - IV - I - V - II. Rpta. (d)"
+  },
+  {
+    "id": 27,
+    "task": "sentence_ordering",
+    "question": "I. Ha generalizado la valoración negativa de la palabra \"error\".\nII. Si hoy no hubiésemos aprendido de nuestros errores, todavía estaríamos gateando.\nIII. No obstante, recuerde que un error sólo es negativo cuando no lo aprendemos.\nIV. Normalmente, asociamos el error con términos como \"malo\" o \"destructivo\".",
+    "options": [
+      "IV - I - II - III",
+      "IV - II - III - I",
+      "I - IV - III - II",
+      "I - II - III - IV",
+      "II - III - I - IV"
+    ],
+    "answer": 2,
+    "rationale": "Solución:\nEl texto explica el verdadero enfoque con el cual debemos tomar el error, y no asociado siempre con la idea de malo o destructivo.\nLa estructura será la siguiente: se plantea el problema con respecto al \"error\" (I), especificamos dicho problema, detallando en que consiste (IV), aclarando el verdadero sentido del \"error\" especificamos cuando solamente es \"malo\" (III) y reiteramos lo dicho expresado una situación probable (II).\nPor consiguiente el orden será: I - IV - III - II. Rpta. (c)"
+  },
+  {
+    "id": 28,
+    "task": "sentence_ordering",
+    "question": "I. Hay varias razones por las que leemos con profundidad.\nII. La mayoría de estos motivos son conocidos.\nIII. No obstante, también es posible leer para ser cada día más libres.\nIV. Siempre buscamos descubrir el motivo de nuestras lecturas.\nV. Como la necesidad de adquirir cierto conocimiento o de distraernos.",
+    "options": [
+      "II - I - V - III - IV",
+      "II - V - I - III - IV",
+      "I - II - IV - V - III",
+      "IV - I - II - V - III",
+      "IV - V - I - II - III"
+    ],
+    "answer": 3,
+    "rationale": "Solución:\nEl título del ejercicio es por demás explicativo: se trata de expresar cuáles son las motivaciones que nos llevan al ejercicio de la lectura, destacando el aspecto familiar así como el hecho de ser cada vez más libres social y culturalmente.\nSe inicia el texto con la inquietud sobre el motivo de la lectura (IV), para luego pasar a responder de manera general (I), y después a especificar diversas razones, la primera en su mayoría: familiares (II), para obtener conocimiento (V) y finalmente y no menos importante para ser cada vez más libres (III).\nEn consecuencia, el orden establecido es IV - I - II - V - III. Rpta. (d)"
+  },
+  {
+    "id": 29,
+    "task": "sentence_ordering",
+    "question": "I. Cervantes me parece el único rival que puede compararse con Shakespeare.\nII. Hamlet es el equivalente de Don Quijote.\nIII. He siempre considerado la obra del Quijote de la Mancha como la primera y la mejor novela.\nIV. Entre las obras clásicas, sobresale particularmente Don Quijote de la Mancha.",
+    "options": [
+      "IV - III - I - II",
+      "IV - I - II - III",
+      "IV - I - III - II",
+      "I - II - III - IV",
+      "I - II - IV - III"
+    ],
+    "answer": 0,
+    "rationale": "Solución:\nEl texto trata sobre uno de los literatos más importante de todos los tiempos: Miguel de Cervantes y de su obra cumbre Don Quijote de la Mancha. El autor trata de hacer una comparación entre Cervantes y Shakespeare, además de un paralelo entre los personajes principales de sus obras.\nIniciamos el texto presentando la obra de Cervantes (IV); luego, la opinión del autor acerca de dicha novela (III). A continuación, vendrá la comparación sobre Shakespeare (I). Finalmente, el paralelo entre los personajes de ambos autores (II).\nEn consecuencia, el orden será IV - III - I - II. Rpta. (a)"
+  }
+]
