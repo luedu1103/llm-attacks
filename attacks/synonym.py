@@ -1,260 +1,81 @@
-import random
+import json
 import re
 
 from attacks.base import Attack
 from utils.llm_client import chat
+from utils.text_utils import preserve_case
 
 
 class SynonymAttack(Attack):
-    """Replace words with synonyms using an LLM by processing words in batches.
+    """Replace content words with synonyms using a single context-aware LLM call.
 
-    Words are grouped into batches and sent to the LLM together, reducing
-    the number of API calls while maintaining quality.
+    The LLM receives the full sentence and selects which words to replace,
+    avoiding word-sense ambiguity that arises when words are sent in isolation.
     """
 
-    BATCH_SIZE = 10
-
-    STOPWORDS = {
-        # Articles
-        "el",
-        "la",
-        "los",
-        "las",
-        "un",
-        "una",
-        "unos",
-        "unas",
-        # Prepositions / conjunctions
-        "de",
-        "a",
-        "en",
-        "al",
-        "del",
-        "por",
-        "con",
-        "para",
-        "pero",
-        "o",
-        "u",
-        "y",
-        "e",
-        "ni",
-        "si",
-        "que",
-        "como",
-        "más",
-        "más",
-        # Pronouns
-        "se",
-        "lo",
-        "le",
-        "les",
-        "me",
-        "te",
-        "nos",
-        "os",
-        "yo",
-        "tú",
-        "él",
-        "ella",
-        "ello",
-        "nosotros",
-        "vosotros",
-        "ellos",
-        "ellas",
-        "su",
-        "sus",
-        "mi",
-        "mis",
-        "tu",
-        "tus",
-        "este",
-        "esta",
-        "estos",
-        "estas",
-        "ese",
-        "esa",
-        "esos",
-        "esas",
-        "aquel",
-        "aquella",
-        "aquellos",
-        "aquellas",
-        # Common verbs (ser/estar/haber/tener)
-        "es",
-        "son",
-        "era",
-        "eran",
-        "fue",
-        "fueron",
-        "ser",
-        "está",
-        "están",
-        "estaba",
-        "estaban",
-        "estuvo",
-        "estuvieron",
-        "hay",
-        "había",
-        "habían",
-        "hubo",
-        "hubieron",
-        "tiene",
-        "tienes",
-        "tenemos",
-        "tenéis",
-        "tienen",
-        "tenía",
-        "tenías",
-        "teníamos",
-        "teníais",
-        "tenían",
-        "tendrá",
-        "tendrás",
-        "tendremos",
-        "tendréis",
-        "tendrán",
-        # Common verbs (ver/decir/hablar/ir)
-        "veo",
-        "ves",
-        "ve",
-        "vemos",
-        "veis",
-        "ven",
-        "dice",
-        "dices",
-        "decimos",
-        "decís",
-        "dicen",
-        "dijo",
-        "dije",
-        "dijiste",
-        "dijimos",
-        "dijisteis",
-        "dijeron",
-        "hablo",
-        "hablas",
-        "habla",
-        "hablamos",
-        "habláis",
-        "hablan",
-        "voy",
-        "vas",
-        "va",
-        "vamos",
-        "vais",
-        "van",
-        # Negation / affirmation
-        "no",
-        "sí",
-    }
-
     def _perturb_text(self, text: str) -> str:
-        """Replace a percentage of content words with synonyms."""
-        pct = int(self.intensity * 100)
-
-        tokens = self._tokenize(text)
-
-        candidates: list[int] = []
-        for i, token in enumerate(tokens):
-            core = re.sub(r"[^\w]", "", token, flags=re.UNICODE).lower()
-            if not core or len(core) <= 2:
-                continue
-            if core in self.STOPWORDS:
-                continue
-            candidates.append(i)
-
-        random.shuffle(candidates)
-        n_replace = max(0, len(candidates) * pct // 100)
+        # \w{3,} pre-filters tokens too short to have meaningful synonyms;
+        # the LLM further narrows to content words via the prompt.
+        words = re.findall(r"\b\w{3,}\b", text, flags=re.UNICODE)
+        n_replace = max(0, round(len(words) * self.intensity))
         if n_replace == 0:
             return text
 
-        to_replace = candidates[:n_replace]
+        replacements = self._get_replacements(text, n_replace)
+        return self._apply_replacements(text, replacements)
 
-        words_to_process = [(i, tokens[i]) for i in to_replace]
+    def _get_replacements(self, text: str, n: int) -> dict[str, str]:
+        """Single LLM call with full sentence context.
 
-        synonym_map: dict[str, str] = {}
-        for batch_start in range(0, len(words_to_process), self.BATCH_SIZE):
-            batch = words_to_process[batch_start : batch_start + self.BATCH_SIZE]
-            unique_words = list(
-                {re.sub(r"[^\w]", "", w, flags=re.UNICODE).lower() for _, w in batch}
-            )
-            batch_result = self._find_synonyms_batch(unique_words)
-            synonym_map.update(batch_result)
-
-        for i, original_token in words_to_process:
-            core = re.sub(r"[^\w]", "", original_token, flags=re.UNICODE).lower()
-            synonym = synonym_map.get(core)
-            if synonym and synonym.lower() != core:
-                tokens[i] = self._match_case(original_token, synonym)
-
-        return "".join(tokens)
-
-    def _tokenize(self, text: str) -> list[str]:
-        """Split text into alternating word / non-word tokens, preserving spaces."""
-        return re.findall(r"\w+|[^\w]+", text, flags=re.UNICODE)
-
-    def _find_synonyms_batch(self, words: list[str]) -> dict[str, str]:
-        """Ask the LLM for synonyms of a batch of words in one call.
-
-        Returns a dict mapping each original word to its synonym (or itself
-        if no good synonym was found).
+        Sending the whole sentence (rather than isolated words) lets the model
+        resolve polysemy — e.g. "banco" → "entidad" vs "asiento" — before
+        choosing a synonym.
         """
-        word_list = "\n".join(f"- {w}" for w in words)
         prompt = (
-            "Tarea: Para cada palabra de la lista, proporciona UN sinónimo en español.\n"
-            "\n"
-            "Reglas estrictas:\n"
-            "- Responde SOLO con JSON, sin texto adicional, sin explicaciones.\n"
-            '- El formato debe ser exactamente: {"palabra": "sinónimo", ...}\n'
-            "- Si no hay un buen sinónimo, usa la misma palabra como valor.\n"
-            "- NO inventes palabras; usa únicamente español real.\n"
-            "- Un sinónimo por palabra, sin listas.\n"
-            "\n"
-            f"Palabras:\n{word_list}\n"
-            "\n"
-            "JSON:"
+            f"Tarea: en el siguiente texto en español, selecciona exactamente {n} "
+            f"palabra(s) de contenido (sustantivos, verbos de acción, adjetivos o adverbios) "
+            f"y proporciona un sinónimo para cada una.\n\n"
+            f"Reglas estrictas:\n"
+            f"- Usa el contexto completo de la oración para elegir el sinónimo correcto.\n"
+            f"- No selecciones artículos, preposiciones, conjunciones, pronombres ni verbos auxiliares.\n"
+            f"- El sinónimo debe encajar gramaticalmente en la misma posición.\n"
+            f"- NO inventes palabras; usa únicamente español real.\n"
+            f"- Si no hay suficientes palabras de contenido, devuelve menos reemplazos.\n"
+            f"- Responde SOLO con JSON, sin texto adicional.\n"
+            f'- Formato exacto: {{"replacements": [{{"original": "palabra", "synonym": "sinónimo"}}, ...]}}\n\n'
+            f'Texto: "{text}"\n\n'
+            f"JSON:"
         )
+        return self._parse_response(chat(prompt).strip())
 
-        response = chat(prompt).strip()
+    def _parse_response(self, response: str) -> dict[str, str]:
+        """Parse LLM output into an original→synonym mapping.
 
-        return self._parse_batch_response(response, words)
-
-    def _parse_batch_response(
-        self, response: str, original_words: list[str]
-    ) -> dict[str, str]:
-        """Parse the JSON response from the LLM into a word→synonym mapping."""
-        import json
-
-        cleaned = re.sub(
-            r"^```(?:json)?\s*|\s*```$", "", response, flags=re.DOTALL
-        ).strip()
-
+        The regex fallback handles models that wrap JSON in markdown fences or
+        prepend prose before the object.
+        """
+        cleaned = re.sub(r"^```(?:json)?\s*|\s*```$", "", response, flags=re.DOTALL).strip()
         try:
-            data = json.loads(cleaned)
-        except json.JSONDecodeError:
-            data = {}
-            for match in re.finditer(r'"([^"]+)"\s*:\s*"([^"]+)"', cleaned):
-                data[match.group(1).lower()] = match.group(2)
+            entries = json.loads(cleaned).get("replacements", [])
+        except (json.JSONDecodeError, AttributeError):
+            entries = [
+                {"original": m.group(1), "synonym": m.group(2)}
+                for m in re.finditer(
+                    r'"original"\s*:\s*"([^"]+)".*?"synonym"\s*:\s*"([^"]+)"', cleaned
+                )
+            ]
 
         result: dict[str, str] = {}
-        for word in original_words:
-            synonym = data.get(word, word)
-            if (
-                not isinstance(synonym, str)
-                or len(synonym) > 30
-                or not re.search(r"\w", synonym)
-            ):
-                synonym = word
-            result[word] = synonym.strip().lower()
-
+        for entry in entries:
+            orig = entry.get("original", "").strip().lower()
+            syn = entry.get("synonym", "").strip().lower()
+            if orig and syn and orig != syn and re.search(r"\w", syn):
+                result[orig] = syn
         return result
 
-    @staticmethod
-    def _match_case(original: str, replacement: str) -> str:
-        """Apply the capitalisation style of *original* to *replacement*."""
-        if original.isupper():
-            return replacement.upper()
-        if original.istitle():
-            return replacement.capitalize()
-        return replacement
+    def _apply_replacements(self, text: str, replacements: dict[str, str]) -> str:
+        # \b word boundaries prevent partial-word matches (e.g. "el" inside "el elemento").
+        for orig, syn in replacements.items():
+            pattern = re.compile(rf"\b{re.escape(orig)}\b", re.IGNORECASE | re.UNICODE)
+            text = pattern.sub(lambda m: preserve_case(m.group(0), syn), text)
+        return text
