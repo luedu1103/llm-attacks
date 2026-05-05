@@ -1,5 +1,5 @@
 from __future__ import annotations
-
+from validation.semantic import check_semantic_similarity
 from abc import ABC, abstractmethod
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from typing import Any
@@ -37,11 +37,27 @@ class Attack(ABC):
         for field in self.FIELDS_TO_PERTURB:
             if field not in example:
                 continue
+            
             value = example[field]
+            
             if isinstance(value, list):
-                result[field] = [self._perturb_text(item) for item in value]
+                new_list = []
+                for item in value:
+                    perturbed_item = self._perturb_text(item)
+                    if check_semantic_similarity(item, perturbed_item):
+                        new_list.append(perturbed_item)
+                    else:
+                        new_list.append(item)
+                result[field] = new_list
             else:
-                result[field] = self._perturb_text(value)
+                perturbed_val = self._perturb_text(value)
+                is_valid = check_semantic_similarity(value, perturbed_val)
+                
+                print(f"¿Tiene sentido?: {is_valid} | Original: '{value[:30]}...' -> Nuevo: '{perturbed_val[:30]}...'")
+                
+                if is_valid:
+                    result[field] = perturbed_val
+
         return result
 
     def apply_dataset(self, dataset: list[dict[str, Any]]) -> list[dict[str, Any]]:
