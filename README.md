@@ -21,7 +21,7 @@ llm-benchmark/
 ├── evaluation/
 │   └── metrics.py            # accuracy, delta_accuracy, flip_rate
 ├── validation/
-│   └── semantic.py           # Validacion de similitud semantica (pendiente)
+│   └── semantic.py           # Validacion de similitud semantica
 ├── utils/
 │   ├── llm_client.py         # Cliente OpenAI-compatible para Ollama
 │   └── text_utils.py
@@ -42,7 +42,7 @@ llm-benchmark/
 ### Dependencias Python
 
 ```bash
-pip install openai httpx tqdm
+pip install openai httpx tqdm sentence-transformers
 ```
 
 | Paquete | Uso |
@@ -50,6 +50,7 @@ pip install openai httpx tqdm
 | `openai` | Cliente HTTP hacia la API compatible de Ollama |
 | `httpx` | Verificar si Ollama esta corriendo |
 | `tqdm` | Barra de progreso en el pipeline |
+| `sentence-transformers` | Verificar si dos textos son iguales mediante embeddings |
 
 ### Modelo LLM local
 
@@ -141,8 +142,8 @@ Los ataques modifican los campos `question` y/o `options`. El campo `answer` nun
 |---|---|
 | Ataques (synonym, paraphrase, minimal_pair, shortcut_removal) | Implementado |
 | Pipeline con paralelismo | Implementado |
-| Metricas (accuracy, delta_accuracy, flip_rate) | Implementado |
-| Validacion semantica | Pendiente (placeholder) |
+| Metricas (accuracy, delta_accuracy, flip_rate) | Pendiente |
+| Validacion semantica | Implementado |
 | Evaluacion del modelo sobre datasets perturbados | Pendiente |
 
 La siguiente fase del proyecto consiste en conectar un modelo evaluador que responda las preguntas del dataset original y del perturbado, y calcular las metricas de robustez (delta de accuracy y flip rate).
