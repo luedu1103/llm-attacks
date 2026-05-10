@@ -2,7 +2,7 @@
   {
     "id": 0,
     "task": "sentence_ordering",
-    "question": "Hegel y la Revolución francesa\nI. La Revolución francesa, como fenómeno político, económico, social y cultural, no sólo transformó el país de origen, sino también toda Europa.\nII. Tanto estudiantes como filósofos alemanes estuvieron fascinados por la Revolución francesa.\nIII. Señala que la Revolución francesa fue una tentativa por someter la historia a la razón.\nIV. Pocos fenómenos resultan tan trascendentes en la historia como la Revolución francesa.\nV. En Fenomenología del espíritu, Hegel reflexiona sobre le significado de este hecho histórico.",
+    "question": "Hegel y la Reforma francesa\nI. La Reforma francesa, como evento político, económico, social y cultural, no sólo alteró el país de origen, sino también toda Europa.\nII. Tanto discípulos como filósofos alemanes estuvieron atraídos por la Reforma francesa.\nIII. Afirma que la Reforma francesa fue un intento por ordenar la historia bajo la razón.\nIV. Pocos eventos resultan tan decisivos en la historia como la Reforma francesa.\nV. En Fenomenología del espíritu, Hegel pondera sobre el significado de este hecho histórico.",
     "options": [
       "I - IV - V - III - II",
       "V - III - II - IV - I",
@@ -16,7 +16,7 @@
   {
     "id": 1,
     "task": "sentence_ordering",
-    "question": "Libertad y religión\nI. Y así la libertad se convirtió en un ideal\nII. La libertad es un factor indispensable no sólo en filosofía, sino también en religión.\nIII. Luego, la lava se enfrió y se convirtió en piedra.\nIV. Entonces, aparecieron las instituciones, las jerarquías, las autoridades y los deberes.\nV. En un principio, las religiones fueron como lava que se salía de un volcán en erupción: Jesús y Buda son paradigmas de hombres libres.",
+    "question": "Libertad y religión\nI. Y así la libertad se transformó en un ideal\nII. La autonomía es un elemento crucial no sólo en filosofía, sino también en religión.\nIII. Luego, el magma se solidificó y se convirtió en roca.\nIV. Entonces, surgieron las instituciones, las jerarquías, las autoridades y los deberes.\nV. En un principio, las creencias fueron como lava que se desprendía de un cráter en erupción: Jesús y Buda son ejemplos de seres libres.",
     "options": [
       "V - III - II - IV - I",
       "V - II - III - IV - I",
@@ -30,7 +30,7 @@
   {
     "id": 2,
     "task": "sentence_ordering",
-    "question": "Caminos de la Creación\nI. Su proceso de búsqueda o de creación está cargado de rupturas, de intentos, de confrontación.\nII. Es desde la comodidad y desde la sorpresa que ellos descubren, con satisfacción, algo inesperado.\nIII. El potencial del ser humano determina que no hay una sola fórmula para crear.\nIV. Los artistas creen que el caos es necesario para construir un nuevo orden.\nV. De otro lado, cuando los niños crean lo hacen a través del juego.",
+    "question": "Caminos de la Creación\nI. Su procedimiento de búsqueda o de creación está saturado de interrupciones, de intentos, de enfrentamientos.\nII. Es desde la comodidad y desde el sorpresa que ellos descubren, con gusto, algo imprevisto.\nIII. El potencial del ser humano determina que no hay una sola receta para crear.\nIV. Los artistas creen que el desorden es necesario para construir un nuevo orden.\nV. De otro lado, cuando los niños crean lo hacen a través de la diversión.",
     "options": [
       "III - IV - I - V - II",
       "III - I - V - II - IV",
@@ -44,7 +44,7 @@
   {
     "id": 3,
     "task": "sentence_elimination",
-    "question": "Resulta incompatible con lo desarrollado en el texto sostener que",
+    "question": "Resulta incongruente con lo elaborado en el texto sostener que",
     "options": [
       "la teoría de la relatividad general tuvo, desde sus inicios, una amplia difusión.",
       "durante su vida, John Wheeler realizó investigaciones junto a otras personalidades.",
@@ -58,7 +58,7 @@
   {
     "id": 4,
     "task": "sentence_elimination",
-    "question": "Respecto de John Wheeler, se puede inferir que",
+    "question": "Respecto de John Wheeler, se puede deducir que",
     "options": [
       "a diferencia de los demás, estudió la teoría de la relatividad.",
       "logró su doctorado antes de cumplir los veinticinco años.",
@@ -72,7 +72,7 @@
   {
     "id": 5,
     "task": "sentence_elimination",
-    "question": "Si John Wheeler hubiese ignorado totalmente el trabajo de Oppenheimer,",
+    "question": "Si John Wheeler hubiese despreciado totalmente el trabajo de Oppenheimer,",
     "options": [
       "nadie habría enseñado física en Princeton.",
       "la teoría de la relatividad habría sido abandonada.",

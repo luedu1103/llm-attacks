@@ -1,0 +1,86 @@
+[
+  {
+    "id": 0,
+    "task": "sentence_ordering",
+    "question": "I. Como fenómeno político, económico, social y cultural, la Revolución francesa no sólo transformó el país de origen y toda Europa también.\nII. Estudiantes y filósofos alemanes estuvieron fascinados por la Revolución francesa tanto.\nIII. La Revolución francesa fue señalada como una tentativa para someter la historia a la razón, según se indica.\nIV. Tan trascendentes resultan pocos fenómenos en la historia como la Revolución francesa.\nV. En Fenomenología del espíritu, reflexiona Hegel sobre el significado de este hecho histórico.",
+    "options": [
+      "I - IV - V - III - II",
+      "V - III - II - IV - I",
+      "V - III - IV - II - I",
+      "IV - I - II - V - III",
+      "IV - II - I - V - III"
+    ],
+    "answer": 3,
+    "rationale": "El texto se inicia con una presentación en la que se valora la trascendencia histórica de la Revolución (IV), complementado con el concepto de Revolución francesa y su repercusión (I). Luego, la fascinación producida en los filósofos alemanes (II), inmediatamente la reflexión de Hegel (V); y finalmente el significado filosófico de la Revolución para Hegel (III). El orden es IV - I - II - V - III."
+  },
+  {
+    "id": 1,
+    "task": "sentence_ordering",
+    "question": "I. Así, la libertad transformóse en un ideal.\nII. Un elemento esencial es la libertad sin importar si se trata de filosofía o religión.\nIII. Posteriormente, el enfriamiento de la lava la convirtió en piedra.\nIV. Luego surgieron las instituciones, las jerarquías, las autoridades y los deberes.\nV. Originariamente, las religiones eran como lava emanando de un volcán eruptivo: Jesús y Buda ejemplificaron ser hombres libres.",
+    "options": [
+      "V - III - II - IV - I",
+      "V - II - III - IV - I",
+      "II - V - III - IV - I",
+      "II - V - I - III - IV",
+      "V - I - II - III - IV"
+    ],
+    "answer": 2,
+    "rationale": "El texto comienza con la importancia de la libertad en filosofía y religión (II). Después, se citan a Jesús y Buda como personajes religiosos que marcan el origen de la religión libre (V). De manera inmediata, se completa con una metáfora que representa la materialización de la religión (III). Luego, la aparición de entidades formales (IV). Finalmente, la conversión de la libertad en un ideal (I). La secuencia es II - V - III - IV - I."
+  },
+  {
+    "id": 2,
+    "task": "sentence_ordering",
+    "question": "I. El proceso de búsqueda o creación está lleno de rupturas, intentos y confrontaciones.\nII. Descubren algo inesperado con satisfacción, desde la comodidad y desde la sorpresa.\nIII. Determina el potencial humano que no existe una fórmula única para crear.\nIV. Los artistas consideran que el caos es necesario para construir un nuevo orden.\nV. Por otra parte, cuando los niños crean lo hacen a través del juego.",
+    "options": [
+      "III - IV - I - V - II",
+      "III - I - V - II - IV",
+      "IV - I - V - III - II",
+      "IV - V - I - III - II",
+      "II - I - III - V - IV"
+    ],
+    "answer": 0,
+    "rationale": "El texto empieza con la idea general de que existen diversas fórmulas para llegar a la creación (III). Inmediatamente, se menciona el caso de los artistas que parten del caos (IV). A continuación, los elementos presentes en el proceso de creación artística (I). Luego, la creación de los niños a través del juego (V) y finalmente los elementos presentes en la creación lúdica del niño (II). El orden correcto es III - IV - I - V - II."
+  },
+  {
+    "id": 3,
+    "task": "sentence_elimination",
+    "question": "Sostenerlo resulta incompatible con lo desarrollado en el texto.",
+    "options": [
+      "la teoría de la relatividad general tuvo, desde sus inicios, una amplia difusión.",
+      "durante su vida, John Wheeler realizó investigaciones junto a otras personalidades.",
+      "John Wheeler creyó que los agujeros negros son el estado colapsado de la materia.",
+      "Wheeler dilucidó la naturaleza del esparcimiento de la luz de los átomos de helio.",
+      "Princeton fue el primer lugar donde se impartió un curso de relatividad general."
+    ],
+    "answer": 0,
+    "rationale": "John Wheeler fue el primero en estudiar la teoría de la relatividad, ya que la mayoría de sus colegas estaba analizando la física nuclear, por ello, la teoría de Einstein no fue muy difundida en sus inicios."
+  },
+  {
+    "id": 4,
+    "task": "sentence_elimination",
+    "question": "Es posible concluir que respecto a John Wheeler.",
+    "options": [
+      "a diferencia de los demás, estudió la teoría de la relatividad.",
+      "logró su doctorado antes de cumplir los veinticinco años.",
+      "enseñó un curso sobre relatividad general en Princeton.",
+      "desde joven se inclinó por el estudio de la relatividad.",
+      "realizó todas sus investigaciones sin ningún apoyo."
+    ],
+    "answer": 1,
+    "rationale": "John Wheeler nació en 1911 y se doctoró en 1933, en consecuencia, logró ese grado académico antes de los 25 años."
+  },
+  {
+    "id": 5,
+    "task": "sentence_elimination",
+    "question": "Si el trabajo de Oppenheimer no hubiera sido ignorado en absoluto por parte de John Wheeler,",
+    "options": [
+      "nadie habría enseñado física en Princeton.",
+      "la teoría de la relatividad habría sido abandonada.",
+      "se habría doctorado en ciencias astronómicas.",
+      "Schwarzschild no habría propuesto su fórmula.",
+      "no habría estudiado la física del agujero negro."
+    ],
+    "answer": 4,
+    "rationale": "La inspiración de Oppenheimer fue fundamental para estudiar los efectos del colapso gravitatorio, lo que lo condujo a la idea de los agujeros negros."
+  }
+]
