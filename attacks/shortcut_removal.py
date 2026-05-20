@@ -18,6 +18,7 @@ class ShortcutRemovalAttack(Attack):
     """
 
     FIELDS_TO_PERTURB: list[str] = ["question"]
+    SIMILARITY_THRESHOLD = 0.85
 
     # Connectors grouped by token length for intensity-based filtering
     _SHORTCUTS_BY_LENGTH: dict[int, list[str]] = {

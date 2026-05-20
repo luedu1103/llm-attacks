@@ -5,9 +5,13 @@ from utils.llm_client import chat
 class ParaphraseAttack(Attack):
     """Rewrite sentences preserving meaning using an LLM."""
 
+    SIMILARITY_THRESHOLD = 0.60
+
     def _perturb_text(self, text: str) -> str:
         if self.intensity < 0.3:
-            level = "leve: cambia solo el orden de algunas palabras o reemplaza 1-2 frases"
+            level = (
+                "leve: cambia solo el orden de algunas palabras o reemplaza 1-2 frases"
+            )
         elif self.intensity < 0.5:
             level = "moderado: reescribe algunas oraciones con estructura diferente"
         else:
@@ -23,11 +27,11 @@ class ParaphraseAttack(Attack):
             f"- Si el texto es una frase incompleta, devuélvela igualmente incompleta.\n"
             f"- Conserva los números, nombres propios y términos técnicos.\n\n"
             f"Ejemplo:\n"
-            f"Entrada: \"Después de estudiar, aprobó el examen.\"\n"
-            f"Salida: \"Aprobó el examen tras haber estudiado.\"\n\n"
+            f'Entrada: "Después de estudiar, aprobó el examen."\n'
+            f'Salida: "Aprobó el examen tras haber estudiado."\n\n'
             f"Ejemplo:\n"
-            f"Entrada: \"Se puede inferir que\"\n"
-            f"Salida: \"Es posible concluir que\"\n\n"
+            f'Entrada: "Se puede inferir que"\n'
+            f'Salida: "Es posible concluir que"\n\n'
             f"Ahora aplica la tarea al siguiente texto y devuelve ÚNICAMENTE el resultado:\n"
             f"{text}"
         )

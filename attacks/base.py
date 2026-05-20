@@ -1,8 +1,10 @@
 from __future__ import annotations
-from validation.semantic import check_semantic_similarity
+
 from abc import ABC, abstractmethod
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from typing import Any
+
+from validation.semantic import check_semantic_similarity
 
 MAX_WORKERS = 8  # concurrent Ollama requests
 
@@ -20,6 +22,7 @@ class Attack(ABC):
     """
 
     FIELDS_TO_PERTURB: list[str] = ["question"]
+    SIMILARITY_THRESHOLD: float = 0.85
 
     def __init__(self, intensity: float = 0.3):
         if not 0.0 <= intensity <= 1.0:
@@ -37,9 +40,9 @@ class Attack(ABC):
         for field in self.FIELDS_TO_PERTURB:
             if field not in example:
                 continue
-            
+
             value = example[field]
-            
+
             if isinstance(value, list):
                 new_list = []
                 for item in value:
@@ -52,9 +55,11 @@ class Attack(ABC):
             else:
                 perturbed_val = self._perturb_text(value)
                 is_valid = check_semantic_similarity(value, perturbed_val)
-                
-                print(f"¿Tiene sentido?: {is_valid} | Original: '{value[:30]}...' -> Nuevo: '{perturbed_val[:30]}...'")
-                
+
+                print(
+                    f"¿Tiene sentido?: {is_valid} | Original: '{value[:30]}...' -> Nuevo: '{perturbed_val[:30]}...'"
+                )
+
                 if is_valid:
                     result[field] = perturbed_val
 
@@ -64,7 +69,9 @@ class Attack(ABC):
         """Apply the attack to all examples in parallel."""
         results: list[dict[str, Any]] = [{}] * len(dataset)
         with ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
-            futures = {executor.submit(self.apply, ex): i for i, ex in enumerate(dataset)}
+            futures = {
+                executor.submit(self.apply, ex): i for i, ex in enumerate(dataset)
+            }
             for future in as_completed(futures):
                 results[futures[future]] = future.result()
         return results

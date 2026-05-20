@@ -13,6 +13,8 @@ class SynonymAttack(Attack):
     avoiding word-sense ambiguity that arises when words are sent in isolation.
     """
 
+    SIMILARITY_THRESHOLD = 0.70
+
     def _perturb_text(self, text: str) -> str:
         # \w{3,} pre-filters tokens too short to have meaningful synonyms;
         # the LLM further narrows to content words via the prompt.
@@ -54,7 +56,9 @@ class SynonymAttack(Attack):
         The regex fallback handles models that wrap JSON in markdown fences or
         prepend prose before the object.
         """
-        cleaned = re.sub(r"^```(?:json)?\s*|\s*```$", "", response, flags=re.DOTALL).strip()
+        cleaned = re.sub(
+            r"^```(?:json)?\s*|\s*```$", "", response, flags=re.DOTALL
+        ).strip()
         try:
             entries = json.loads(cleaned).get("replacements", [])
         except (json.JSONDecodeError, AttributeError):
@@ -67,6 +71,8 @@ class SynonymAttack(Attack):
 
         result: dict[str, str] = {}
         for entry in entries:
+            if not isinstance(entry, dict):
+                continue
             orig = entry.get("original", "").strip().lower()
             syn = entry.get("synonym", "").strip().lower()
             if orig and syn and orig != syn and re.search(r"\w", syn):
