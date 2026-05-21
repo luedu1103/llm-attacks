@@ -1,0 +1,50 @@
+{
+  "original": {
+    "dataset": "sample_dataset.json",
+    "accuracy": 0.5,
+    "n_items": 6,
+    "n_invalid": 0
+  },
+  "perturbations": [
+    {
+      "file": "sample_dataset_paraphrase_0.3.json",
+      "attack": "dataset_paraphrase",
+      "intensity": 0.3,
+      "accuracy": 0.6667,
+      "delta_accuracy": -0.1667,
+      "flip_rate": 0.1667
+    },
+    {
+      "file": "sample_dataset_paraphrase_0.5.json",
+      "attack": "dataset_paraphrase",
+      "intensity": 0.5,
+      "accuracy": 0.5,
+      "delta_accuracy": 0.0,
+      "flip_rate": 0.1667
+    },
+    {
+      "file": "sample_dataset_shortcut_removal_0.3.json",
+      "attack": "dataset_shortcut_removal",
+      "intensity": 0.3,
+      "accuracy": 0.5,
+      "delta_accuracy": 0.0,
+      "flip_rate": 0.0
+    },
+    {
+      "file": "sample_dataset_synonym_0.3.json",
+      "attack": "dataset_synonym",
+      "intensity": 0.3,
+      "accuracy": 0.5,
+      "delta_accuracy": 0.0,
+      "flip_rate": 0.0
+    },
+    {
+      "file": "sample_dataset_synonym_0.5.json",
+      "attack": "dataset_synonym",
+      "intensity": 0.5,
+      "accuracy": 0.3333,
+      "delta_accuracy": 0.1667,
+      "flip_rate": 0.1667
+    }
+  ]
+}
