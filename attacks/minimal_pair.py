@@ -141,15 +141,13 @@ class MinimalPairAttack(Attack):
     4. Devuelve un PerturbationResult con metadata para trazabilidad.
     """
 
-    SIMILARITY_THRESHOLD = 0.80
+    SKIP_SEMANTIC_VALIDATION = True
 
     def _perturb_text(self, text: str) -> str:
         result = self._apply_rules(text)
         return result.perturbed
 
     def _apply_rules(self, text: str) -> PerturbationResult:
-        normalized = _normalize(text)
-
         max_substitutions = max(1, round(self.intensity * len(SUBSTITUTION_RULES)))
         substitutions_done = 0
 

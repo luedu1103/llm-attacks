@@ -27,26 +27,12 @@ class SynonymAttack(Attack):
         return self._apply_replacements(text, replacements)
 
     def _get_replacements(self, text: str, n: int) -> dict[str, str]:
-        """Single LLM call with full sentence context.
-
-        Sending the whole sentence (rather than isolated words) lets the model
-        resolve polysemy — e.g. "banco" → "entidad" vs "asiento" — before
-        choosing a synonym.
-        """
         prompt = (
-            f"Tarea: en el siguiente texto en español, selecciona exactamente {n} "
-            f"palabra(s) de contenido (sustantivos, verbos de acción, adjetivos o adverbios) "
-            f"y proporciona un sinónimo para cada una.\n\n"
-            f"Reglas estrictas:\n"
-            f"- Usa el contexto completo de la oración para elegir el sinónimo correcto.\n"
-            f"- No selecciones artículos, preposiciones, conjunciones, pronombres ni verbos auxiliares.\n"
-            f"- El sinónimo debe encajar gramaticalmente en la misma posición.\n"
-            f"- NO inventes palabras; usa únicamente español real.\n"
-            f"- Si no hay suficientes palabras de contenido, devuelve menos reemplazos.\n"
-            f"- Responde SOLO con JSON, sin texto adicional.\n"
-            f'- Formato exacto: {{"replacements": [{{"original": "palabra", "synonym": "sinónimo"}}, ...]}}\n\n'
-            f'Texto: "{text}"\n\n'
-            f"JSON:"
+            f"En este texto en español, reemplaza exactamente {n} palabra(s) de contenido "
+            f"(sustantivos, verbos, adjetivos, adverbios) por sinónimos que encajen gramaticalmente. "
+            f"No uses artículos, preposiciones ni pronombres. Solo JSON sin texto extra:\n"
+            f'{{"replacements":[{{"original":"palabra","synonym":"sinónimo"}}]}}\n'
+            f"Texto: {text}"
         )
         return self._parse_response(chat(prompt).strip())
 

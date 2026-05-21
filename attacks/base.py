@@ -6,7 +6,7 @@ from typing import Any
 
 from validation.semantic import check_semantic_similarity
 
-MAX_WORKERS = 8  # concurrent Ollama requests
+MAX_WORKERS = 16  # concurrent Ollama requests
 
 
 class Attack(ABC):
@@ -23,6 +23,7 @@ class Attack(ABC):
 
     FIELDS_TO_PERTURB: list[str] = ["question"]
     SIMILARITY_THRESHOLD: float = 0.85
+    SKIP_SEMANTIC_VALIDATION: bool = False
 
     def __init__(self, intensity: float = 0.3):
         if not 0.0 <= intensity <= 1.0:
@@ -54,13 +55,9 @@ class Attack(ABC):
                 result[field] = new_list
             else:
                 perturbed_val = self._perturb_text(value)
-                is_valid = check_semantic_similarity(value, perturbed_val)
-
-                print(
-                    f"¿Tiene sentido?: {is_valid} | Original: '{value[:30]}...' -> Nuevo: '{perturbed_val[:30]}...'"
-                )
-
-                if is_valid:
+                if self.SKIP_SEMANTIC_VALIDATION or check_semantic_similarity(
+                    value, perturbed_val, self.SIMILARITY_THRESHOLD
+                ):
                     result[field] = perturbed_val
 
         return result
