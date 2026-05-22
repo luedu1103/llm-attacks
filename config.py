@@ -6,7 +6,7 @@ DATA_DIR = ROOT_DIR / "data"
 RAW_DATA_DIR = DATA_DIR / "raw"
 PERTURBED_DATA_DIR = DATA_DIR / "perturbed"
 
-DEFAULT_DATASET = RAW_DATA_DIR / "dataset.json"
+DEFAULT_DATASET = RAW_DATA_DIR / "datasetV1.5.json"
 
 # --- Attack settings ---
 AVAILABLE_ATTACKS = ["synonym", "paraphrase", "minimal_pair", "shortcut_removal"]
