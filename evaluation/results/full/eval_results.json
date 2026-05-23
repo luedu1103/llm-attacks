@@ -1,0 +1,74 @@
+{
+  "original": {
+    "dataset": "datasetV1.5.json",
+    "accuracy": 0.6182,
+    "n_items": 11095,
+    "n_invalid": 24
+  },
+  "perturbations": [
+    {
+      "file": "datasetV1.5_minimal_pair_0.1.json",
+      "attack": "minimal_pair",
+      "intensity": 0.1,
+      "accuracy": 0.596,
+      "delta_accuracy": 0.0224,
+      "flip_rate": 0.111
+    },
+    {
+      "file": "datasetV1.5_minimal_pair_0.5.json",
+      "attack": "minimal_pair",
+      "intensity": 0.5,
+      "accuracy": 0.5817,
+      "delta_accuracy": 0.0365,
+      "flip_rate": 0.1345
+    },
+    {
+      "file": "datasetV1.5_minimal_pair_1.0.json",
+      "attack": "minimal_pair",
+      "intensity": 1.0,
+      "accuracy": 0.5817,
+      "delta_accuracy": 0.0366,
+      "flip_rate": 0.1333
+    },
+    {
+      "file": "datasetV1.5_paraphrase_0.5.json",
+      "attack": "paraphrase",
+      "intensity": 0.5,
+      "accuracy": 0.5879,
+      "delta_accuracy": 0.0303,
+      "flip_rate": 0.161
+    },
+    {
+      "file": "datasetV1.5_shortcut_removal_0.1.json",
+      "attack": "shortcut_removal",
+      "intensity": 0.1,
+      "accuracy": 0.6161,
+      "delta_accuracy": 0.0022,
+      "flip_rate": 0.0685
+    },
+    {
+      "file": "datasetV1.5_shortcut_removal_0.5.json",
+      "attack": "shortcut_removal",
+      "intensity": 0.5,
+      "accuracy": 0.615,
+      "delta_accuracy": 0.0032,
+      "flip_rate": 0.0761
+    },
+    {
+      "file": "datasetV1.5_shortcut_removal_1.0.json",
+      "attack": "shortcut_removal",
+      "intensity": 1.0,
+      "accuracy": 0.6162,
+      "delta_accuracy": 0.0022,
+      "flip_rate": 0.0749
+    },
+    {
+      "file": "datasetV1.5_synonym_0.5.json",
+      "attack": "synonym",
+      "intensity": 0.5,
+      "accuracy": 0.568,
+      "delta_accuracy": 0.0266,
+      "flip_rate": 0.1595
+    }
+  ]
+}

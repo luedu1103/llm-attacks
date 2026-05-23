@@ -15,6 +15,7 @@ from __future__ import annotations
 import argparse
 import json
 import logging
+import re
 from pathlib import Path
 
 import config
@@ -299,7 +300,7 @@ def main() -> None:
     # Resolver paths según flags
     if args.full:
         original_path = config.DEFAULT_DATASET
-        perturbed_dir = config.PERTURBED_DATA_DIR / "ready"
+        perturbed_dir = config.PERTURBED_DATA_DIR / "readyV1.5"
         output_dir = args.output_dir or (
             config.ROOT_DIR / "evaluation" / "results" / "full"
         )
