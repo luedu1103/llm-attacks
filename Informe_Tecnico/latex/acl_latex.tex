@@ -52,26 +52,81 @@ precisión y la tasa de cambio de predicciones de modelos evaluadores.
 \section{Introducción}
 \label{sec:intro}
 
-Los modelos de lenguaje basados en transformadores han alcanzado rendimiento
-sobresaliente en una amplia variedad de tareas de procesamiento del lenguaje
-natural \citep{devlin-etal-2019-bert}.
-Sin embargo, estudios recientes muestran que buena parte de ese rendimiento se
-apoya en \textit{atajos léxicos}: correlaciones estadísticas superficiales entre
-palabras del enunciado y la respuesta correcta, en lugar de una comprensión
-semántica profunda \citep{mccoy-etal-2019-right}.
 
-Una consecuencia práctica es que pequeñas perturbaciones del texto —reemplazar
-una palabra por un sinónimo o eliminar un conector causal— pueden provocar un
-cambio drástico en la predicción del modelo incluso cuando el significado es
-idéntico.
-Este fenómeno compromete la fiabilidad de los sistemas en contextos reales y
-dificulta su certificación para aplicaciones de alto impacto.
+Los modelos de lenguaje de gran escala (LLMs) basados en la arquitectura
+\textit{transformer} \citep{devlin-etal-2019-bert} han transformado el
+procesamiento del lenguaje natural y, en pocos años, se han convertido en
+componentes centrales de sistemas de búsqueda, asistencia educativa,
+evaluación automática y toma de decisiones.
+Su despliegue masivo, sin embargo, ha superado al ritmo al que la comunidad
+puede caracterizar formalmente \emph{qué} es lo que estos modelos están
+aprendiendo realmente: persiste una brecha entre la fluidez aparente de sus
+respuestas y la certeza de que dicha fluidez proviene de una comprensión
+semántica genuina.
 
-El problema se agudiza en español, idioma con menor representación en los
-\textit{benchmarks} de robustez existentes frente al inglés.
-La mayoría de los trabajos sobre adversarialidad léxica en PLN \citep{jia-liang-2017-adversarial,jin-etal-2020-bert,gao-etal-2018-black}
-se centran en inglés, lo que limita la evaluación de modelos desplegados en
-contextos hispanohablantes.
+Esta preocupación se hace especialmente relevante en tareas de
+\textbf{razonamiento verbal}, dominio en el cual el modelo debe interpretar
+relaciones lógicas, inferenciales y pragmáticas entre fragmentos de texto.
+Pruebas de aptitud académica empleadas en contextos hispanohablantes
+—comprensión lectora, ordenamiento y eliminación de oraciones, analogías,
+series verbales y oraciones incompletas— constituyen un escenario natural
+para examinar dicho razonamiento, ya que fueron diseñadas por humanos para
+medir precisamente esa capacidad en personas.
+
+El escenario, no obstante, está marcado por un desequilibrio importante:
+mientras que la mayoría de los \textit{benchmarks} y herramientas de
+evaluación de robustez se han desarrollado y validado en
+inglés~\citep{jia-liang-2017-adversarial,jin-etal-2020-bert,ribeiro-etal-2020-checklist},
+el español sigue subrepresentado en este tipo de análisis.
+Esto deja un vacío metodológico significativo: los modelos que se utilizan
+en aplicaciones hispanohablantes no son evaluados con el mismo nivel de
+rigor adversarial que sus contrapartes en inglés, a pesar de operar sobre
+hablantes y datos con características lingüísticas propias.
+
+\section{Problema abordado}
+\label{sec:problem}
+
+Estudios recientes han demostrado que una fracción importante del rendimiento
+de los LLMs en tareas de comprensión y razonamiento se apoya en
+\textit{atajos léxicos}: correlaciones superficiales entre palabras del
+enunciado y la respuesta correcta, en lugar de una representación profunda
+del significado~\citep{mccoy-etal-2019-right,gardner-etal-2020-evaluating}.
+Como consecuencia, modificaciones mínimas del texto(sustituir una palabra
+por un sinónimo, parafrasear una oración, invertir un conector causal o
+eliminar una pista discursiva) pueden alterar drásticamente la predicción
+del modelo, aun cuando el significado y la respuesta correcta permanezcan
+intactos.
+
+Este fenómeno plantea un problema concreto: \textbf{no es posible distinguir,
+únicamente a partir de la precisión global, si un modelo de lenguaje en
+español razona sobre el contenido o si meramente explota regularidades
+superficiales del texto}.
+Esta indistinguibilidad tiene consecuencias prácticas serias, pues compromete
+la fiabilidad de los modelos en escenarios reales donde la formulación de las
+preguntas varía respecto a los datos de entrenamiento, y dificulta su
+certificación para usos sensibles como evaluación académica o apoyo a la
+toma de decisiones.
+
+Atacar este problema requiere superar tres limitaciones específicas del
+estado actual:
+
+\begin{enumerate}
+    \item \textbf{Escasez de herramientas adversariales para el español.}
+          La mayoría de los marcos existentes están diseñados para inglés y
+          dependen de recursos léxicos (WordNet, listas de \textit{stopwords},
+          etiquetadores) que no son directamente trasladables.
+    \item \textbf{Falta de control sobre la intensidad de la perturbación.}
+          Las evaluaciones binarias (perturbado / no perturbado) ocultan
+          cómo se degrada el rendimiento a medida que la perturbación se
+          intensifica.
+    \item \textbf{Ausencia de validación semántica sistemática.}
+          Sin un control automático sobre el significado, una perturbación
+          puede cambiar la respuesta correcta del ítem, invalidando la
+          comparación con el modelo evaluador.
+\end{enumerate}
+
+\subsection{Aportes de este trabajo}
+\label{sec:contributions}
 
 En este trabajo describimos el diseño e implementación de un \textbf{marco de
 evaluación de robustez léxica} para tareas de razonamiento verbal en español,
