@@ -19,10 +19,15 @@
   mediante Perturbaciones Controladas en Tareas de\\
   Razonamiento Verbal en Español}
 
-\author{
-  \textbf{Grupon 4?} \\
-  - cmep
-}
+  \author{
+  Grupo 7 \\
+    Carlos Miguel Espinoza Peralta \And
+    Yair Fabio Mattos Hilario \And
+    Eduardo Luis Carbajal Gutiérrez \And
+    Abraham Josué Espinoza Peralta \And
+    Diego Alonso Calderón Matías \\
+  }
+
 
 \begin{document}
 \maketitle
@@ -175,9 +180,11 @@ Suprime conectores lógicos y causales (``porque'', ``dado que'',
 ``sin embargo''\ldots) que suelen señalar de manera explícita la
 relación argumentativa del enunciado. La hipótesis, en línea con los
 resultados de \citet{mccoy-etal-2019-right} sobre heurísticas
-superficiales en inferencia natural, es que parte del rendimiento del
-modelo se explica por estos marcadores discursivos; si los retiramos,
-la precisión debería degradarse.
+superficiales en inferencia natural y de
+\citet{niven-kao-2019-probing} sobre \textit{cue words} en
+argumentación, es que parte del rendimiento del modelo se explica por
+estos marcadores discursivos; si los retiramos, la precisión debería
+degradarse.
 
 Las cuatro estrategias se aplican de manera independiente y con tres
 niveles de intensidad (bajo, medio, alto), lo que permite analizar no
@@ -442,6 +449,20 @@ esta sección la configuración fue \texttt{qwen2.5} sobre Ollama local,
 con un máximo de 8 hilos concurrentes (\texttt{ThreadPoolExecutor}).
 Aumentar la concurrencia más allá no aportó mejoras porque el cuello
 de botella pasa al modelo.
+
+Una vez generados los conjuntos perturbados, un segundo \textit{pipeline}
+\linebreak (\texttt{evaluation/evaluate.py}) se encarga de ejecutar el
+modelo evaluador sobre cada versión, almacenar las predicciones y
+calcular las tres métricas reportadas en este informe (precisión,
+$\Delta$Acc y \textit{flip rate}). La separación entre generación y
+evaluación es deliberada: permite reutilizar los mismos conjuntos
+perturbados con modelos distintos sin reejecutar los ataques, y
+mantiene aislado el código costoso (las llamadas al LLM para
+sinónimos y parafraseo) del cálculo barato de las métricas. La salida
+final es un único \texttt{eval\_results.json} que consolida los
+resultados de todas las combinaciones ataque\,$\times$\,intensidad
+sobre el dataset evaluado. La definición formal de las métricas y el
+protocolo se desarrollan en la Sección~\ref{sec:evaluation}.
 
 % ─────────────────────────────────────────────────────────────────────────────
 \section{Conclusiones}
