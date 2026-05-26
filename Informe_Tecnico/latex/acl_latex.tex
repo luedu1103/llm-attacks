@@ -19,10 +19,15 @@
   mediante Perturbaciones Controladas en Tareas de\\
   Razonamiento Verbal en Español}
 
-\author{
-  \textbf{Grupon 4?} \\
-  - cmep
-}
+  \author{
+  Grupo 7 \\
+    Carlos Miguel Espinoza Peralta \
+    Yair Fabio Mattos Hilario \
+    Eduardo Luis Carbajal Gutiérrez \
+    Abraham Josué Espinoza Peralta \
+    Diego Alonso Calderón Matías \\
+  }
+
 
 \begin{document}
 \maketitle
@@ -182,9 +187,53 @@ técnica de perturbación.
 \subsection{Métodos o estrategias exploradas}
 \label{sec:methods}
 
-\textit{[Descripción de todas las estrategias implementadas y la intuición
-detrás de cada una: sustitución por sinónimos, parafraseo, pares mínimos y
-eliminación de atajos lingüísticos.]}
+Para evaluar la robustez del modelo desde distintos ángulos lingüísticos
+se implementaron cuatro estrategias de perturbación. Cada una ataca una
+hipótesis distinta sobre dónde reside la fragilidad del modelo, y todas
+comparten una restricción común: la respuesta correcta del ítem
+original debe seguir siendo válida tras la perturbación.
+
+\paragraph{Sustitución por sinónimos.}
+Reemplaza palabras de contenido por equivalentes semánticos. La pregunta
+que intenta responder es si el modelo se apoya en formas léxicas
+concretas o en su significado. A diferencia de \citet{jin-etal-2020-bert},
+donde cada palabra se procesa de forma aislada, aquí enviamos la
+oración completa al LLM para que resuelva la polisemia en contexto.
+
+\paragraph{Parafraseo.}
+Reescribe la oración cambiando estructura sintáctica pero no contenido.
+Cubre el caso opuesto al anterior: si el modelo se apoya en el orden de
+las palabras o en patrones sintácticos memorizados, una reformulación
+debería desestabilizar su predicción aun preservando el significado.
+Este es el tipo de prueba que \citet{ribeiro-etal-2020-checklist}
+denominan \textit{invariance test}.
+
+\paragraph{Pares mínimos.}
+Cambia un único elemento crítico del enunciado, sea una negación, un
+cuantificador, un conector temporal, un verbo modal o una marca de
+polaridad. La premisa es la opuesta a las dos anteriores: aquí
+\emph{sí} buscamos alterar la respuesta correcta, para comprobar si el
+modelo detecta el cambio en lugar de ignorarlo. La lógica es la misma
+que motiva los \textit{contrast sets} de \citet{gardner-etal-2020-evaluating},
+adaptada al español. Es además el único ataque completamente basado
+en reglas, lo que garantiza determinismo y reproducibilidad exacta.
+
+\paragraph{Eliminación de atajos lingüísticos.}
+Suprime conectores lógicos y causales (``porque'', ``dado que'',
+``sin embargo''\ldots) que suelen señalar de manera explícita la
+relación argumentativa del enunciado. La hipótesis, en línea con los
+resultados de \citet{mccoy-etal-2019-right} sobre heurísticas
+superficiales en inferencia natural y de
+\citet{niven-kao-2019-probing} sobre \textit{cue words} en
+argumentación, es que parte del rendimiento del modelo se explica por
+estos marcadores discursivos; si los retiramos, la precisión debería
+degradarse.
+
+Las cuatro estrategias se aplican de manera independiente y con tres
+niveles de intensidad (bajo, medio, alto), lo que permite analizar no
+sólo si el modelo es vulnerable sino cómo se degrada conforme la
+perturbación se intensifica. Los detalles de implementación se
+desarrollan en la Sección~\ref{sec:attacks}.
 
 \subsection{Métricas de evaluación}
 \label{sec:metrics}
@@ -238,7 +287,7 @@ La Tabla~\ref{tab:results} resume los resultados obtenidos al evaluar
 \textsc{Qwen2.5} sobre el dataset original y sus versiones perturbadas.
 La precisión basal del modelo sobre el dataset sin modificar es de
 \textbf{61.82\%}.
- 
+
 \begin{table}[h]
   \centering
   \small
@@ -300,46 +349,46 @@ A partir de estos datos, se pueden identificar tres patrones principales de
 comportamiento en el modelo:
 
 \begin{itemize}
-    \item \textbf{Estructura Lógica y Paradoja de los Atajos (Ordenamiento y Eliminación):} 
-    Los datos desagregados resuelven la duda planteada en el análisis global 
-    respecto al ataque \texttt{Shortcut Removal}. A nivel general, el ataque 
-    parecía casi inofensivo ($\Delta\text{Acc} = -0.32$~pp). Sin embargo, en la 
-    tarea de \textit{Ordenamiento de oraciones}, la eliminación de conectores 
-    produce una caída significativa del rendimiento (de $0.552$ a $0.514$) con un 
-    \textit{flip rate} de casi $12\%$. Esto demuestra que el modelo sí depende 
-    genuinamente de marcadores discursivos para inferir secuencias lógicas, pero 
-    este efecto se diluye en el promedio global debido al peso masivo de 
-    \textit{Comprensión lectora} ($N=7\,940$), donde la redundancia del párrafo 
-    compensa la pérdida de conectores aislados. Por otro lado, \textit{Eliminación de oraciones} 
-    presenta el rendimiento base más bajo ($0.240$, cercano al azar en 5 opciones) 
-    y registra los \textit{flip rates} más altos del experimento ($28.2\%$ en 
-    pares mínimos y $30.9\%$ en parafraseo), evidenciando que el modelo carece de 
+    \item \textbf{Estructura Lógica y Paradoja de los Atajos (Ordenamiento y Eliminación):}
+    Los datos desagregados resuelven la duda planteada en el análisis global
+    respecto al ataque \texttt{Shortcut Removal}. A nivel general, el ataque
+    parecía casi inofensivo ($\Delta\text{Acc} = -0.32$~pp). Sin embargo, en la
+    tarea de \textit{Ordenamiento de oraciones}, la eliminación de conectores
+    produce una caída significativa del rendimiento (de $0.552$ a $0.514$) con un
+    \textit{flip rate} de casi $12\%$. Esto demuestra que el modelo sí depende
+    genuinamente de marcadores discursivos para inferir secuencias lógicas, pero
+    este efecto se diluye en el promedio global debido al peso masivo de
+    \textit{Comprensión lectora} ($N=7\,940$), donde la redundancia del párrafo
+    compensa la pérdida de conectores aislados. Por otro lado, \textit{Eliminación de oraciones}
+    presenta el rendimiento base más bajo ($0.240$, cercano al azar en 5 opciones)
+    y registra los \textit{flip rates} más altos del experimento ($28.2\%$ en
+    pares mínimos y $30.9\%$ en parafraseo), evidenciando que el modelo carece de
     una estrategia robusta para discriminar impertinencia textual.
 
-    \item \textbf{Fragilidad en Semántica Léxica Aislada (Series Verbales y Sinónimos/Antónimos):} 
-    En las tareas de relaciones léxicas puras, el impacto de \texttt{Minimal Pair} 
-    es sorprendentemente destructivo. En \textit{Series verbales}, alterar un solo 
-    elemento crítico (v.g., invertir polaridad o número) desploma el \textit{Accuracy} 
-    de $0.602$ a $0.511$ ($\Delta\text{Acc} = -9.1$~pp) con un FR del $20.7\%$. 
-    Aún más notable es la tarea de \textit{Sinónimos y antónimos}, donde el ataque 
-    produce la caída más aguda registrada: de $0.600$ a $0.497$ ($\Delta\text{Acc} = -10.3$~pp). 
-    Esto revela que la atención del modelo en estas tareas está hiper-focalizada 
-    en pivotes léxicos superficiales; si se modifica la orientación del pivote 
-    original, el modelo falla sistemáticamente al no poder mapearlo contra las 
-    opciones estáticas. Como era esperable, \texttt{Shortcut Removal} resultó nulo 
-    en estas tareas ($\Delta\text{Acc} \approx 0$), ya que no operan sobre 
+    \item \textbf{Fragilidad en Semántica Léxica Aislada (Series Verbales y Sinónimos/Antónimos):}
+    En las tareas de relaciones léxicas puras, el impacto de \texttt{Minimal Pair}
+    es sorprendentemente destructivo. En \textit{Series verbales}, alterar un solo
+    elemento crítico (v.g., invertir polaridad o número) desploma el \textit{Accuracy}
+    de $0.602$ a $0.511$ ($\Delta\text{Acc} = -9.1$~pp) con un FR del $20.7\%$.
+    Aún más notable es la tarea de \textit{Sinónimos y antónimos}, donde el ataque
+    produce la caída más aguda registrada: de $0.600$ a $0.497$ ($\Delta\text{Acc} = -10.3$~pp).
+    Esto revela que la atención del modelo en estas tareas está hiper-focalizada
+    en pivotes léxicos superficiales; si se modifica la orientación del pivote
+    original, el modelo falla sistemáticamente al no poder mapearlo contra las
+    opciones estáticas. Como era esperable, \texttt{Shortcut Removal} resultó nulo
+    en estas tareas ($\Delta\text{Acc} \approx 0$), ya que no operan sobre
     estructuras discursivas causales.
 
-    \item \textbf{Comprensión de Textos Extensos (Comprensión Lectora):} 
-    Siendo la tarea más representativa del corpus, la comprensión lectora 
-    demuestra mayor resiliencia ante ataques localizados (\texttt{Minimal Pair} 
-    cae solo $3.3$~pp), pero resulta considerablemente sensible al 
-    \texttt{ParaphraseAttack} ($\text{FR} = 0.154$). Al reestructurar la sintaxis 
-    de las premisas, el modelo modifica sus predicciones en el $15.4\%$ de los 
-    casos, a pesar de que el contenido semántico permanece validado por \textit{embeddings}. 
-    Esto apoya la hipótesis de que, en textos largos, \textsc{Qwen2.5} tiende a 
-    realizar un mapeo superficial de patrones (\textit{pattern matching}) entre la 
-    forma sintáctica de la pregunta y el cuerpo del texto, perdiendo precisión 
+    \item \textbf{Comprensión de Textos Extensos (Comprensión Lectora):}
+    Siendo la tarea más representativa del corpus, la comprensión lectora
+    demuestra mayor resiliencia ante ataques localizados (\texttt{Minimal Pair}
+    cae solo $3.3$~pp), pero resulta considerablemente sensible al
+    \texttt{ParaphraseAttack} ($\text{FR} = 0.154$). Al reestructurar la sintaxis
+    de las premisas, el modelo modifica sus predicciones en el $15.4\%$ de los
+    casos, a pesar de que el contenido semántico permanece validado por \textit{embeddings}.
+    Esto apoya la hipótesis de que, en textos largos, \textsc{Qwen2.5} tiende a
+    realizar un mapeo superficial de patrones (\textit{pattern matching}) entre la
+    forma sintáctica de la pregunta y el cuerpo del texto, perdiendo precisión
     cuando se altera la superficie textual sin alterar el significado.
 \end{itemize}
 
@@ -435,11 +484,63 @@ para trabajos posteriores es reportar siempre las dos. Si hubiera que
 elegir un único ataque para diagnóstico, los pares mínimos son los
 más rentables por relación coste/impacto.
 
-\subsection{Interfaces (implementación)}
+\subsection{Interfaces}
 \label{sec:interfaces}
 
-\textit{[Descripción de la arquitectura del sistema, clase base \texttt{Attack},
-pipeline CLI con checkpoints, cliente Ollama, etc.]}
+Los experimentos reportados en esta sección se generaron con un
+\textit{pipeline} unificado por línea de comandos, lo que garantiza
+que cualquiera de los ocho conjuntos perturbados pueda reproducirse
+con un solo comando. La interfaz típica es:
+
+\begin{quote}
+\small
+\texttt{python pipeline.py --attack <tipo> --intensity <valor>}\\
+\texttt{\phantom{python pipeline.py} --dataset <ruta> --output <ruta>}
+\end{quote}
+
+\noindent donde \texttt{<tipo>} es uno de \texttt{synonym},
+\texttt{paraphrase}, \texttt{minimal\_pair} o \texttt{shortcut\_removal},
+y la intensidad se especifica como un real en $[0, 1]$ o uno de los
+alias \texttt{low}, \texttt{medium}, \texttt{high}. La separación entre
+selección de ataque, parámetro de intensidad y rutas de E/S permite
+ejecutar combinaciones nuevas sin tocar código.
+
+Todos los ataques heredan de una clase abstracta \texttt{Attack} que
+fija el contrato común (qué campos perturbar, cómo aplicar la
+transformación, cómo paralelizar). Esta uniformidad facilita añadir un
+quinto ataque en el futuro sin reescribir el \textit{pipeline}: basta
+implementar el método \texttt{\_perturb\_text}.
+
+Una decisión que terminó siendo crítica en la práctica fue el
+sistema de \textit{checkpoints}. Sobre $\sim$11\,k ítems, los ataques
+basados en LLM (sinónimos y parafraseo) tardan varias horas; cualquier
+interrupción habría obligado a empezar de cero. El \textit{pipeline}
+guarda el estado cada 10 ítems procesados, y al reanudar la ejecución
+detecta el último \textit{checkpoint} y continúa desde ahí. Sin esto,
+muchos de los experimentos reportados no habrían podido completarse
+de una sola corrida.
+
+Las llamadas al LLM pasan por un cliente compatible con la API de
+OpenAI, lo que permite alternar entre Ollama local y servicios remotos
+sin cambios en el código de ataque. En los experimentos descritos en
+esta sección la configuración fue \texttt{qwen2.5} sobre Ollama local,
+con un máximo de 8 hilos concurrentes (\texttt{ThreadPoolExecutor}).
+Aumentar la concurrencia más allá no aportó mejoras porque el cuello
+de botella pasa al modelo.
+
+Una vez generados los conjuntos perturbados, un segundo \textit{pipeline}
+\linebreak (\texttt{evaluation/evaluate.py}) se encarga de ejecutar el
+modelo evaluador sobre cada versión, almacenar las predicciones y
+calcular las tres métricas reportadas en este informe (precisión,
+$\Delta$Acc y \textit{flip rate}). La separación entre generación y
+evaluación es deliberada: permite reutilizar los mismos conjuntos
+perturbados con modelos distintos sin reejecutar los ataques, y
+mantiene aislado el código costoso (las llamadas al LLM para
+sinónimos y parafraseo) del cálculo barato de las métricas. La salida
+final es un único \texttt{eval\_results.json} que consolida los
+resultados de todas las combinaciones ataque\,$\times$\,intensidad
+sobre el dataset evaluado. La definición formal de las métricas y el
+protocolo se desarrollan en la Sección~\ref{sec:evaluation}.
 
 % ─────────────────────────────────────────────────────────────────────────────
 \section{Conclusiones}
