@@ -133,8 +133,51 @@ estado actual:
 \subsection{Dataset}
 \label{sec:dataset}
 
-\textit{[Descripción del dataset original. Incluir estadísticas: número total
-de ítems, distribución por tipo de tarea, longitud media, fuente, formato.]}
+El conjunto de datos base consistió inicialmente en 13\,829 ítems de razonamiento
+verbal en español obtenidos de exámenes de aptitud académica. Tras aplicar la validación
+semántica de las perturbaciones y filtrar aquellos ítems donde el modelo evaluador
+no generó una respuesta interpretable, el conjunto de evaluación final se consolidó en 11\,091 ítems.
+Cada ítem sigue el formato de opción múltiple (MCQ) con cinco alternativas:
+
+\begin{quote}
+\small
+\texttt{\{"id": 0, "task": "sentence\_ordering",}\\
+\texttt{\ "question": "...", "options": [...],}\\
+\texttt{\ "answer": 3, "rationale": "..."\}}
+\end{quote}
+
+El campo \texttt{answer} es un índice (0–4) que nunca se modifica durante las
+perturbaciones.
+La Tabla~\ref{tab:dataset} muestra la distribución del conjunto filtrado por tipo de tarea.
+
+\begin{table}[h]
+  \centering
+  \small
+  \begin{tabular}{lrr}
+    \toprule
+    \textbf{Tipo de tarea} & \textbf{N} & \textbf{\%} \\
+    \midrule
+    Comprensión lectora        & 7\,940 & 71.6 \\
+    Series verbales            & 1\,316 & 11.9 \\
+    Eliminación de oraciones   & 1\,115 & 10.0 \\
+    Ordenamiento de oraciones  &   319  &  2.9 \\
+    Analogías                  &   213  &  1.9 \\
+    Sinónimos y antónimos      &   175  &  1.6 \\
+    Oraciones incompletas      &    13  &  0.1 \\
+    \midrule
+    \textbf{Total}             & \textbf{11\,091} & \textbf{100} \\
+    \bottomrule
+  \end{tabular}
+  \caption{Distribución del conjunto de evaluación final por tipo de tarea.}
+  \label{tab:dataset}
+\end{table}
+
+Las tareas presentan características lingüísticas distintas: las de comprensión
+lectora requieren inferir sobre párrafos extensos; las de ordenamiento de
+oraciones exigen detectar conectores y relaciones de coherencia; las de series
+verbales y analogías se apoyan en relaciones semánticas entre palabras.
+Esta variedad permite analizar qué tipos de tarea son más sensibles a cada
+técnica de perturbación.
 
 \subsection{Métodos o estrategias exploradas}
 \label{sec:methods}
@@ -146,8 +189,43 @@ eliminación de atajos lingüísticos.]}
 \subsection{Métricas de evaluación}
 \label{sec:metrics}
 
-\textit{[Definición formal de las métricas empleadas: precisión (accuracy),
-caída de precisión ($\Delta$Acc) y tasa de cambio (flip rate).]}
+El módulo de evaluaciones se define tres métricas para cuantificar
+el impacto de las perturbaciones sobre un modelo evaluador:
+
+\paragraph{Precisión (\textit{accuracy}).}
+Fracción de predicciones que coinciden con la etiqueta correcta:
+
+\begin{equation}
+  \text{Acc}(P, Y) = \frac{1}{N} \sum_{i=1}^{N} \mathbf{1}[p_i = y_i]
+\end{equation}
+
+\paragraph{Cambio de precisión ($\Delta$\,Acc).}
+Diferencia entre la precisión sobre el dataset perturbado y el original:
+
+\begin{equation}
+  \Delta\text{Acc} = \text{Acc}(P_\text{pert}, Y) - \text{Acc}(P_\text{orig}, Y)
+\end{equation}
+
+Un valor negativo indica que el ataque degradó el rendimiento del modelo.
+
+\paragraph{Tasa de cambio (\textit{flip rate}).}
+Fracción de ejemplos donde la predicción cambió entre el dataset original y el
+perturbado, independientemente de si el cambio fue hacia la respuesta correcta
+o incorrecta:
+
+\begin{equation}
+  \text{FR}(P_\text{orig}, P_\text{pert}) = \frac{1}{N}
+    \sum_{i=1}^{N} \mathbf{1}[p^\text{orig}_i \neq p^\text{pert}_i]
+\end{equation}
+
+Un alto \textit{flip rate} con un $\Delta$\,Acc moderado sugiere inestabilidad de
+predicciones sin necesariamente un desplome del rendimiento global.
+
+El protocolo de evaluación consiste en (1) ejecutar el modelo evaluador sobre el
+dataset original y registrar sus predicciones, (2) ejecutarlo sobre cada versión
+perturbada (ataque $\times$ intensidad) y (3) calcular las tres métricas para
+cada combinación. Esto genera una tabla comparativa que permite identificar qué
+tipo de perturbación afecta más al modelo y qué tareas son más sensibles.
 
 % ─────────────────────────────────────────────────────────────────────────────
 \section{Resultados obtenidos}
@@ -418,54 +496,6 @@ Para la validación semántica empleamos el modelo
 genera representaciones densas comparables en 50 idiomas, incluido el español.
 
 % ─────────────────────────────────────────────────────────────────────────────
-\section{Conjunto de datos}
-\label{sec:dataset}
-
-El conjunto de datos base consiste en 13\,829 ítems de razonamiento verbal en
-español obtenidos de exámenes de aptitud académica.
-Cada ítem sigue el formato de opción múltiple (MCQ) con cinco alternativas:
-
-\begin{quote}
-\small
-\texttt{\{"id": 0, "task": "sentence\_ordering",}\\
-\texttt{\ "question": "...", "options": [...],}\\
-\texttt{\ "answer": 3, "rationale": "..."\}}
-\end{quote}
-
-El campo \texttt{answer} es un índice (0–4) que nunca se modifica durante las
-perturbaciones.
-La Tabla~\ref{tab:dataset} muestra la distribución por tipo de tarea.
-
-\begin{table}[h]
-  \centering
-  \small
-  \begin{tabular}{lrr}
-    \toprule
-    \textbf{Tipo de tarea} & \textbf{N} & \textbf{\%} \\
-    \midrule
-    Comprensión lectora        & 9\,373 & 67.8 \\
-    Eliminación de oraciones   & 2\,229 & 16.1 \\
-    Series verbales            & 1\,434 & 10.4 \\
-    Sinónimos y antónimos      &   383  &  2.8 \\
-    Ordenamiento de oraciones  &   319  &  2.3 \\
-    Oraciones incompletas      &    44  &  0.3 \\
-    Analogías                  &    47  &  0.3 \\
-    \midrule
-    \textbf{Total}             & \textbf{13\,829} & \textbf{100} \\
-    \bottomrule
-  \end{tabular}
-  \caption{Distribución del conjunto de datos por tipo de tarea.}
-  \label{tab:dataset}
-\end{table}
-
-Las tareas presentan características lingüísticas distintas: las de comprensión
-lectora requieren inferir sobre párrafos extensos; las de ordenamiento de
-oraciones exigen detectar conectores y relaciones de coherencia; las de series
-verbales y analogías se apoyan en relaciones semánticas entre palabras.
-Esta variedad permite analizar qué tipos de tarea son más sensibles a cada
-técnica de perturbación.
-
-% ─────────────────────────────────────────────────────────────────────────────
 \section{Metodología}
 \label{sec:methodology}
 
@@ -696,51 +726,6 @@ espacios dobles y puntuación huérfana generada por la supresión.
 \textbf{Original:} ``Juan llegó tarde \textbf{porque} perdió el bus.''\\
 \textbf{Perturbado:} ``Juan llegó tarde. Perdió el bus.''
 \end{quote}
-
-% ─────────────────────────────────────────────────────────────────────────────
-\section{Marco de evaluación}
-\label{sec:evaluation}
-
-El módulo \texttt{evaluation/metrics.py} define tres métricas para cuantificar
-el impacto de las perturbaciones sobre un modelo evaluador:
-
-\paragraph{Precisión (\textit{accuracy}).}
-Fracción de predicciones que coinciden con la etiqueta correcta:
-
-\begin{equation}
-  \text{Acc}(P, Y) = \frac{1}{N} \sum_{i=1}^{N} \mathbf{1}[p_i = y_i]
-\end{equation}
-
-\paragraph{Caída de precisión ($\Delta$\,Acc).}
-Diferencia entre la precisión sobre el dataset original y la del perturbado:
-
-\begin{equation}
-  \Delta\text{Acc} = \text{Acc}(P_\text{orig}, Y) - \text{Acc}(P_\text{pert}, Y)
-\end{equation}
-
-Un valor positivo indica que el ataque degradó el rendimiento del modelo.
-
-\paragraph{Tasa de cambio (\textit{flip rate}).}
-Fracción de ejemplos donde la predicción cambió entre el dataset original y el
-perturbado, independientemente de si el cambio fue hacia la respuesta correcta
-o incorrecta:
-
-\begin{equation}
-  \text{FR}(P_\text{orig}, P_\text{pert}) = \frac{1}{N}
-    \sum_{i=1}^{N} \mathbf{1}[p^\text{orig}_i \neq p^\text{pert}_i]
-\end{equation}
-
-Un alto \textit{flip rate} con bajo $\Delta$\,Acc sugiere inestabilidad de
-predicciones sin necesariamente peor rendimiento global.
-
-\paragraph{Protocolo de evaluación.}
-El protocolo planificado consiste en (1) ejecutar el modelo evaluador sobre el
-dataset original y registrar sus predicciones, (2) ejecutarlo sobre cada versión
-perturbada (ataque $\times$ intensidad) y (3) calcular las tres métricas para
-cada combinación.
-Esto genera una tabla comparativa con 12 configuraciones
-(4 ataques $\times$ 3 intensidades) que permite identificar qué tipo de
-perturbación afecta más al modelo y qué tareas son más sensibles.
 
 % ─────────────────────────────────────────────────────────────────────────────
 \section{Conjuntos de datos generados}
