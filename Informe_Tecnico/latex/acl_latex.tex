@@ -139,9 +139,46 @@ de ítems, distribución por tipo de tarea, longitud media, fuente, formato.]}
 \subsection{Métodos o estrategias exploradas}
 \label{sec:methods}
 
-\textit{[Descripción de todas las estrategias implementadas y la intuición
-detrás de cada una: sustitución por sinónimos, parafraseo, pares mínimos y
-eliminación de atajos lingüísticos.]}
+Para evaluar la robustez del modelo desde distintos ángulos lingüísticos
+se implementaron cuatro estrategias de perturbación. Cada una ataca una
+hipótesis distinta sobre dónde reside la fragilidad del modelo, y todas
+comparten una restricción común: la respuesta correcta del ítem
+original debe seguir siendo válida tras la perturbación.
+
+\paragraph{Sustitución por sinónimos.}
+Reemplaza palabras de contenido por equivalentes semánticos. La pregunta
+que intenta responder es si el modelo se apoya en formas léxicas
+concretas o en su significado. A diferencia de \citet{jin-etal-2020-bert},
+donde cada palabra se procesa de forma aislada, aquí enviamos la
+oración completa al LLM para que resuelva la polisemia en contexto.
+
+\paragraph{Parafraseo.}
+Reescribe la oración cambiando estructura sintáctica pero no contenido.
+Cubre el caso opuesto al anterior: si el modelo se apoya en el orden de
+las palabras o en patrones sintácticos memorizados, una reformulación
+debería desestabilizar su predicción aun preservando el significado.
+
+\paragraph{Pares mínimos.}
+Cambia un único elemento crítico del enunciado, sea una negación, un
+cuantificador, un conector temporal, un verbo modal o una marca de
+polaridad. La premisa es la opuesta a las dos anteriores: aquí
+\emph{sí} buscamos alterar la respuesta correcta, para comprobar si el
+modelo detecta el cambio en lugar de ignorarlo. Es el único ataque
+completamente basado en reglas, lo que garantiza determinismo y
+reproducibilidad exacta.
+
+\paragraph{Eliminación de atajos lingüísticos.}
+Suprime conectores lógicos y causales (``porque'', ``dado que'',
+``sin embargo''\ldots) que suelen señalar de manera explícita la
+relación argumentativa del enunciado. La hipótesis es que parte del
+rendimiento del modelo se explica por estos marcadores discursivos;
+si los retiramos, la precisión debería degradarse.
+
+Las cuatro estrategias se aplican de manera independiente y con tres
+niveles de intensidad (bajo, medio, alto), lo que permite analizar no
+sólo si el modelo es vulnerable sino cómo se degrada conforme la
+perturbación se intensifica. Los detalles de implementación se
+desarrollan en la Sección~\ref{sec:attacks}.
 
 \subsection{Métricas de evaluación}
 \label{sec:metrics}
@@ -360,8 +397,48 @@ más rentables por relación coste/impacto.
 \subsection{Interfaces (implementación)}
 \label{sec:interfaces}
 
-\textit{[Descripción de la arquitectura del sistema, clase base \texttt{Attack},
-pipeline CLI con checkpoints, cliente Ollama, etc.]}
+Los experimentos reportados en esta sección se generaron con un
+\textit{pipeline} unificado por línea de comandos, lo que garantiza
+que cualquiera de los ocho conjuntos perturbados pueda reproducirse
+con un solo comando. La interfaz típica es:
+
+\begin{quote}
+\small
+\texttt{python pipeline.py --attack <tipo> --intensity <valor>}\\
+\texttt{\phantom{python pipeline.py} --dataset <ruta> --output <ruta>}
+\end{quote}
+
+\noindent donde \texttt{<tipo>} es uno de \texttt{synonym},
+\texttt{paraphrase}, \texttt{minimal\_pair} o \texttt{shortcut\_removal},
+y la intensidad se especifica como un real en $[0, 1]$ o uno de los
+alias \texttt{low}, \texttt{medium}, \texttt{high}. La separación entre
+selección de ataque, parámetro de intensidad y rutas de E/S permite
+ejecutar combinaciones nuevas sin tocar código.
+
+Todos los ataques heredan de una clase abstracta \texttt{Attack} que
+fija el contrato común (qué campos perturbar, cómo aplicar la
+transformación, cómo paralelizar). Esta uniformidad facilita añadir un
+quinto ataque en el futuro sin reescribir el \textit{pipeline}: basta
+implementar el método \texttt{\_perturb\_text}. La descripción
+detallada de esta jerarquía está en la
+Sección~\ref{sec:methodology}.
+
+Una decisión que terminó siendo crítica en la práctica fue el
+sistema de \textit{checkpoints}. Sobre $\sim$11\,k ítems, los ataques
+basados en LLM (sinónimos y parafraseo) tardan varias horas; cualquier
+interrupción habría obligado a empezar de cero. El \textit{pipeline}
+guarda el estado cada 10 ítems procesados, y al reanudar la ejecución
+detecta el último \textit{checkpoint} y continúa desde ahí. Sin esto,
+muchos de los experimentos reportados no habrían podido completarse
+de una sola corrida.
+
+Las llamadas al LLM pasan por un cliente compatible con la API de
+OpenAI, lo que permite alternar entre Ollama local y servicios remotos
+sin cambios en el código de ataque. En los experimentos descritos en
+esta sección la configuración fue \texttt{qwen2.5} sobre Ollama local,
+con un máximo de 8 hilos concurrentes (\texttt{ThreadPoolExecutor}).
+Aumentar la concurrencia más allá no aportó mejoras porque el cuello
+de botella pasa al modelo.
 
 % ─────────────────────────────────────────────────────────────────────────────
 \section{Conclusiones}
