@@ -13,6 +13,7 @@
 \usepackage{booktabs}
 \usepackage{multirow}
 \usepackage{amsmath}
+\usepackage{caption}
 
 \title{Evaluación de Robustez Léxica en Modelos de Lenguaje\\
   mediante Perturbaciones Controladas en Tareas de\\
@@ -155,8 +156,36 @@ caída de precisión ($\Delta$Acc) y tasa de cambio (flip rate).]}
 \subsection{Resultados generales}
 \label{sec:results-general}
 
-\textit{[Tabla agregada con métricas por ataque e intensidad sobre el dataset
-completo.]}
+La Tabla~\ref{tab:results} resume los resultados obtenidos al evaluar
+\textsc{Qwen2.5} sobre el dataset original y sus versiones perturbadas.
+La precisión basal del modelo sobre el dataset sin modificar es de
+\textbf{61.82\%}.
+ 
+\begin{table}[h]
+  \centering
+  \small
+  \begin{tabular}{llrrr}
+    \toprule
+    \textbf{Ataque} & \textbf{Int.} & \textbf{Acc.} & $\boldsymbol{\Delta}$\textbf{Acc.} & \textbf{FR} \\
+    \midrule
+    Baseline (original) & --- & 0.618 & --- & --- \\
+    \midrule
+    \multirow{3}{*}{Pares mínimos}   & 0.1 & 0.596 & 0.022 & 0.111 \\
+                                      & 0.5 & 0.582 & 0.037 & 0.135 \\
+                                      & 1.0 & 0.582 & 0.037 & 0.133 \\
+    \midrule
+    Parafraseo                        & 0.5 & 0.588 & 0.030 & 0.161 \\
+    \midrule
+    \multirow{3}{*}{Elim.\ atajos}   & 0.1 & 0.616 & 0.002 & 0.069 \\
+                                      & 0.5 & 0.615 & 0.003 & 0.076 \\
+                                      & 1.0 & 0.616 & 0.002 & 0.075 \\
+    \midrule
+    Sinónimos                         & 0.5 & 0.568 & 0.027 & 0.160 \\
+    \bottomrule
+  \end{tabular}
+    \phantomcaption
+  \label{tab:results}
+\end{table}
 
 \subsection{Experimentos por enunciado y resultados obtenidos}
 \label{sec:results-per-task}
