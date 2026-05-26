@@ -125,28 +125,75 @@ estado actual:
           comparación con el modelo evaluador.
 \end{enumerate}
 
-\subsection{Aportes de este trabajo}
-\label{sec:contributions}
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Experimental Setup}
+\label{sec:setup}
 
-En este trabajo describimos el diseño e implementación de un \textbf{marco de
-evaluación de robustez léxica} para tareas de razonamiento verbal en español,
-cuyos aportes principales son:
+\subsection{Dataset}
+\label{sec:dataset}
 
-\begin{enumerate}
-    \item Cuatro módulos de perturbación controlada (sinónimos, parafraseo, pares
-          mínimos y eliminación de atajos) con una interfaz unificada y soporte
-          de paralelismo.
-    \item Un \textit{pipeline} de generación de datos perturbados con sistema de
-          \textit{checkpoints} para tolerancia a fallos.
-    \item Validación semántica automática mediante \textit{embeddings} multilingües
-          que garantiza la preservación del significado en cada ejemplo generado.
-    \item Un conjunto de datos de 13\,829 ejemplos en español con siete tipos de
-          tarea, listos para ser evaluados.
-    \item Un módulo de métricas (precisión, $\Delta$\,precisión y tasa de cambio)
-          listo para conectarse a cualquier modelo evaluador.
-\end{enumerate}
+\textit{[Descripción del dataset original. Incluir estadísticas: número total
+de ítems, distribución por tipo de tarea, longitud media, fuente, formato.]}
+
+\subsection{Métodos o estrategias exploradas}
+\label{sec:methods}
+
+\textit{[Descripción de todas las estrategias implementadas y la intuición
+detrás de cada una: sustitución por sinónimos, parafraseo, pares mínimos y
+eliminación de atajos lingüísticos.]}
+
+\subsection{Métricas de evaluación}
+\label{sec:metrics}
+
+\textit{[Definición formal de las métricas empleadas: precisión (accuracy),
+caída de precisión ($\Delta$Acc) y tasa de cambio (flip rate).]}
 
 % ─────────────────────────────────────────────────────────────────────────────
+\section{Resultados obtenidos}
+\label{sec:results}
+
+\subsection{Resultados generales}
+\label{sec:results-general}
+
+\textit{[Tabla agregada con métricas por ataque e intensidad sobre el dataset
+completo.]}
+
+\subsection{Experimentos por enunciado y resultados obtenidos}
+\label{sec:results-per-task}
+
+\textit{[Resultados desagregados para cada uno de los siete tipos de tarea
+bajo cada ataque e intensidad.]}
+
+\subsection{Análisis de resultados}
+\label{sec:results-analysis}
+
+\textit{[Análisis cualitativo y cuantitativo: en qué tareas falla el modelo
+con mayor frecuencia, patrones de error, casos representativos de
+\textit{flips}, interpretación de los resultados.]}
+
+\subsection{Interfaces (implementación)}
+\label{sec:interfaces}
+
+\textit{[Descripción de la arquitectura del sistema, clase base \texttt{Attack},
+pipeline CLI con checkpoints, cliente Ollama, etc.]}
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Conclusiones}
+\label{sec:conclusions}
+
+\textit{[Síntesis del trabajo realizado, hallazgos principales y líneas de
+trabajo futuro.]}
+
+\bibliography{custom}
+
+\end{document}
+
+% =============================================================================
+% MATERIAL DE REFERENCIA (NO INCLUIDO EN EL INFORME FINAL)
+% Se conserva como reservorio de contenido para completar las secciones
+% anteriores. Está después de \end{document} y no se compilará.
+% =============================================================================
+
 \section{Trabajo relacionado}
 \label{sec:related}
 
