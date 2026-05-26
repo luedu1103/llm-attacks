@@ -167,9 +167,94 @@ bajo cada ataque e intensidad.]}
 \subsection{Análisis de resultados}
 \label{sec:results-analysis}
 
-\textit{[Análisis cualitativo y cuantitativo: en qué tareas falla el modelo
-con mayor frecuencia, patrones de error, casos representativos de
-\textit{flips}, interpretación de los resultados.]}
+Sobre los 11\,095 ítems de \texttt{datasetV1.5} (24 descartados por
+respuesta inválida del modelo), \texttt{qwen2.5} parte de una precisión
+de $61{,}82\,\%$. Las cifras de la Tabla~\ref{tab:results-summary} son
+el resumen agregado sobre el que gira el resto de la discusión.
+
+\begin{table}[h]
+\centering
+\small
+\begin{tabular}{lcccc}
+\hline
+\textbf{Ataque} & \textbf{Intens.} & \textbf{Acc} & $\Delta$\textbf{Acc} & \textbf{Flip} \\
+\hline
+Sinónimos       & 0{,}5 & 0{,}5680 & $-2{,}66$ & 0{,}1595 \\
+Parafraseo      & 0{,}5 & 0{,}5879 & $-3{,}03$ & 0{,}1610 \\
+Pares mínimos   & 0{,}1 & 0{,}5960 & $-2{,}24$ & 0{,}1110 \\
+Pares mínimos   & 0{,}5 & 0{,}5817 & $-3{,}65$ & 0{,}1345 \\
+Pares mínimos   & 1{,}0 & 0{,}5817 & $-3{,}66$ & 0{,}1333 \\
+Elim. atajos    & 0{,}1 & 0{,}6161 & $-0{,}22$ & 0{,}0685 \\
+Elim. atajos    & 0{,}5 & 0{,}6150 & $-0{,}32$ & 0{,}0761 \\
+Elim. atajos    & 1{,}0 & 0{,}6162 & $-0{,}22$ & 0{,}0749 \\
+\hline
+\end{tabular}
+\caption{Métricas agregadas por ataque e intensidad. Línea base:
+$\text{Acc}=0{,}6182$. Con $N \approx 11\text{k}$, diferencias de
+$\Delta\text{Acc}$ por encima de aproximadamente un punto porcentual
+caen fuera del intervalo de confianza al $95\,\%$ bajo una prueba
+binomial.}
+\label{tab:results-summary}
+\end{table}
+
+El primer hecho que salta a la vista es que el ataque de pares mínimos
+(el más pequeño en cuanto a número de tokens alterados)
+produce la mayor caída de precisión: $-3{,}66$~pp a intensidad $1{,}0$,
+y $-3{,}65$~pp ya a intensidad $0{,}5$. La diferencia entre ambos
+puntos es ruido estadístico. Es decir, una única sustitución dirigida
+a la negación, el cuantificador o el conector temporal del enunciado
+basta para arrastrar al modelo, y aumentar la intensidad apenas añade
+nada. La saturación es muy temprana y, francamente, esperábamos algo
+más de gradualidad. Una posible interpretación es que los enunciados
+sólo contienen un elemento crítico de este tipo: una vez perturbado,
+no queda nada más que sustituir, y subir la intensidad sólo añade
+trabajo a la red sin tocar puntos sensibles \citep{jia-liang-2017-adversarial}.
+
+El parafraseo, por contraste, mueve más predicciones que ningún otro
+ataque (flip rate $0{,}1610$) pero no es el que más daño hace en
+términos netos ($\Delta\text{Acc} = -3{,}03$~pp). La diferencia
+flip rate vs.\ $|\Delta\text{Acc}|$ acota inferiormente la fracción
+de cambios que se cancelan entre sí, es decir, ítems que pasaron de
+mal a bien o de bien a otro mal; para el parafraseo esa cota es
+$0{,}131$, frente a $0{,}098$ en los pares mínimos a $0{,}5$. El
+parafraseo, entonces, desestabiliza más pero de manera menos dirigida.
+Los pares mínimos cambian menos respuestas y casi todos esos cambios
+van hacia el error. Esto es coherente con lo que diseñamos: el ataque
+está pensado precisamente para tocar el pivote semántico.
+
+La comparación entre sinónimos y eliminación de atajos es la que más
+nos llamó la atención. Los sinónimos producen $-2{,}66$~pp y un flip
+rate del $15{,}95\,\%$; eliminar conectores lógico-causales apenas
+mueve la precisión ($-0{,}32$~pp) y el flip rate es $7{,}61\,\%$,
+sólo unos puntos por encima del ruido que cabría esperar de
+reformulaciones inocuas. Es decir: el modelo aguanta razonablemente
+bien que le quitemos los andamios discursivos del enunciado, pero
+falla cuando le reescribimos palabras léxicas por equivalentes
+semánticos. Esta asimetría es consistente con la literatura sobre
+heurísticas léxicas y atajos espurios en modelos de
+lenguaje~\citep{mccoy-etal-2019-right, gardner-etal-2020-evaluating},
+pero no es trivial verla con tanta claridad en español y sobre
+razonamiento verbal de opción múltiple.
+
+Una última observación sobre la curva del ataque de eliminación de
+atajos: es plana en todo el rango ($\Delta\text{Acc}$ entre $-0{,}22$
+y $-0{,}32$~pp). No hay monotonía. Cabe la duda de si esto refleja
+robustez genuina o un fallo del propio ataque al no encontrar
+suficientes conectores que eliminar en los enunciados del dataset; el
+análisis por tipo de tarea de la Sección~\ref{sec:results-per-task}
+deberá despejarlo.
+
+
+
+En conjunto, el modelo muestra una fragilidad de unos $3$~pp ante
+perturbaciones semánticamente conservadoras, lo cual no es catastrófico
+pero tampoco despreciable: una porción de sus aciertos depende de cómo
+está formulado el enunciado, no sólo de lo que dice. Las dos métricas
+empleadas no son redundantes: el flip rate captura inestabilidad y
+$\Delta$Acc captura el desplazamiento neto. Nuestra recomendación
+para trabajos posteriores es reportar siempre las dos. Si hubiera que
+elegir un único ataque para diagnóstico, los pares mínimos son los
+más rentables por relación coste/impacto.
 
 \subsection{Interfaces (implementación)}
 \label{sec:interfaces}
