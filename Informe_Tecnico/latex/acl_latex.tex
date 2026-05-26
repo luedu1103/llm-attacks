@@ -1,0 +1,637 @@
+\documentclass[11pt]{article}
+
+% "final" genera la versión final sin marcas de revisión anónima.
+\usepackage[final]{acl}
+
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{microtype}
+\usepackage{inconsolata}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{amsmath}
+
+\title{Evaluación de Robustez Léxica en Modelos de Lenguaje\\
+  mediante Perturbaciones Controladas en Tareas de\\
+  Razonamiento Verbal en Español}
+
+\author{
+  \textbf{Grupon 4?} \\
+  - cmep
+}
+
+\begin{document}
+\maketitle
+
+% ─────────────────────────────────────────────────────────────────────────────
+\begin{abstract}
+Los modelos de lenguaje de gran escala exhiben rendimiento notable en tareas de
+comprensión verbal, pero sus mecanismos de inferencia siguen siendo parcialmente
+opacos: no es evidente si el modelo razona sobre el contenido semántico o si
+explota patrones superficiales del texto.
+En este trabajo presentamos un marco sistemático para evaluar la
+\textbf{robustez léxica} de modelos de lenguaje en tareas de razonamiento verbal
+en español.
+Se implementan cuatro técnicas de perturbación controlada —sustitución por
+sinónimos, parafraseo, pares mínimos y eliminación de atajos lingüísticos—
+organizadas como módulos independientes que derivan de una clase abstracta común.
+Las perturbaciones se aplican sobre un conjunto de datos de 13\,829 ejemplos en
+español que abarca siete tipos de tarea.
+La validez semántica de cada perturbación se verifica automáticamente mediante
+similitud coseno de \textit{embeddings} multilingües, garantizando que el
+significado y la etiqueta correcta se preserven.
+El marco genera conjuntos de datos perturbados en tres niveles de intensidad
+(bajo, medio, alto) para medir, en una fase posterior, el impacto sobre la
+precisión y la tasa de cambio de predicciones de modelos evaluadores.
+\end{abstract}
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Introducción}
+\label{sec:intro}
+
+Los modelos de lenguaje basados en transformadores han alcanzado rendimiento
+sobresaliente en una amplia variedad de tareas de procesamiento del lenguaje
+natural \citep{devlin-etal-2019-bert}.
+Sin embargo, estudios recientes muestran que buena parte de ese rendimiento se
+apoya en \textit{atajos léxicos}: correlaciones estadísticas superficiales entre
+palabras del enunciado y la respuesta correcta, en lugar de una comprensión
+semántica profunda \citep{mccoy-etal-2019-right}.
+
+Una consecuencia práctica es que pequeñas perturbaciones del texto —reemplazar
+una palabra por un sinónimo o eliminar un conector causal— pueden provocar un
+cambio drástico en la predicción del modelo incluso cuando el significado es
+idéntico.
+Este fenómeno compromete la fiabilidad de los sistemas en contextos reales y
+dificulta su certificación para aplicaciones de alto impacto.
+
+El problema se agudiza en español, idioma con menor representación en los
+\textit{benchmarks} de robustez existentes frente al inglés.
+La mayoría de los trabajos sobre adversarialidad léxica en PLN \citep{jia-liang-2017-adversarial,jin-etal-2020-bert,gao-etal-2018-black}
+se centran en inglés, lo que limita la evaluación de modelos desplegados en
+contextos hispanohablantes.
+
+En este trabajo describimos el diseño e implementación de un \textbf{marco de
+evaluación de robustez léxica} para tareas de razonamiento verbal en español,
+cuyos aportes principales son:
+
+\begin{enumerate}
+    \item Cuatro módulos de perturbación controlada (sinónimos, parafraseo, pares
+          mínimos y eliminación de atajos) con una interfaz unificada y soporte
+          de paralelismo.
+    \item Un \textit{pipeline} de generación de datos perturbados con sistema de
+          \textit{checkpoints} para tolerancia a fallos.
+    \item Validación semántica automática mediante \textit{embeddings} multilingües
+          que garantiza la preservación del significado en cada ejemplo generado.
+    \item Un conjunto de datos de 13\,829 ejemplos en español con siete tipos de
+          tarea, listos para ser evaluados.
+    \item Un módulo de métricas (precisión, $\Delta$\,precisión y tasa de cambio)
+          listo para conectarse a cualquier modelo evaluador.
+\end{enumerate}
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Trabajo relacionado}
+\label{sec:related}
+
+\paragraph{Adversarialidad en PLN.}
+\citet{jia-liang-2017-adversarial} demostraron que agregar oraciones engañosas
+a párrafos de comprensión lectora degrada severamente a sistemas del estado del
+arte.
+\citet{gao-etal-2018-black} propusieron perturbaciones de caja negra que sustituyen
+o insertan caracteres y palabras para engañar a clasificadores profundos.
+\citet{jin-etal-2020-bert} presentaron \textsc{TextFooler}, método que reemplaza
+palabras por sinónimos semánticamente cercanos y logra reducir la precisión de
+BERT hasta un 20\% en tareas de clasificación.
+
+\paragraph{Pruebas conductuales.}
+\citet{ribeiro-etal-2020-checklist} propusieron \textsc{CheckList}, un marco de
+pruebas unitarias para modelos de PLN que organiza las capacidades esperadas
+(vocabulario, negación, relaciones temporales, etc.) y genera perturbaciones
+controladas para verificarlas.
+Nuestro trabajo comparte esta filosofía de prueba sistemática, adaptándola a
+razonamiento verbal en español.
+
+\paragraph{Atajos y heurísticas superficiales.}
+\citet{mccoy-etal-2019-right} demostraron con el conjunto \textsc{HANS} que
+modelos de inferencia de lenguaje natural entrenados sobre \textsc{MNLI} se
+apoyan en heurísticas léxicas y sintácticas en lugar de razonamiento lógico.
+\citet{gardner-etal-2020-evaluating} propusieron los \textit{contrast sets},
+mínimas modificaciones manuales de ejemplos de prueba para evaluar fronteras de
+decisión locales.
+El ataque de pares mínimos de este trabajo es el equivalente automático de los
+\textit{contrast sets} para el español.
+
+\paragraph{Embeddings multilingües.}
+Para la validación semántica empleamos el modelo
+\texttt{paraphrase-multilingual-MiniLM-L12-v2} de la biblioteca
+\textsc{Sentence-Transformers} \citep{reimers-gurevych-2019-sentence}, que
+genera representaciones densas comparables en 50 idiomas, incluido el español.
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Conjunto de datos}
+\label{sec:dataset}
+
+El conjunto de datos base consiste en 13\,829 ítems de razonamiento verbal en
+español obtenidos de exámenes de aptitud académica.
+Cada ítem sigue el formato de opción múltiple (MCQ) con cinco alternativas:
+
+\begin{quote}
+\small
+\texttt{\{"id": 0, "task": "sentence\_ordering",}\\
+\texttt{\ "question": "...", "options": [...],}\\
+\texttt{\ "answer": 3, "rationale": "..."\}}
+\end{quote}
+
+El campo \texttt{answer} es un índice (0–4) que nunca se modifica durante las
+perturbaciones.
+La Tabla~\ref{tab:dataset} muestra la distribución por tipo de tarea.
+
+\begin{table}[h]
+  \centering
+  \small
+  \begin{tabular}{lrr}
+    \toprule
+    \textbf{Tipo de tarea} & \textbf{N} & \textbf{\%} \\
+    \midrule
+    Comprensión lectora        & 9\,373 & 67.8 \\
+    Eliminación de oraciones   & 2\,229 & 16.1 \\
+    Series verbales            & 1\,434 & 10.4 \\
+    Sinónimos y antónimos      &   383  &  2.8 \\
+    Ordenamiento de oraciones  &   319  &  2.3 \\
+    Oraciones incompletas      &    44  &  0.3 \\
+    Analogías                  &    47  &  0.3 \\
+    \midrule
+    \textbf{Total}             & \textbf{13\,829} & \textbf{100} \\
+    \bottomrule
+  \end{tabular}
+  \caption{Distribución del conjunto de datos por tipo de tarea.}
+  \label{tab:dataset}
+\end{table}
+
+Las tareas presentan características lingüísticas distintas: las de comprensión
+lectora requieren inferir sobre párrafos extensos; las de ordenamiento de
+oraciones exigen detectar conectores y relaciones de coherencia; las de series
+verbales y analogías se apoyan en relaciones semánticas entre palabras.
+Esta variedad permite analizar qué tipos de tarea son más sensibles a cada
+técnica de perturbación.
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Metodología}
+\label{sec:methodology}
+
+\subsection{Arquitectura del sistema}
+
+El sistema se organiza en tres capas (Figura~\ref{fig:arch}):
+
+\begin{enumerate}
+    \item \textbf{Ataques}: módulos de perturbación que implementan una
+          interfaz común.
+    \item \textbf{Validación}: verifica que cada ejemplo perturbado preserve el
+          significado original.
+    \item \textbf{Pipeline}: coordina la carga del dataset, la aplicación
+          paralela del ataque y el guardado de resultados.
+\end{enumerate}
+
+\paragraph{Clase base \texttt{Attack}.}
+Todos los módulos heredan de la clase abstracta \texttt{Attack}:
+
+\begin{itemize}
+    \item \texttt{FIELDS\_TO\_PERTURB}: lista de campos a modificar
+          (p.\,ej.\ \texttt{["question"]}).  El campo \texttt{answer} nunca
+          se altera.
+    \item \texttt{\_perturb\_text(text)}: método abstracto que aplica la
+          transformación a una cadena.
+    \item \texttt{apply(example)}: aplica \texttt{\_perturb\_text} a cada
+          campo listado, invoca la validación semántica y devuelve el ejemplo
+          (perturbado si es válido, original en caso contrario).
+    \item \texttt{apply\_dataset(dataset)}: versión paralela con
+          \texttt{ThreadPoolExecutor} (hasta 8 hilos concurrentes).
+\end{itemize}
+
+\paragraph{Pipeline con tolerancia a fallos.}
+El \textit{pipeline} principal (\texttt{pipeline.py}) acepta por línea de
+comandos el tipo de ataque, la intensidad, la ruta del dataset de entrada y la
+de salida.
+Cada 10 ejemplos procesados guarda un \textit{checkpoint} en disco; si la
+ejecución se interrumpe, se retoma desde el último punto guardado.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.95\columnwidth]{arch_placeholder}
+  \caption{Arquitectura del sistema de generación de datos perturbados.
+           (Diagrama a incluir en la versión final.)}
+  \label{fig:arch}
+\end{figure}
+
+\subsection{Control de intensidad}
+
+Cada ataque recibe un parámetro \texttt{intensity} $\in [0, 1]$ que controla
+cuánto se modifica el texto.  Se definen tres niveles estándar:
+
+\begin{table}[h]
+  \centering
+  \small
+  \begin{tabular}{lccc}
+    \toprule
+    \textbf{Nivel} & \textbf{Valor} & \textbf{Sinónimos} & \textbf{Parafraseo} \\
+    \midrule
+    Bajo   & 0.1 & $\sim$10\,\% palabras & cambios mínimos \\
+    Medio  & 0.3 & $\sim$30\,\% palabras & reestructuración parcial \\
+    Alto   & 0.5 & $\sim$50\,\% palabras & reescritura profunda \\
+    \bottomrule
+  \end{tabular}
+  \caption{Niveles de intensidad y su interpretación por ataque.}
+  \label{tab:intensity}
+\end{table}
+
+\noindent Para los ataques basados en reglas (pares mínimos y eliminación de
+atajos), la intensidad controla el \emph{número máximo de sustituciones} o el
+\emph{alcance de las reglas activas}, respectivamente.
+
+\subsection{Validación semántica}
+
+Para garantizar que el significado no se altere, después de cada perturbación se
+calcula la similitud coseno entre los \textit{embeddings} del texto original y
+del perturbado usando el modelo multilingüe
+\texttt{paraphrase-multilingual-MiniLM-L12-v2}
+\citep{reimers-gurevych-2019-sentence}:
+
+\begin{equation}
+  \text{sim}(t, t') = \frac{\mathbf{e}(t) \cdot \mathbf{e}(t')}
+                           {\|\mathbf{e}(t)\| \, \|\mathbf{e}(t')\|}
+  \label{eq:cosine}
+\end{equation}
+
+\noindent Si $\text{sim}(t, t') \geq 0.85$, se acepta la perturbación; en caso
+contrario, el campo se deja sin modificar.
+Este umbral fue elegido experimentalmente para equilibrar permisividad semántica
+y restricción de cambios radicales de significado.
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Técnicas de perturbación}
+\label{sec:attacks}
+
+\subsection{Ataque 1: Sustitución por sinónimos}
+\label{sec:synonym}
+
+\paragraph{Descripción.}
+El ataque \texttt{SynonymAttack} reemplaza un porcentaje de palabras de
+contenido por sinónimos contextualmente apropiados.
+A diferencia de enfoques que procesan palabras de forma aislada
+\citep{jin-etal-2020-bert}, la implementación envía la oración completa al
+modelo de lenguaje en una única llamada, lo que permite resolver la polisemia
+antes de elegir el sinónimo (p.\,ej.\ ``banco'' como entidad financiera
+vs.\ como asiento).
+
+\paragraph{Implementación.}
+\begin{enumerate}
+    \item Se extraen los \textit{tokens} de al menos 3 caracteres mediante
+          expresión regular.
+    \item Se calcula $n = \lceil |\text{tokens}| \times \texttt{intensity} \rceil$
+          (número de palabras a reemplazar).
+    \item Una única llamada a \textsc{qwen2.5} \citep{qwen25report} vía la API
+          compatible con OpenAI de Ollama devuelve un JSON con los pares
+          \texttt{\{original, sinonimo\}}.
+    \item Las sustituciones se aplican con límites de palabra (\verb|\b|) y se
+          conserva la capitalización original.
+    \item Se incluye un analizador de respaldo basado en expresiones regulares
+          para manejar modelos que envuelven el JSON en bloques Markdown.
+\end{enumerate}
+
+\paragraph{Ejemplo.}
+\begin{quote}
+\small
+\textbf{Original:} ``El niño estaba feliz por su regalo.''\\
+\textbf{Perturbado:} ``El niño estaba \textbf{contento} por su \textbf{obsequio}.''
+\end{quote}
+
+\subsection{Ataque 2: Parafraseo}
+\label{sec:paraphrase}
+
+\paragraph{Descripción.}
+El ataque \texttt{ParaphraseAttack} reescribe oraciones completas sin cambiar
+su significado.
+El nivel de cambio estructural se controla mediante la intensidad: reordenamiento
+ligero de frases (bajo), reestructuración parcial (medio) y reescritura profunda
+(alto).
+
+\paragraph{Implementación.}
+El \textit{prompt} enviado al modelo incluye reglas explícitas de no ampliar ni
+reducir la información, preservar nombres propios, números y términos técnicos,
+y devolver frases incompletas igualmente incompletas.
+Esta restricción es crítica en tareas de oraciones incompletas, donde el ítem
+original deliberadamente no forma una oración completa.
+
+\paragraph{Ejemplo.}
+\begin{quote}
+\small
+\textbf{Original:} ``Después de estudiar toda la noche, aprobó el examen.''\\
+\textbf{Perturbado:} ``Aprobó el examen tras haber estudiado toda la noche.''
+\end{quote}
+
+\subsection{Ataque 3: Pares mínimos}
+\label{sec:minimal}
+
+\paragraph{Descripción.}
+El ataque \texttt{MinimalPairAttack} aplica sustituciones críticas de palabras
+que invierten o modifican aspectos semánticos clave: negación, cuantificadores,
+conectores temporales, verbos modales y polaridad.
+El objetivo es que la etiqueta correcta cambie, revelando si el modelo detecta
+realmente esos cambios.
+
+\paragraph{Implementación.}
+El ataque es completamente basado en reglas, lo que garantiza determinismo y no
+requiere acceso a un LLM.
+Se definen 105 reglas de sustitución agrupadas en cinco categorías
+(Tabla~\ref{tab:minimal_rules}).
+La intensidad controla el número máximo de sustituciones aplicadas por ejemplo.
+
+\begin{table}[h]
+  \centering
+  \small
+  \begin{tabular}{llp{4.2cm}}
+    \toprule
+    \textbf{Categoría} & \textbf{N reglas} & \textbf{Ejemplos} \\
+    \midrule
+    Negación     & 18 & no $\to$ $\varnothing$, nunca $\leftrightarrow$ siempre \\
+    Cuantificadores & 16 & todo $\to$ ningún, mucho $\leftrightarrow$ poco \\
+    Temporales   & 11 & antes $\leftrightarrow$ después, primero $\leftrightarrow$ último \\
+    Modales      & 8  & puede $\to$ no puede, debe $\to$ no debe \\
+    Polaridad    & 10 & positivo $\leftrightarrow$ negativo, posible $\leftrightarrow$ imposible \\
+    \bottomrule
+  \end{tabular}
+  \caption{Categorías de reglas del ataque de pares mínimos.}
+  \label{tab:minimal_rules}
+\end{table}
+
+\noindent Se aplica normalización Unicode (NFC) y preservación de capitalización
+para manejar correctamente los acentos del español.
+
+\paragraph{Ejemplo.}
+\begin{quote}
+\small
+\textbf{Original:} ``Juan \textbf{no} fue al mercado.''\\
+\textbf{Perturbado:} ``Juan fue al mercado.'' \quad [\textit{negación eliminada}]
+\end{quote}
+
+\subsection{Ataque 4: Eliminación de atajos lingüísticos}
+\label{sec:shortcut}
+
+\paragraph{Descripción.}
+El ataque \texttt{ShortcutRemovalAttack} elimina conectores lógicos y causales
+(\textit{shortcuts}) que señalan explícitamente relaciones de causalidad,
+consecuencia, concesión o temporalidad.
+La hipótesis de investigación subyacente es que si el modelo depende de estas
+señales superficiales para inferir la respuesta, su precisión caerá al
+eliminarlas.
+
+\paragraph{Implementación.}
+Los conectores se agrupan en tres niveles según su longitud en \textit{tokens}:
+nivel 1 (p.\,ej.\ ``porque'', ``entonces''), nivel 2 (p.\,ej.\ ``dado que'',
+``sin embargo'') y nivel 3 (p.\,ej.\ ``en consecuencia'', ``a condición de que'').
+La intensidad determina qué niveles se activan:
+
+\begin{itemize}
+    \item Baja ($<0.4$): solo nivel 1 (9 conectores).
+    \item Media ($0.4$–$0.7$): niveles 1 y 2 (38 conectores).
+    \item Alta ($>0.7$): todos los niveles (55 conectores).
+\end{itemize}
+
+\noindent Tras la eliminación se aplica un paso de limpieza que normaliza
+espacios dobles y puntuación huérfana generada por la supresión.
+
+\paragraph{Ejemplo.}
+\begin{quote}
+\small
+\textbf{Original:} ``Juan llegó tarde \textbf{porque} perdió el bus.''\\
+\textbf{Perturbado:} ``Juan llegó tarde. Perdió el bus.''
+\end{quote}
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Marco de evaluación}
+\label{sec:evaluation}
+
+El módulo \texttt{evaluation/metrics.py} define tres métricas para cuantificar
+el impacto de las perturbaciones sobre un modelo evaluador:
+
+\paragraph{Precisión (\textit{accuracy}).}
+Fracción de predicciones que coinciden con la etiqueta correcta:
+
+\begin{equation}
+  \text{Acc}(P, Y) = \frac{1}{N} \sum_{i=1}^{N} \mathbf{1}[p_i = y_i]
+\end{equation}
+
+\paragraph{Caída de precisión ($\Delta$\,Acc).}
+Diferencia entre la precisión sobre el dataset original y la del perturbado:
+
+\begin{equation}
+  \Delta\text{Acc} = \text{Acc}(P_\text{orig}, Y) - \text{Acc}(P_\text{pert}, Y)
+\end{equation}
+
+Un valor positivo indica que el ataque degradó el rendimiento del modelo.
+
+\paragraph{Tasa de cambio (\textit{flip rate}).}
+Fracción de ejemplos donde la predicción cambió entre el dataset original y el
+perturbado, independientemente de si el cambio fue hacia la respuesta correcta
+o incorrecta:
+
+\begin{equation}
+  \text{FR}(P_\text{orig}, P_\text{pert}) = \frac{1}{N}
+    \sum_{i=1}^{N} \mathbf{1}[p^\text{orig}_i \neq p^\text{pert}_i]
+\end{equation}
+
+Un alto \textit{flip rate} con bajo $\Delta$\,Acc sugiere inestabilidad de
+predicciones sin necesariamente peor rendimiento global.
+
+\paragraph{Protocolo de evaluación.}
+El protocolo planificado consiste en (1) ejecutar el modelo evaluador sobre el
+dataset original y registrar sus predicciones, (2) ejecutarlo sobre cada versión
+perturbada (ataque $\times$ intensidad) y (3) calcular las tres métricas para
+cada combinación.
+Esto genera una tabla comparativa con 12 configuraciones
+(4 ataques $\times$ 3 intensidades) que permite identificar qué tipo de
+perturbación afecta más al modelo y qué tareas son más sensibles.
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Conjuntos de datos generados}
+\label{sec:datasets}
+
+La Tabla~\ref{tab:outputs} resume los conjuntos de datos perturbados generados
+hasta la fecha de este informe.
+
+\begin{table}[h]
+  \centering
+  \small
+  \begin{tabular}{llrc}
+    \toprule
+    \textbf{Ataque} & \textbf{Intensidad} & \textbf{Ítems} & \textbf{Válidos (\%)} \\
+    \midrule
+    Sinónimos     & 0.3 & 13\,829 & — \\
+    \midrule
+    \multirow{4}{*}{Pares mínimos} & 0.1 & 13\,829 & — \\
+                                    & 0.3 & 13\,829 & — \\
+                                    & 0.5 & 13\,829 & — \\
+                                    & 1.0 & 13\,829 & — \\
+    \bottomrule
+  \end{tabular}
+  \caption{Conjuntos de datos perturbados disponibles. La columna
+           ``Válidos'' se completará al finalizar la validación semántica masiva.
+           Los ataques de parafraseo y eliminación de atajos están en progreso.}
+  \label{tab:outputs}
+\end{table}
+
+La Tabla~\ref{tab:example} muestra una comparación cualitativa entre el
+ejemplo original y sus cuatro versiones perturbadas para un ítem de
+ordenamiento de oraciones.
+
+\begin{table*}[h]
+  \centering
+  \small
+  \begin{tabular}{p{2.8cm}p{10.8cm}}
+    \toprule
+    \textbf{Versión} & \textbf{Fragmento del campo \texttt{question}} \\
+    \midrule
+    Original &
+      \textit{``I. La Revolución francesa, como fenómeno político, económico, social y cultural,
+      no sólo \textbf{transformó} el país de origen, sino también toda Europa.''} \\
+    \addlinespace
+    Sinónimos (0.3) &
+      \textit{``I. La Revolución francesa, como fenómeno político, económico, social y cultural,
+      no sólo \textbf{alteró} el país de origen, sino también toda Europa.''} \\
+    \addlinespace
+    Pares mínimos (0.3) &
+      \textit{``I. La Revolución francesa, como fenómeno político, económico, social y cultural,
+      no sólo transformó el país de origen, sino también toda Europa.''}\,*\\
+    \addlinespace
+    Eliminación atajos (0.3) &
+      \textit{``I. La Revolución francesa, como fenómeno político, económico, social y cultural,
+      no sólo transformó el país de origen, toda Europa.''} \\
+    \addlinespace
+    Parafraseo (0.3) &
+      \textit{``I. La Revolución francesa, fenómeno político, económico, social y cultural,
+      no solo transformó el país de origen, sino también el continente europeo entero.''} \\
+    \bottomrule
+  \end{tabular}
+  \caption{Comparación de versiones perturbadas para un mismo ítem.
+           (*) El ataque de pares mínimos no encontró ninguna regla aplicable en este fragmento.}
+  \label{tab:example}
+\end{table*}
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Limitaciones}
+\label{sec:limitations}
+
+\paragraph{Dependencia de la calidad del LLM.}
+Los ataques de sinónimos y parafraseo dependen de \textsc{qwen2.5} ejecutándose
+localmente vía Ollama.
+Si el modelo alucina, puede generar sinónimos incorrectos (p.\,ej.\ ``Revolución''
+$\to$ ``Reforma''), lo cual sería detectado y revertido por la validación
+semántica, pero introduce ruido en el proceso.
+
+\paragraph{Umbral de similitud fijo.}
+El umbral de 0.85 de similitud coseno es un hiperparámetro que podría requerir
+ajuste por tipo de tarea.
+Tareas de series verbales o analogías tienen contextos muy cortos donde pequeñas
+modificaciones producen una caída relativa mayor de la similitud.
+
+\paragraph{Cobertura del ataque de atajos.}
+El lexicón de conectores cubre el español estándar pero puede omitir
+construcciones regionales o tecnicismos de algunas materias presentes en el
+conjunto de datos.
+
+\paragraph{Evaluación pendiente.}
+La fase de evaluación (ejecución del modelo evaluador sobre los datasets
+perturbados y cálculo de métricas) aún no se ha completado, por lo que este
+trabajo no reporta resultados experimentales definitivos.
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Conclusiones}
+\label{sec:conclusions}
+
+Se ha construido un marco extensible y reutilizable para la evaluación de
+robustez léxica de modelos de lenguaje en tareas de razonamiento verbal en
+español.
+El marco implementa cuatro ataques de perturbación controlada con una interfaz
+unificada, validación semántica automática basada en \textit{embeddings}
+multilingües, procesamiento paralelo con tolerancia a fallos, y un módulo de
+métricas listo para conectarse a cualquier modelo evaluador.
+
+El conjunto de datos de 13\,829 ejemplos cubre siete tipos de tarea con
+características lingüísticas distintas, lo que permitirá, en la siguiente fase,
+analizar tanto qué tipo de perturbación afecta más al modelo como qué tipo de
+tarea resulta más sensible a los atajos léxicos.
+
+Como trabajo futuro inmediato se planea: (1) completar la generación de los
+datasets perturbados para todos los ataques e intensidades, (2) ejecutar el
+modelo evaluador y calcular las métricas de robustez, (3) generar curvas de
+sensibilidad (precisión vs.\ intensidad) por tipo de tarea, y (4) analizar de
+forma cualitativa los casos de cambio de predicción (\textit{flips}) para
+identificar patrones de dependencia superficial.
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section*{Limitaciones de investigación}
+
+Este trabajo tiene como alcance la generación del marco de evaluación y los
+datasets perturbados.
+Los resultados experimentales sobre el comportamiento de modelos concretos están
+fuera del alcance del presente informe y se reportarán en una publicación
+posterior.
+
+\section*{Agradecimientos}
+
+Al equipo de desarrollo de \textsc{Sentence-Transformers} y de Ollama por
+proveer las herramientas de código abierto que hacen posible este trabajo.
+
+% ─────────────────────────────────────────────────────────────────────────────
+\bibliography{custom}
+
+% ─────────────────────────────────────────────────────────────────────────────
+\appendix
+
+\section{Estructura del repositorio}
+\label{sec:appendix-repo}
+
+\begin{verbatim}
+llm-attacks/
+├── attacks/
+│   ├── base.py          # Clase abstracta Attack
+│   ├── synonym.py       # SynonymAttack (LLM)
+│   ├── paraphrase.py    # ParaphraseAttack (LLM)
+│   ├── minimal_pair.py  # MinimalPairAttack (reglas)
+│   └── shortcut_removal.py # ShortcutRemovalAttack (reglas)
+├── evaluation/
+│   └── metrics.py       # accuracy, delta_accuracy, flip_rate
+├── validation/
+│   └── semantic.py      # Similitud coseno multilingüe
+├── utils/
+│   ├── llm_client.py    # Cliente Ollama (API OpenAI-compatible)
+│   └── text_utils.py    # Utilidades de texto
+├── data/
+│   ├── raw/             # Dataset original (13 829 ítems)
+│   └── perturbed/       # Datasets perturbados generados
+├── config.py            # Parámetros globales
+└── pipeline.py          # Script principal CLI
+\end{verbatim}
+
+\section{Uso del pipeline}
+\label{sec:appendix-usage}
+
+\begin{verbatim}
+# Sinónimos con intensidad media (por defecto 0.3)
+python pipeline.py --attack synonym
+
+# Parafraseo con intensidad alta
+python pipeline.py --attack paraphrase --intensity 0.5
+
+# Pares mínimos sobre dataset completo
+python pipeline.py --attack minimal_pair \
+    --dataset data/raw/dataset.json
+
+# Eliminación de atajos con salida personalizada
+python pipeline.py --attack shortcut_removal \
+    --output data/perturbed/mi_salida.json
+\end{verbatim}
+
+\end{document}
