@@ -23,8 +23,8 @@
   Grupo 7 \\
     Carlos Miguel Espinoza Peralta \\
     Yayir Flabio Mattos Hilario \\
-    Eduardo Luis Carbajal Gutiérrez \\
-    Abraham Josué Espinoza Peralta \\
+    Eduardo Luis Calle Huamantico \\
+    Abraham Josue Carbajal Gutierrez \\
     Diego Alonso Calderón Matías \\
   }
 
@@ -44,7 +44,7 @@ en español.
 Se implementan cuatro técnicas de perturbación controlada —sustitución por
 sinónimos, parafraseo, pares mínimos y eliminación de atajos lingüísticos—
 organizadas como módulos independientes que derivan de una clase abstracta común.
-Las perturbaciones se aplican sobre un conjunto de datos de 13\,829 ejemplos en
+Las perturbaciones se aplican sobre un conjunto de datos de 11\,091 ejemplos en
 español que abarca siete tipos de tarea.
 La validez semántica de cada perturbación se verifica automáticamente mediante
 similitud coseno de \textit{embeddings} multilingües, garantizando que el
@@ -138,10 +138,9 @@ estado actual:
 \subsection{Dataset}
 \label{sec:dataset}
 
-El conjunto de datos base consistió inicialmente en 13\,829 ítems de razonamiento
-verbal en español obtenidos de exámenes de aptitud académica. Tras aplicar la validación
-semántica de las perturbaciones y filtrar aquellos ítems donde el modelo evaluador
-no generó una respuesta interpretable, el conjunto de evaluación final se consolidó en 11\,091 ítems.
+El conjunto de datos consistió en 11\,091 ítems de razonamiento
+verbal en español obtenidos de exámenes de aptitud académica tras la validación
+semántica de las perturbaciones.
 Cada ítem sigue el formato de opción múltiple (MCQ) con cinco alternativas:
 
 \begin{quote}
