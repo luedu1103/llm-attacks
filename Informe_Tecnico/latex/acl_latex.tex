@@ -22,7 +22,7 @@
   \author{
   Grupo 7 \\
     Carlos Miguel Espinoza Peralta \\
-    Yair Fabio Mattos Hilario \\
+    Yayir Flabio Mattos Hilario \\
     Eduardo Luis Carbajal Gutiérrez \\
     Abraham Josué Espinoza Peralta \\
     Diego Alonso Calderón Matías \\
@@ -545,8 +545,62 @@ sobre el dataset evaluado.
 \section{Conclusiones}
 \label{sec:conclusions}
 
-\textit{[Síntesis del trabajo realizado, hallazgos principales y líneas de
-trabajo futuro.]}
+Este trabajo presentó un marco extensible para la evaluación de robustez léxica
+de modelos de lenguaje en tareas de razonamiento verbal en español, un ámbito
+significativamente subrepresentado en la literatura adversarial.
+Se implementaron cuatro módulos de perturbación controlada ---sustitución por
+sinónimos, parafraseo, pares mínimos y eliminación de atajos lingüísticos---
+con intensidad ajustable, validación semántica automática basada en
+\textit{embeddings} multilingües, y un \textit{pipeline} con tolerancia a fallos
+capaz de procesar el corpus completo de 13\,829 ítems de manera reproducible.
+
+\paragraph{Hallazgos principales.}
+Los experimentos con \textsc{Qwen2.5} sobre 11\,091 ítems revelan cuatro
+conclusiones concretas:
+
+\begin{enumerate}
+
+    \item \textbf{Los pares mínimos son el ataque más eficiente.}
+    Un único cambio en un elemento semántico crítico
+    (negación, cuantificador, conector temporal)
+    produce la mayor caída de precisión del experimento: $-3{,}66$~pp a
+    intensidad $1{,}0$. Crucialmente, la saturación es muy temprana: elevar la
+    intensidad de $0{,}5$ a $1{,}0$ no añade ningún impacto estadísticamente
+    distinguible. Esto indica que los enunciados suelen contener un único pivote
+    semántico; una vez perturbado, no queda nada más que sustituir.
+    En relación coste/impacto, este ataque es el más rentable para diagnóstico
+    rápido de robustez.
+
+    \item \textbf{El parafraseo maximiza la inestabilidad de predicciones.}
+    Con el \textit{flip rate} más alto del experimento ($16{,}10\,\%$) pero un
+    $\Delta\text{Acc}$ moderado ($-3{,}03$~pp), el parafraseo desestabiliza las
+    predicciones del modelo de manera más difusa que los pares mínimos: cambia
+    más respuestas, pero una parte de esos cambios se compensa entre sí.
+    Este fenómeno es especialmente pronunciado en comprensión lectora
+    ($\text{FR} = 15{,}4\,\%$), donde \textsc{Qwen2.5} parece realizar un
+    \textit{pattern matching} entre la superficie sintáctica de la pregunta y el
+    texto, perdiendo estabilidad cuando se altera la forma sin alterar el fondo.
+
+    \item \textbf{El modelo no depende críticamente de conectores lógicos en global,
+    pero sí en tareas estructuralmente dependientes de ellos.}
+    La eliminación de atajos lingüísticos produce un $\Delta\text{Acc}$ de apenas
+    $-0{,}32$~pp en el agregado global ---aparentemente inofensivo--- pero oculta
+    una caída real de $3{,}8$~pp en \textit{Ordenamiento de oraciones} ($0{,}552
+    \to 0{,}514$). El efecto se diluye en el promedio porque la tarea
+    dominante, \textit{Comprensión lectora} ($71{,}6\,\%$ del corpus), compensa
+    la pérdida de conectores aislados gracias a la redundancia informativa de sus
+    párrafos extensos. Este resultado subraya el riesgo de interpretar únicamente
+    métricas agregadas.
+
+    \item \textbf{La fragilidad es más severa en tareas de semántica léxica aislada.}
+    Las tareas que operan sobre palabras individuales son las más vulnerables:
+    \textit{Sinónimos y antónimos} sufre la caída más aguda del experimento ante
+    pares mínimos ($-10{,}3$~pp), y \textit{Series verbales} le sigue con
+    $-9{,}1$~pp. En ambas, el modelo está hiper-focalizado en el pivote léxico
+    del ítem; si se invierte su polaridad o cuantificación, falla sistemáticamente
+    porque no puede mapear el nuevo pivote contra las opciones estáticas.
+
+\end{enumerate}
 
 \bibliography{custom}
 
