@@ -191,7 +191,10 @@ Para evaluar la robustez del modelo desde distintos ángulos lingüísticos
 se implementaron cuatro estrategias de perturbación. Cada una ataca una
 hipótesis distinta sobre dónde reside la fragilidad del modelo, y todas
 comparten una restricción común: la respuesta correcta del ítem
-original debe seguir siendo válida tras la perturbación.
+original debe seguir siendo válida tras la perturbación. Esta garantía
+se materializa mediante un filtro de validación semántica basado en
+similitud coseno sobre \textit{embeddings} multilingües, que descarta
+cualquier perturbación que se aleje demasiado del significado original.
 
 \paragraph{Sustitución por sinónimos.}
 Reemplaza palabras de contenido por equivalentes semánticos. La pregunta
@@ -232,8 +235,7 @@ degradarse.
 Las cuatro estrategias se aplican de manera independiente y con tres
 niveles de intensidad (bajo, medio, alto), lo que permite analizar no
 sólo si el modelo es vulnerable sino cómo se degrada conforme la
-perturbación se intensifica. Los detalles de implementación se
-desarrollan en la Sección~\ref{sec:attacks}.
+perturbación se intensifica.
 
 \subsection{Métricas de evaluación}
 \label{sec:metrics}
@@ -514,11 +516,14 @@ implementar el método \texttt{\_perturb\_text}.
 Una decisión que terminó siendo crítica en la práctica fue el
 sistema de \textit{checkpoints}. Sobre $\sim$11\,k ítems, los ataques
 basados en LLM (sinónimos y parafraseo) tardan varias horas; cualquier
-interrupción habría obligado a empezar de cero. El \textit{pipeline}
-guarda el estado cada 10 ítems procesados, y al reanudar la ejecución
-detecta el último \textit{checkpoint} y continúa desde ahí. Sin esto,
-muchos de los experimentos reportados no habrían podido completarse
-de una sola corrida.
+interrupción habría obligado a empezar de cero. La granularidad del
+guardado se adaptó a la naturaleza del ataque: los basados en LLM
+procesan en lotes de 50 ítems y persisten estado al cerrar cada lote,
+mientras que los basados en reglas como los pares mínimos y la
+eliminación de atajos lingüísticos guardan cada 10 ítems. Al reanudar,
+el \textit{pipeline} detecta el último \textit{checkpoint} y continúa
+desde ahí. Sin este mecanismo, muchos de los experimentos reportados
+no habrían podido completarse de una sola corrida.
 
 Las llamadas al LLM pasan por un cliente compatible con la API de
 OpenAI, lo que permite alternar entre Ollama local y servicios remotos
