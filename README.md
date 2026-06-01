@@ -142,8 +142,6 @@ Los ataques modifican los campos `question` y/o `options`. El campo `answer` nun
 |---|---|
 | Ataques (synonym, paraphrase, minimal_pair, shortcut_removal) | Implementado |
 | Pipeline con paralelismo | Implementado |
-| Metricas (accuracy, delta_accuracy, flip_rate) | Pendiente |
+| Metricas (accuracy, delta_accuracy, flip_rate) | Implementado |
 | Validacion semantica | Implementado |
-| Evaluacion del modelo sobre datasets perturbados | Pendiente |
-
-La siguiente fase del proyecto consiste en conectar un modelo evaluador que responda las preguntas del dataset original y del perturbado, y calcular las metricas de robustez (delta de accuracy y flip rate).
+| Evaluacion del modelo sobre datasets perturbados | Implementado |
